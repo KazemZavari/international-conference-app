@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.background-overlay {
+  /* background-color: var( --e-global-color-8a61d4e ); */
+  opacity: 0.9;
+  transition: 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
