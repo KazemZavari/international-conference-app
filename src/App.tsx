@@ -96,9 +96,29 @@ const App = () => {
             <p>This is a simple parallax example.</p>
           </div>
         </div>
+        <div className=" "></div>
       </div>
 
-      <div className="bg-gray-600 h-[1000px]"></div>
+      <div className="bg-[#114b5f]  h-[150vh]"></div>
+      <div className="bg-[#114b5f] bg-gradient-to-t from-gray-200 to-[#114b5f] h-[50vh]"></div>
+
+      <div className="relative h-[80vh] overflow-hidden">
+        <div
+          className="absolute w-[100%] h-[80vh] bg-fixed bg-center-top bg-no-repeat text-white
+          opacity-90 bg-cover text-center bg-[url('./assets/img/18.jpg')]  "
+        >
+          <div className="content">
+            <h1>Your Content Goes Here</h1>
+            <p>This is a simple parallax example.</p>
+          </div>
+        </div>
+      </div>
+      <div className="h-[45vh]">
+
+      </div>
+      <div className="h-[45vh] bg-[#114b5f] ">
+
+</div>
     </>
   );
 };
