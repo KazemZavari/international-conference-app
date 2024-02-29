@@ -7,6 +7,7 @@ import ColorDiv from "./components/ColorDiv";
 import CountDown from "./components/CountDown";
 import Sponsors from "./components/Sponsors";
 import ParallaxSection from "./components/ParallaxSection";
+import ParallaxContent1 from "./components/ParallaxContent1";
 // import img1 from "./assets/img/18.jpg"
 
 const App = () => {
@@ -19,10 +20,10 @@ const App = () => {
       <CountDown />
       <ParallaxSection
         backgroundImage="bg-[url('./assets/img/pic-9.jpg')]"
-        height="h-[65vh]"
-        opacity="opacity-70"
+        height="h-[70vh]"
+        opacity="opacity-"
       >
-        <div className=""></div>
+        <ParallaxContent1 />
       </ParallaxSection>
 
       <div className="bg-[#114b5f] h-[150vh] inlin-flex justify-center relative overflow-hidden">
