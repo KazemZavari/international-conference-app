@@ -16,3 +16,6 @@
   transition: 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
+.title:hover .cartContent{
+ display: block;
+}
