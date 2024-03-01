@@ -1,10 +1,10 @@
-type ParallaxSectionProps = {
+type ParallaxProviderProps = {
   height: string;
   backgroundImage: string;
   opacity?: string;
   children: React.ReactNode;
 };
-const ParallaxSection: React.FC<ParallaxSectionProps> = ({
+const ParallaxProvider: React.FC<ParallaxProviderProps> = ({
   height,
   backgroundImage,
   opacity,
@@ -22,4 +22,4 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   );
 };
 
-export default ParallaxSection;
+export default ParallaxProvider;

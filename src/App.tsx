@@ -6,9 +6,8 @@ import Divider from "./components/Divider";
 import ColorDiv from "./components/ColorDiv";
 import CountDown from "./components/CountDown";
 import Sponsors from "./components/Sponsors";
-import ParallaxSection from "./components/ParallaxSection";
+import ParallaxProvider from "./components/ParallaxProvider";
 import ParallaxContent1 from "./components/ParallaxContent1";
-// import img1 from "./assets/img/18.jpg"
 
 const App = () => {
   return (
@@ -18,13 +17,13 @@ const App = () => {
         <Navbar />
       </div>
       <CountDown />
-      <ParallaxSection
+      <ParallaxProvider
         backgroundImage="bg-[url('./assets/img/pic-9.jpg')]"
         height="h-[70vh]"
-        opacity="opacity-"
+        // opacity="opacity-90"
       >
         <ParallaxContent1 />
-      </ParallaxSection>
+      </ParallaxProvider>
 
       <div className="bg-[#114b5f] h-[150vh] inlin-flex justify-center relative overflow-hidden">
         <ColorDiv />
@@ -33,12 +32,12 @@ const App = () => {
       </div>
       <div className="bg-[#114b5f] bg-gradient-to-t from-gray-200 to-[#114b5f] h-[50vh]"></div>
 
-      <ParallaxSection
+      <ParallaxProvider
         backgroundImage="bg-[url('./assets/img/pic-10.jpg')]"
         height="h-[100vh]"
       >
         <p>rt</p>
-      </ParallaxSection>
+      </ParallaxProvider>
 
       <Sponsors />
       <Footer />
