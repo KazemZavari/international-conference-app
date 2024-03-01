@@ -2,7 +2,7 @@ type ParallaxProviderProps = {
   height: string;
   backgroundImage: string;
   opacity?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 const ParallaxProvider: React.FC<ParallaxProviderProps> = ({
   height,

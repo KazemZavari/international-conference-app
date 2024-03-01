@@ -19,7 +19,7 @@ const Divider: React.FC<dividerProps> = ({
         className={`flex-grow border-t border-white ${borderColor} border-[.1rem] `}
       ></div>
       <span
-        className={`flex-shrink mx-4 text-[#f9c80e] ${textColor}  font-bold text-[1.8rem]`}
+        className={`flex-shrink mx-4 text-[#f9c80e] ${textColor} font-bold text-[2.3rem]`}
       >
         {borderText}
       </span>

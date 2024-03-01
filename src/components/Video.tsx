@@ -1,10 +1,4 @@
-// import React from 'react'
 import video from "../assets/bgVideo/earth-1.mp4";
-
-// type videoProps ={
-//    videoUrl: string,
-//    src:URL
-// }
 
 const Video = () => {
   return (
