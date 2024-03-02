@@ -13,7 +13,7 @@ const Divider: React.FC<dividerProps> = ({
 }) => {
   return (
     <div
-      className={`relative inline-flex mt-[1rem] py-[1.2rem] items-center w-[60%] ${borderWidth} `}
+      className={`relative inline-flex mt-[2rem] py-[1.2rem] items-center w-[60%] ${borderWidth} `}
     >
       <div
         className={`flex-grow border-t border-white ${borderColor} border-[.1rem] `}

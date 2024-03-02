@@ -4,12 +4,11 @@ import ColorDiv from "../components/ColorDiv";
 const CountDown: React.FC = () => {
   return (
     <div
-      className="w-[100%] h-[40vh] bg-[#114b5f] inlin-flex justify-center 
-                    relative overflow-hidden"
+      className="w-[100%] h-[45vh] bg-[#114b5f] inlin-flex justify-center relative overflow-hidden"
     >
       <ColorDiv />
       <Divider borderText="Conference Count Down" borderWidth="w-[60%]" />
-      <div className=" absolute top-36 left-40 text-white flex ">
+      <div className=" absolute top-44 left-40 text-white flex ">
         <span className="font-bold text-[20px] justify-start ">
           Conference starts in:
         </span>
