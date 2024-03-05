@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-type ConferanceDayProps = {
+type ConferenceDayProps = {
   day: number;
   month: number;
 };
-const ConferanceDay: React.FC<ConferanceDayProps> = ({ day, month }) => {
+const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
   const [state, setState] = useState({
     seconds: 0,
     hours: 0,
@@ -18,17 +18,17 @@ const ConferanceDay: React.FC<ConferanceDayProps> = ({ day, month }) => {
     setInterval(() => {
       const countdown = () => {
         const nowDate = new Date();
-        let conferanceDay = new Date(currentYear, month - 1, day);
-        if (nowDate > conferanceDay) {
-          conferanceDay = new Date(currentYear + 1, month - 1, day);
-        } else if (nowDate.getFullYear() === conferanceDay.getFullYear() + 1) {
-          conferanceDay = new Date(currentYear, month - 1, day);
+        let conferenceDay = new Date(currentYear, month - 1, day);
+        if (nowDate > conferenceDay) {
+          conferenceDay = new Date(currentYear + 1, month - 1, day);
+        } else if (nowDate.getFullYear() === conferenceDay.getFullYear() + 1) {
+          conferenceDay = new Date(currentYear, month - 1, day);
         }
 
         const currentTime = nowDate.getTime();
-        const conferanceTime = conferanceDay.getTime();
+        const conferenceTime = conferenceDay.getTime();
 
-        const timeRemaining = conferanceTime - currentTime;
+        const timeRemaining = conferenceTime - currentTime;
 
         let seconds = Math.floor(timeRemaining / 1000);
         let minutes = Math.floor(seconds / 60);
@@ -79,4 +79,4 @@ const ConferanceDay: React.FC<ConferanceDayProps> = ({ day, month }) => {
   );
 };
 
-export default ConferanceDay;
+export default ConferenceDay;

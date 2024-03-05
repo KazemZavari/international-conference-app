@@ -1,6 +1,6 @@
 import Divider from "../components/Divider";
 import ColorDiv from "../components/ColorDiv";
-import ConferanceDay from "./ConferanceDay";
+import ConferanceDay from "./ConferenceDay";
 const CountDown: React.FC = () => {
   return (
     <div className="w-[100%] h-[45vh] bg-[#114b5f] inlin-flex justify-center relative overflow-hidden">
