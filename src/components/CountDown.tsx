@@ -6,7 +6,7 @@ const CountDown: React.FC = () => {
     <div className="w-[100%] h-[45vh] bg-[#114b5f] inlin-flex justify-center relative overflow-hidden">
       <ColorDiv />
       <Divider borderText="Conference Count Down" borderWidth="w-[60%]" />
-      <ConferanceDay day={20} month={4} />
+      <ConferanceDay day={18} month={4}   />
     </div>
   );
 };

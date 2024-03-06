@@ -27,7 +27,6 @@ const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
 
         const currentTime = nowDate.getTime();
         const conferenceTime = conferenceDay.getTime();
-
         const timeRemaining = conferenceTime - currentTime;
 
         let seconds = Math.floor(timeRemaining / 1000);
@@ -52,30 +51,27 @@ const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
   }, [currentYear, day, month]);
 
   return (
-
-      <div className=" absolute top-44 left-40 text-white flex ">
-        <span className="font-bold text-[20px] justify-start ">
-          Conference starts in:
-        </span>
-        <div className="ml-16 -mt-4">
-          <span className="font-bold text-[40px]">{state.days}</span>{" "}
-          <span className="font-bold text-[24px]">Days</span>
-        </div>
-        <div className="ml-16  -mt-4">
-          <span className="font-bold text-[40px]">{state.hours}</span>{" "}
-          <span className="font-bold text-[24px]">Hours</span>
-        </div>
-        <div className="ml-16  -mt-4">
-          <span className="font-bold text-[40px]">{state.minutes}</span>{" "}
-          <span className="font-bold text-[24px]">Minutes</span>
-        </div>
-        <div className="ml-16  -mt-4">
-          <span className="font-bold text-[40px]">{state.seconds}</span>{" "}
-          <span className="font-bold text-[24px]">Seconds</span>
-        </div>
+    <div className=" absolute top-44 left-40 text-white flex ">
+      <span className="font-bold text-[20px] justify-start ">
+        Conference starts in:
+      </span>
+      <div className="ml-16 -mt-4">
+        <span className="font-bold text-[40px]">{state.days}</span>{" "}
+        <span className="font-bold text-[24px]">Days</span>
       </div>
- 
-   
+      <div className="ml-16 -mt-4">
+        <span className="font-bold text-[40px]">{state.hours}</span>{" "}
+        <span className="font-bold text-[24px]">Hours</span>
+      </div>
+      <div className="ml-16 -mt-4">
+        <span className="font-bold text-[40px]">{state.minutes}</span>{" "}
+        <span className="font-bold text-[24px]">Minutes</span>
+      </div>
+      <div className="ml-16 -mt-4">
+        <span className="font-bold text-[40px]">{state.seconds}</span>{" "}
+        <span className="font-bold text-[24px]">Seconds</span>
+      </div>
+    </div>
   );
 };
 
