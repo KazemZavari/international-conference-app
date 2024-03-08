@@ -11,7 +11,7 @@ const ParallaxProvider: React.FC<ParallaxProviderProps> = ({
   children,
 }) => {
   return (
-    <div className={` relative ${height} overflow-hidden `}>
+    <div className={` relative ${height} overflow-hidden bg-white/70 `}>
       <div
         className={`absolute w-[100%]  ${height} bg-fixed bg-center-top bg-no-repeat
                  text-white ${opacity} bg-cover text-center ${backgroundImage} `}

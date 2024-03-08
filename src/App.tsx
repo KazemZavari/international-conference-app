@@ -7,6 +7,7 @@ import CountDown from "./components/CountDown";
 import Sponsors from "./components/Sponsors";
 import ParallaxProvider from "./components/ParallaxProvider";
 import ParallaxContent1 from "./components/ParallaxContent1";
+import ParallaxContent2 from "./components/ParallaxContent2";
 import MainTopics from "./components/MainTopics";
 import { parallaxData } from "./constants/parallax";
 const App = () => {
@@ -30,7 +31,10 @@ const App = () => {
       <ParallaxProvider
         backgroundImage={parallaxData.bg[1]}
         height={parallaxData.height[1]}
-      ></ParallaxProvider>
+        opacity="opacity-90"
+      >
+        <ParallaxContent2 />
+      </ParallaxProvider>
 
       <Sponsors />
       <Footer />
