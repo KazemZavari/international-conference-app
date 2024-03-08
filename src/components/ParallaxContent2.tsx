@@ -1,15 +1,37 @@
-// import { ParallaxItems } from "../constants/parallax";
+import {
+  ParallaxItemsImportantDates,
+  ParallaxItemsDownloadCenter,
+} from "../constants/parallax";
+
 import Divider from "./Divider";
 
 const ParallaxContent1 = () => {
   return (
     <>
-    <Divider borderText="Download Center" />
-    <div className="mt-[4.2rem] grid grid-cols-2 justify-items-center gap-8 px-20  ">
-      <p>oijsedflijwso</p>
-    </div>
+      {/* Download Center Section */}
+      <Divider borderText="Download Center" />
+      <div className="mt-[2rem] grid grid-cols-3 mb-5 px-32 justify-items-center">
+        {ParallaxItemsDownloadCenter.map((item) => (
+          <div className="col-span-1 ">
+            <img className="mx-auto mb-4" src={item.icon} />
+            <h3 className="font-bold text-[1.6rem]">{item.title}</h3>
+          </div>
+        ))}
+      </div>
+
+      {/* Important Dates Section */}
+      <Divider borderText="Important Dates" />
+      <div className="mt-[2rem] grid grid-cols-2 justify-items-center gap-8 px-20">
+        {ParallaxItemsImportantDates.map((item) => (
+          <div className="w-[60%] rounded-[20px] py-3 backdrop-blur-[5px] bg-white/20 col-span-1">
+            <h3 className="font-bold text-[2rem] leading-8 px-2 ">
+              {item.title}
+            </h3>
+            <h4 className="font text-[1.5rem] mt-5">{item.date}</h4>
+          </div>
+        ))}
+      </div>
     </>
-    
   );
 };
 

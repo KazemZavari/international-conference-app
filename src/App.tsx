@@ -31,7 +31,7 @@ const App = () => {
       <ParallaxProvider
         backgroundImage={parallaxData.bg[1]}
         height={parallaxData.height[1]}
-        opacity="opacity-90"
+        // opacity="opacity-90"
       >
         <ParallaxContent2 />
       </ParallaxProvider>
