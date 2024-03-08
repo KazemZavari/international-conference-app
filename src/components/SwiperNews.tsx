@@ -25,7 +25,6 @@ const SwiperNews = () => {
         delay: 4000,
         pauseOnMouseEnter: true,
         waitForTransition: true,
-        // reverseDirection:true,
         disableOnInteraction: true,
       }}
       className=" w-[95%] h-[19rem] flex justify-center bg-transparent rounded-3xl -mt-[1rem] "
