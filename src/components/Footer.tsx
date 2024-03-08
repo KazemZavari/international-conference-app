@@ -31,7 +31,7 @@ const Footer = () => {
           </a>
         </span>
       </div>
-      <div className="col-span-2">jj</div>
+      <div className="col-span-2"> sdfds</div>
     </div>
   );
 };
