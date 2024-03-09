@@ -4,7 +4,6 @@ import img1 from "../assets/img/pic-10.jpg";
 import img2 from "../assets/img/pic-7.jpg";
 import img3 from "../assets/img/pic-9.jpg";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -27,16 +26,17 @@ const SwiperNews = () => {
         waitForTransition: true,
         disableOnInteraction: true,
       }}
-      className=" w-[95%] h-[19rem] flex justify-center bg-transparent rounded-3xl -mt-[1rem] "
+      className=" w-[90%] h-[21rem] flex justify-center bg-transparent rounded-[5rem] 
+                  -mt-[1rem] duration-500 "
     >
-      <SwiperSlide className="flex align-middle justify-center bg-transparent">
-        <img className="block rounded-2xl mx-auto self-center w-[90%] h-[90%]" src={img1} />
+      <SwiperSlide className="flex align-middle justify-center bg-transparent duration-700">
+        <img className="block shadow-lg shadow-slate-600 rounded-[5rem] mx-auto self-center w-[90%] h-[90%]" src={img1} />
       </SwiperSlide>
       <SwiperSlide className="flex align-middle justify-center bg-transparent">
-        <img className="block mx-auto rounded-2xl self-center w-[90%] h-[90%]" src={img2} />
+        <img className="block shadow-lg shadow-slate-600 mx-auto rounded-[5rem] self-center w-[90%] h-[90%]" src={img2} />
       </SwiperSlide>
       <SwiperSlide className="flex align-middle justify-center bg-transparent">
-        <img className="block mx-auto  rounded-2xl self-center w-[90%] h-[90%]" src={img3} />
+        <img className="block shadow-lg shadow-slate-600 mx-auto rounded-[5rem] self-center w-[90%] h-[90%]" src={img3} />
       </SwiperSlide>
     </Swiper>
   );

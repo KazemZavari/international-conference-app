@@ -1,65 +1,77 @@
 import { Navigation, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import img1 from "../assets/img/pic-10.jpg";
-import img2 from "../assets/img/pic-7.jpg";
-import img3 from "../assets/img/pic-9.jpg";
-
-import "swiper/css";
 import "swiper/css/navigation";
 import Divider from "./Divider";
+import {
+  pic3,
+  pic4,
+  pic5,
+  pic6,
+  pic7,
+  pic8,
+  pic9,
+  pic10,
+  pic11,
+  pic12,
+  pic13,
+} from "../assets/sponsors-logo";
+const swiperSliderClasses: string =
+  "flex align-middle justify-center bg-transparent pt-[1rem] ";
+const sipersliderImgClasses: string =
+  "block rounded-2xl mx-auto self-center h-28 w-[11rem] hover:scale-[1.1] duration-500";
 const Sponsors = () => {
   return (
-    <div className="h-[20rem] opacity-80">
-  <Divider borderText="Sponsors" textColor="text-black" borderColor="border-black" />
+    <div className="h-[20rem] ">
+      <Divider
+        borderText="Sponsors"
+        textColor="text-black"
+        borderColor="border-black"
+      />
       <Swiper
         modules={[Navigation, Autoplay]}
-        spaceBetween={20}
         slidesPerView={5}
         loop={true}
         grabCursor={true}
-        // navigation={true}
         centeredSlides={true}
         autoplay={{
           delay: 4000,
           pauseOnMouseEnter: true,
         }}
-        className=" w-[85%] flex justify-center bg-transparent rounded-3xl mt-4 "
+        className=" w-[80%] flex justify-center bg-transparent mt-4 "
       >
-        <SwiperSlide className="flex align-middle justify-center bg-transparent pt-[1rem] ">
-          <img
-            className="block rounded-2xl mx-auto self-center h-28 w-[80%]"
-            src={img1}
-          />
+        <SwiperSlide className={swiperSliderClasses}>
+          <img className={sipersliderImgClasses} src={pic3} alt="pic3" />
         </SwiperSlide>
-        <SwiperSlide className="flex align-middle justify-center bg-transparent pt-[1rem]">
-          <img
-            className="block mx-auto rounded-2xl self-center h-28 w-[80%]"
-            src={img2}
-          />
+
+        <SwiperSlide className={swiperSliderClasses}>
+          <img className={sipersliderImgClasses} src={pic4} alt="pic4" />
         </SwiperSlide>
-        <SwiperSlide className="flex align-middle justify-center bg-transparent  pt-[1rem]">
-          <img
-            className="block mx-auto  rounded-2xl self-center h-28 w-[80%]"
-            src={img3}
-          />
+        <SwiperSlide className={swiperSliderClasses}>
+          <img className={sipersliderImgClasses} src={pic5} alt="pic5" />
         </SwiperSlide>
-        <SwiperSlide className="flex align-middle justify-center bg-transparent pt-[1rem]">
-          <img
-            className="block mx-auto rounded-2xl self-center h-28 w-[80%]"
-            src={img2}
-          />
+        <SwiperSlide className={swiperSliderClasses}>
+          <img className={sipersliderImgClasses} src={pic6} alt="pic6" />
         </SwiperSlide>
-        <SwiperSlide className="flex align-middle justify-center bg-transparent  pt-[1rem]">
-          <img
-            className="block mx-auto  rounded-2xl self-center h-28 w-[80%]"
-            src={img3}
-          />
+        <SwiperSlide className={swiperSliderClasses}>
+          <img className={sipersliderImgClasses} src={pic7} alt="pic7" />
         </SwiperSlide>
-        <SwiperSlide className="flex align-middle justify-center bg-transparent  pt-[1rem]">
-          <img
-            className="block mx-auto  rounded-2xl self-center w-[80%]"
-            src={img3}
-          />
+        <SwiperSlide className={swiperSliderClasses}>
+          <img className={sipersliderImgClasses} src={pic8} alt="pic8" />
+        </SwiperSlide>
+        <SwiperSlide className={swiperSliderClasses}>
+          <img className={sipersliderImgClasses} src={pic9} alt="pic9" />
+        </SwiperSlide>
+        <SwiperSlide className={swiperSliderClasses}>
+          <img className={sipersliderImgClasses} src={pic10} alt="pic10" />
+        </SwiperSlide>
+        <SwiperSlide className={swiperSliderClasses}>
+          <img className={sipersliderImgClasses} src={pic11} alt="pic11" />
+        </SwiperSlide>
+        <SwiperSlide className={swiperSliderClasses}>
+          <img className={sipersliderImgClasses} src={pic12} alt="pic12" />
+        </SwiperSlide>
+        <SwiperSlide className={swiperSliderClasses}>
+          <img className={sipersliderImgClasses} src={pic13} alt="pic13" />
         </SwiperSlide>
       </Swiper>
     </div>

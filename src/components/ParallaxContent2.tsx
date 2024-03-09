@@ -13,7 +13,7 @@ const ParallaxContent1 = () => {
       <div className="mt-[2rem] grid grid-cols-3 mb-5 px-32 justify-items-center">
         {ParallaxItemsDownloadCenter.map((item) => (
           <div className="col-span-1 ">
-            <img className="mx-auto mb-4" src={item.icon} />
+            <img className="mx-auto mb-4" src={item.icon} alt={item.title} />
             <h3 className="font-bold text-[1.6rem]">{item.title}</h3>
           </div>
         ))}
@@ -23,7 +23,8 @@ const ParallaxContent1 = () => {
       <Divider borderText="Important Dates" />
       <div className="mt-[2rem] grid grid-cols-2 justify-items-center gap-8 px-20">
         {ParallaxItemsImportantDates.map((item) => (
-          <div className="w-[60%] rounded-[20px] py-3 backdrop-blur-[5px] bg-white/20 col-span-1">
+          <div className="w-[60%] rounded-[20px] shadow-slate-100 shadow-sm
+           py-3 backdrop-blur-[50px] bg-white/15 col-span-1">
             <h3 className="font-bold text-[2rem] leading-8 px-2 ">
               {item.title}
             </h3>
