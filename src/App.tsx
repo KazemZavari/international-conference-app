@@ -24,14 +24,13 @@ const App = () => {
       >
         <ParallaxContent1 />
       </ParallaxProvider>
-
       <MainTopics />
 
       <News />
       <ParallaxProvider
         backgroundImage={parallaxData.bg[1]}
         height={parallaxData.height[1]}
-        // opacity="opacity-90"
+        // opacity="opacity-70"
       >
         <ParallaxContent2 />
       </ParallaxProvider>

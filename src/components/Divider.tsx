@@ -16,7 +16,7 @@ const Divider: React.FC<dividerProps> = ({
       className={`relative inline-flex mt-[2rem] py-[1.2rem] items-center w-[60%] ${borderWidth} `}
     >
       <div
-        className={`flex-grow border-t border-white ${borderColor} border-[.1rem] `}
+        className={`flex-grow border-t ${borderColor} border-[.1rem] `}
       ></div>
       <span
         className={`flex-shrink mx-4 text-[#f9c80e] ${textColor} font-bold text-[2.3rem]`}
@@ -24,7 +24,7 @@ const Divider: React.FC<dividerProps> = ({
         {borderText}
       </span>
       <div
-        className={`flex-grow border-t border-white ${borderColor} border-[.1rem]`}
+        className={`flex-grow border-t ${borderColor} border-[.1rem]`}
       ></div>
     </div>
   );

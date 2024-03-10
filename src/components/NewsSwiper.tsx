@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-const SwiperNews = () => {
+const NewsSwiper = () => {
   return (
     <Swiper
       modules={[Navigation, Pagination, EffectFade, Autoplay]}
@@ -42,4 +42,4 @@ const SwiperNews = () => {
   );
 };
 
-export default SwiperNews;
+export default NewsSwiper;
