@@ -25,7 +25,7 @@ const App = () => {
         <ParallaxContent1 />
       </ParallaxProvider>
       <MainTopics />
-
+{/* news Section */}
       <News />
       <ParallaxProvider
         backgroundImage={parallaxData.bg[1]}
