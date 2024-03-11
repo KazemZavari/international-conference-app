@@ -1,6 +1,6 @@
 import logo from "../assets/img/sharif-logo-1.png";
-// import { Link } from "react-router-dom";
-import { SocialIcon } from "react-social-icons";
+import { SlArrowRightCircle } from "react-icons/sl";
+import { FaBeer } from "react-icons/fa";
 import Social from "./Social";
 const Footer = () => {
   return (
@@ -42,10 +42,12 @@ const Footer = () => {
                hover:bg-white hover:text-teal-800 justify-self-end mt-5 duration-500 "
             >
               SUBSCRIBE
+              
               <i className="inline-block fa-solid fa-arrow-right text-lg p-[2px] ml-4 group-hover:-mr-3 duration-500"></i>{" "}
             </button>
           </div>
         </form>
+        <FaBeer  />
       </div>
     </div>
   );

@@ -13,7 +13,9 @@ const ParallaxContent1 = () => {
       <div className="mt-[2rem] grid grid-cols-3 mb-5 px-32 justify-items-center">
         {ParallaxItemsDownloadCenter.map((item) => (
           <div className="col-span-1 ">
+ 
             <img className="mx-auto mb-4" src={item.icon} alt={item.title} />
+            
             <h3 className="font-bold text-[1.6rem]">{item.title}</h3>
           </div>
         ))}
