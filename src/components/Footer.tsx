@@ -1,6 +1,7 @@
 import logo from "../assets/img/sharif-logo-1.png";
-import { SlArrowRightCircle } from "react-icons/sl";
-import { FaBeer } from "react-icons/fa";
+import { GoArrowRight, GoArrowUpRight } from "react-icons/go";
+import { TbBrandGithubFilled } from "react-icons/tb";
+
 import Social from "./Social";
 const Footer = () => {
   return (
@@ -36,18 +37,19 @@ const Footer = () => {
             placeholder="Enter Your Email To Join Our Mai"
             className="bg-transparent border-b-[1px] p-2 w-[16rem] focus:border-none focus:shadow-md"
           />
-          <div className="group hover:-mt-[.8rem] duration-500 text-right mr-24 align-middle ">
+          <div className="group hover:-mt-[.8rem] duration-500 text-right mr-24 align-middle  ">
             <button
               className=" px-8 py-4 text-[1rem] bg-teal-600 rounded-s-[2rem] rounded-b-[2rem]
-               hover:bg-white hover:text-teal-800 justify-self-end mt-5 duration-500 "
+               hover:bg-white hover:text-teal-800 mt-5 duration-500 "
             >
               SUBSCRIBE
-              
-              <i className="inline-block fa-solid fa-arrow-right text-lg p-[2px] ml-4 group-hover:-mr-3 duration-500"></i>{" "}
+              <GoArrowRight
+                size={23}
+                className="inline-block ml-3 group-hover:-rotate-45 group-hover:-mt-5 group-hover:ml-1 duration-500"
+              />
             </button>
           </div>
         </form>
-        <FaBeer  />
       </div>
     </div>
   );

@@ -1,12 +1,17 @@
 type ItemsProps = {
   title: string;
   date?: string;
-  icon?: string
+  icon?: ReactNode;
+  href?: any;
 }[];
 type parallaxData = {
   bg: string[];
   height: string[];
 };
+import { ReactNode } from "react";
+import { FaClipboardList } from "react-icons/fa";
+import { IoDocument, IoMap } from "react-icons/io5";
+
 export const parallaxData: parallaxData = {
   bg: [
     "bg-[url('./assets/img/pic-9.jpg')]",
@@ -36,18 +41,20 @@ export const ParallaxItems: ItemsProps = [
 
 export const ParallaxItemsDownloadCenter: ItemsProps = [
   {
-    icon: "icon-1",
+    icon: <FaClipboardList className="text-[2rem] mx-auto mb-2" />,
     title: "Paper Announcement",
+    href: "www.google.com",
   },
   {
-    icon: "icon-2",
+    icon: <IoDocument className="text-[2rem] mx-auto mb-2" />,
     title: "Poster",
+    href: "www.google.com",
   },
   {
-    icon: "icon-3",
+    icon: <IoMap className="text-[2rem] mx-auto mb-2" />,
     title: "Catalogue",
+    href: "www.google.com",
   },
-
 ];
 
 export const ParallaxItemsImportantDates: ItemsProps = [
