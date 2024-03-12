@@ -41,17 +41,17 @@ export const ParallaxItems: ItemsProps = [
 
 export const ParallaxItemsDownloadCenter: ItemsProps = [
   {
-    icon: <FaClipboardList className="text-[2rem] mx-auto mb-2" />,
+    icon: <FaClipboardList className="text-[2.5rem] mx-auto mb-2 " />,
     title: "Paper Announcement",
     href: "www.google.com",
   },
   {
-    icon: <IoDocument className="text-[2rem] mx-auto mb-2" />,
+    icon: <IoDocument className="text-[2.5rem] mx-auto mb-2" />,
     title: "Poster",
     href: "www.google.com",
   },
   {
-    icon: <IoMap className="text-[2rem] mx-auto mb-2" />,
+    icon: <IoMap className="text-[2.5rem] mx-auto mb-2" />,
     title: "Catalogue",
     href: "www.google.com",
   },

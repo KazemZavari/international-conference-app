@@ -3,6 +3,7 @@ import {
   ParallaxItemsDownloadCenter,
 } from "../constants/parallax";
 import Divider from "./Divider";
+ 
 const ParallaxContent1 = () => {
   return (
     <>
@@ -11,7 +12,7 @@ const ParallaxContent1 = () => {
       <div className="mt-[1rem] grid grid-cols-3 mb-5 px-32 justify-items-center">
         {ParallaxItemsDownloadCenter.map((item) => (
           <div className="col-span-1 ">
-          <a href={item.href} target="_blank" >{item.icon}</a>
+          <a href={item.href} target="_blank" className="text-amber-300" >{item.icon}</a>
             <h3 className="font-bold text-[1.6rem]">{item.title}</h3>
           </div>
         ))}
