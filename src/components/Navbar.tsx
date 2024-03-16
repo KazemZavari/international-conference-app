@@ -25,14 +25,15 @@ const Navbar = () => {
             </li>
             <li className=" px-[8px] group flex ">
               {" "}
-              General Information <HiChevronDown className="mt-2 ml-1 group-hover:rotate-90 duration-300 " />
-              <ul className=" hidden absolute top-9 group-hover:block pt-2 pb-3 bg-slate-500 bg-opacity-50
+              General Information 
+              {/* <HiChevronDown className="mt-2 ml-1 group-hover:rotate-90 duration-300 " /> */}
+              {/* <ul className=" hidden absolute top-9 group-hover:block pt-2 pb-3 bg-slate-500 bg-opacity-50
               w-[9.6rem] hover:block z-[1000] transition-all animate-in slide-in-from-bottom-2 cursor-pointer duration-300
                  shadow-slate-100 shadow-md rounded-b-lg ">
                 <li>test1</li>
                 <li>test2</li>
                 <li>test3</li>
-              </ul>
+              </ul> */}
             </li>
 
             <li className=" px-[8px]">Organization</li>
