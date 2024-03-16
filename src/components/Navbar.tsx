@@ -1,5 +1,6 @@
 import logo from "../assets/img/sharif-logo-1.png";
-import Menu, { SubMenu, Item as MenuItem, Divider } from "rc-menu";
+import { HiChevronDown } from "react-icons/hi";import "rc-menu/assets/index.css";
+import "css-animation";
 const Navbar = () => {
   return (
     <>
@@ -17,12 +18,23 @@ const Navbar = () => {
           </div>
         </div>
         <div className="w-[69%] 2xl:w-[70%] border-b-[2px] border-yellow-300 pb-[1rem] block mx-auto "></div>
-        <div className="nav-menu pt-3">
-          <ul className="flex justify-center divide-x-[1px] text-[16px] font-bold text-amber-400">
+        <div className="nav-menu pt-3 relative">
+          <ul className="flex justify-center divide-x-[1px] text-[16px] font-bold text-amber-400 cursor-pointer">
             <li className=" px-[10px]">
               <a href="#">Home</a>{" "}
             </li>
-            <li className=" px-[8px]"> General Information</li>
+            <li className=" px-[8px] group flex ">
+              {" "}
+              General Information <HiChevronDown className="mt-2 ml-1 group-hover:rotate-90 duration-300 " />
+              <ul className=" hidden absolute top-9 group-hover:block pt-2 pb-3 bg-slate-500 bg-opacity-50
+              w-[9.6rem] hover:block z-[1000] transition-all animate-in slide-in-from-bottom-2 cursor-pointer duration-300
+                 shadow-slate-100 shadow-md rounded-b-lg ">
+                <li>test1</li>
+                <li>test2</li>
+                <li>test3</li>
+              </ul>
+            </li>
+
             <li className=" px-[8px]">Organization</li>
             <li className=" px-[8px]">Paper Submission</li>
             <li className=" px-[8px]">Registration</li>
@@ -41,31 +53,8 @@ const Navbar = () => {
           </h2>
           <h3 className=" text-[1.2rem] font-bold pb-">18-19 April 2024</h3>
         </div>
-        <div>
-          <Menu className="text-red-700">
-            <SubMenu title="sub menu" key="1">
-              <MenuItem key="1-1">0-1</MenuItem>
-              <MenuItem key="1-2">0-2</MenuItem>
-            </SubMenu>
-            <MenuItem key="2">Menu Item</MenuItem>
-            <MenuItem key="3">outer</MenuItem>
-            <>
-              <SubMenu key="4" title="sub menu">
-                <MenuItem key="4-1">inner inner</MenuItem>
-                <Divider />
-                <SubMenu key="4-2" title="sub menu">
-                  <MenuItem key="4-2-1">inn</MenuItem>
-                  <SubMenu title="sub menu" key="4-2-2">
-                    <MenuItem key="4-2-2-1">inner inner</MenuItem>
-                    <MenuItem key="4-2-2-2">inner inner2</MenuItem>
-                  </SubMenu>
-                </SubMenu>
-              </SubMenu>
-              <MenuItem disabled>disabled</MenuItem>
-              <MenuItem key="4-3">outer3</MenuItem>
-            </>
-          </Menu>
-        </div>
+
+        <div className="w-[50vw] text-red-500  "></div>
       </nav>
     </>
   );
