@@ -1,6 +1,8 @@
 import logo from "../assets/img/sharif-logo-1.png";
-import { HiChevronDown } from "react-icons/hi";import "rc-menu/assets/index.css";
+import { HiChevronDown } from "react-icons/hi";
+import "rc-menu/assets/index.css";
 import "css-animation";
+import Menuu from "./Menuu";
 const Navbar = () => {
   return (
     <>
@@ -18,7 +20,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="w-[69%] 2xl:w-[70%] border-b-[2px] border-yellow-300 pb-[1rem] block mx-auto "></div>
-        <div className="nav-menu pt-3 relative">
+        {/* <div className="nav-menu pt-3 relative">
           <ul className="flex justify-center divide-x-[1px] text-[16px] font-bold text-amber-400 cursor-pointer">
             <li className=" px-[10px]">
               <a href="#">Home</a>{" "}
@@ -43,8 +45,8 @@ const Navbar = () => {
             <li className=" px-[8px]">News</li>
             <li className=" px-[8px]">Contact us</li>
           </ul>
-        </div>
-
+        </div>  */}
+        <Menuu />
         <div className="mt-[4rem] 2xl:mt-[11rem] rounded-3xl mx-auto w-[80%] text-amber-400">
           <h1 className=" text-[1.7rem] font-bold mb-4">
             International Conference on Energy Resilience, and Sustainability
