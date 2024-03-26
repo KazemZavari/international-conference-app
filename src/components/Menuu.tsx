@@ -97,13 +97,12 @@ const Menuu: React.FC = () => {
               itemColor: "#fadb14",
               groupTitleColor: "#666",
               itemActiveBg: "#000",
-              itemHoverBg: "#000",
+              itemHoverColor: "#fff",
               activeBarBorderWidth: 10,
               dangerItemHoverColor: "#000",
               horizontalItemSelectedColor: "#fff",
               itemSelectedBg: "#000",
-              itemHoverColor: "#fff",
-              subMenuItemBorderRadius: 10,
+   
             },
           },
         }}
@@ -113,7 +112,8 @@ const Menuu: React.FC = () => {
           selectedKeys={[current]}
           mode="horizontal"
           items={items}
-          className=" mx-auto w-[60vw] bg-transparent text-[1rem]  text-lime-600"
+          style={{ color: "white" }}
+          className=" mx-auto w-[60vw] bg-transparent text-[1rem] "
         />
       </ConfigProvider>
     </div>

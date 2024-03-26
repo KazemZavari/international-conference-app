@@ -1,8 +1,8 @@
 import logo from "../assets/img/sharif-logo-1.png";
-import { HiChevronDown } from "react-icons/hi";
 import "rc-menu/assets/index.css";
 import "css-animation";
 import Menuu from "./Menuu";
+
 const Navbar = () => {
   return (
     <>
@@ -47,6 +47,8 @@ const Navbar = () => {
           </ul>
         </div>  */}
         <Menuu />
+        {/* <MenuMui /> */}
+
         <div className="mt-[4rem] 2xl:mt-[11rem] rounded-3xl mx-auto w-[80%] text-amber-400">
           <h1 className=" text-[1.7rem] font-bold mb-4">
             International Conference on Energy Resilience, and Sustainability
