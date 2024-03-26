@@ -1,6 +1,5 @@
 import Divider from "../components/Divider";
 import ColorDiv from "../components/ColorDiv";
- import { Link } from "react-router-dom";
 import { mainTopicsItems } from "../constants/mainTopics";
 const MainTopics = () => {
   return (
@@ -20,7 +19,10 @@ const MainTopics = () => {
                   className="bg-white/30 w-[100%] hidden group-hover:block group-hover:absolute
                     -mt-[17rem] h-[18rem] "
                 >
-                  <h3 className="font-semibold text-[2rem] mt-2 "> {item.title} </h3>
+                  <h3 className="font-semibold text-[2rem] mt-2 ">
+                    {" "}
+                    {item.title}{" "}
+                  </h3>
                   {item.content}
                 </div>
               </div>
@@ -31,9 +33,9 @@ const MainTopics = () => {
               </h3>
             </div>
 
-            <button 
-              className="bg-teal-600 hover:bg-cyan-900 px-4 pt-2 pb-3 rounded-3xl mt-10 text-white 
-                       font-semibold transition-all duration-300 z-1000 "
+            <button
+              className="bg-teal-600 hover:bg-cyan-900 hover:mt-9 hover:ml-1 px-4 pt-2 pb-3 rounded-3xl mt-10 text-white 
+                       font-semibold transition-all duration-300"
             >
               Reade more
             </button>
