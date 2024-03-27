@@ -1,5 +1,5 @@
-import Divider from "../components/Divider";
-import ColorDiv from "../components/ColorDiv";
+import Divider from "./Divider";
+import ColorDiv from "./ColorDiv";
 import { mainTopicsItems } from "../constants/mainTopics";
 const MainTopics = () => {
   return (

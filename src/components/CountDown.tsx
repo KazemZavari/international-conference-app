@@ -1,5 +1,5 @@
-import Divider from "../components/Divider";
-import ColorDiv from "../components/ColorDiv";
+import Divider from "./Divider";
+import ColorDiv from "./ColorDiv";
 import ConferanceDay from "./ConferenceDay";
 const CountDown: React.FC = () => {
   return (

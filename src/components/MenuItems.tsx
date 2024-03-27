@@ -6,6 +6,7 @@ import { FaUsers } from "react-icons/fa";
 import { IoSettings } from "react-icons/io5";
 import { HiChevronDown } from "react-icons/hi";
 import type { MenuProps } from "antd";
+import { Link } from "react-router-dom";
 
 export const items: MenuProps["items"] = [
   {
@@ -18,7 +19,7 @@ export const items: MenuProps["items"] = [
     icon: <FaHome />,
   },
   {
-    label: "News",
+    label: <Link to="/news">news</Link>,
     key: "news",
     icon: <IoNewspaper />,
   },
