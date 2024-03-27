@@ -25,7 +25,8 @@ const Menuu: React.FC = () => {
           components: {
             Menu: {
               itemBg: "#fff",
-              colorBgElevated: "#000",
+              colorBgElevated: "#333",
+                //  colorBgElevated: "transparent",
               itemColor: "#fadb14",
               itemHoverBg: "#555",
               horizontalItemSelectedColor: "#fff",
@@ -42,7 +43,7 @@ const Menuu: React.FC = () => {
           selectedKeys={[current]}
           mode="horizontal"
           items={items}
-          className=" mx-auto w-[60vw] bg-transparent text-[1rem] font-semibold "
+          className="  flex justify-center w-[60vw] bg-transparent text-[1rem] font-semibold "
         />
       </ConfigProvider>
     </div>

@@ -3,7 +3,7 @@ import ColorDiv from "../components/ColorDiv";
 import { mainTopicsItems } from "../constants/mainTopics";
 const MainTopics = () => {
   return (
-    <div className="bg-[#114b5f] h-[180vh] inlin-flex justify-center relative overflow-hidden">
+    <div className="bg-[#114b5f] pb-10 inlin-flex justify-center relative overflow-hidden">
       <ColorDiv />
       <Divider borderText="Main Topics of The Conference" />
       <div className="mt-[0.5rem] grid grid-cols-4 justify-evenly gap-5 mx-28  ">

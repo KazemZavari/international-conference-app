@@ -1,11 +1,12 @@
-import React from "react";
-import {
-  AppstoreOutlined,
-  MailOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
-import type { MenuProps } from "antd";
+import { MailOutlined } from "@ant-design/icons";
+import { FaHome } from "react-icons/fa";
+import { IoNewspaper } from "react-icons/io5";
+import { IoLibrary } from "react-icons/io5";
+import { FaUsers } from "react-icons/fa";
+import { IoSettings } from "react-icons/io5";
 import { HiChevronDown } from "react-icons/hi";
+import type { MenuProps } from "antd";
+
 export const items: MenuProps["items"] = [
   {
     label: (
@@ -14,19 +15,18 @@ export const items: MenuProps["items"] = [
       </a>
     ),
     key: "Home",
-    icon: <MailOutlined />,
+    icon: <FaHome />,
   },
   {
-    label: "Page1",
-    key: "app",
-    icon: <AppstoreOutlined />,
-    disabled: false,
+    label: "News",
+    key: "news",
+    icon: <IoNewspaper />,
   },
   {
     label: (
       <div className="inline-flex group ">
         {" "}
-        pagetow{" "}
+        Libraray{" "}
         <HiChevronDown
           size={20}
           className="mt-4 ml-1 group-hover:rotate-180 duration-500 "
@@ -34,23 +34,46 @@ export const items: MenuProps["items"] = [
       </div>
     ),
     key: "SubMenu",
-    icon: <SettingOutlined />,
+    icon: <IoLibrary />,
     children: [
       {
         type: "group",
-        // label: "Item 1",
         children: [
           {
-            label: "Option 1",
-            key: "setting:1",
+            label: (
+              <a
+                href="https://tailwindcss.com/"
+                rel="noopener noreferrer"
+                target="_Blank"
+              >
+                TailwindCss
+              </a>
+            ),
+            key: "TailwindCss",
           },
           {
-            label: "Option 2",
-            key: "setting:2",
+            label: (
+              <a
+                href="https://ant.design/"
+                rel="noopener noreferrer"
+                target="_Blank"
+              >
+                Antd
+              </a>
+            ),
+            key: "Antd",
           },
           {
-            label: "Option 3",
-            key: "setting:3",
+            label: (
+              <a
+                href="https://www.framer.com/motion/"
+                rel="noopener noreferrer"
+                target="_Blank"
+              >
+                FramerMotion
+              </a>
+            ),
+            key: "FramerMotion",
           },
         ],
       },
@@ -58,18 +81,18 @@ export const items: MenuProps["items"] = [
   },
   {
     label: (
-      <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-        goooo
+      <a href="#" target="_self" rel="noopener noreferrer">
+        Community
       </a>
     ),
     key: "alipay",
-    icon: <SettingOutlined />,
+    icon: <FaUsers />,
   },
   {
     label: (
       <div className="inline-flex group ">
         {" "}
-        pagetow{" "}
+        Dependencies{" "}
         <HiChevronDown
           size={20}
           className="mt-4 ml-1 group-hover:rotate-180 duration-500 "
@@ -77,30 +100,30 @@ export const items: MenuProps["items"] = [
       </div>
     ),
     key: "SubMenu2",
-    icon: <SettingOutlined />,
+    icon: <IoSettings />,
     children: [
       {
         type: "group",
         children: [
           {
-            label: "Option 11",
-            key: "setting:11",
+            label: "ReactRouter",
+            key: "ReactRouter",
           },
           {
-            label: "Option 21",
-            key: "setting:21",
+            label: "Swiper",
+            key: "Swiper",
           },
           {
-            label: "Option 31",
-            key: "setting:31",
+            label: "reactParallax",
+            key: "reactParallax",
           },
         ],
       },
     ],
   },
   {
-    label: "page2",
-    key: "pag2",
+    label: "Contact us",
+    key: "ContactPage",
     icon: <MailOutlined />,
   },
 ];

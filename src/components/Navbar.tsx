@@ -20,7 +20,7 @@ const Navbar = () => {
             <h5>18-19 April 2024</h5>
           </div>
         </div>
-        <div className="w-[69%] 2xl:w-[70%] border-b-[2px] border-yellow-300 pb-[1rem] block mx-auto "></div>
+        <div className="w-[62%] 2xl:w-[70%] border-b-[2px] border-yellow-300 pb-[1rem] block mx-auto "></div>
         {/* <div className="nav-menu pt-3 relative">
           <ul className="flex justify-center divide-x-[1px] text-[16px] font-bold text-amber-400 cursor-pointer">
             <li className=" px-[10px]">
@@ -48,8 +48,7 @@ const Navbar = () => {
           </ul>
         </div>  */}
         <Menuu />
-        {/* <MenuMui /> */}
-
+ 
         <div className="mt-[4rem] 2xl:mt-[11rem] rounded-3xl mx-auto w-[80%] text-amber-400">
           <h1 className=" text-[1.7rem] font-bold mb-4">
             International Conference on Energy Resilience, and Sustainability

@@ -35,9 +35,10 @@ const Footer = () => {
           <input
             type="text"
             placeholder="Enter Your Email To Join Our Mai"
-            className="bg-transparent border-b-[1px] p-2 w-[16rem] focus:border-none focus:shadow-md"
+            className="bg-transparent border-b-[1px] p-2 w-[16rem] active:border-none focus:border-none
+                        focus:shadow-md"
           />
-          <div className="group hover:-mt-[.8rem] duration-500 text-right mr-24 align-middle  ">
+          <div className="group hover:-mt-[.8rem] duration-500 text-right mr-24 align-middle">
             <button
               className=" px-8 py-4 text-[1rem] bg-teal-600 rounded-s-[2rem] rounded-b-[2rem]
                hover:bg-white hover:text-teal-800 mt-5 duration-500 "
