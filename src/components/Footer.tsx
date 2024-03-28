@@ -1,11 +1,10 @@
 import logo from "../assets/img/sharif-logo-1.png";
-import { GoArrowRight, GoArrowUpRight } from "react-icons/go";
-import { TbBrandGithubFilled } from "react-icons/tb";
+import { GoArrowRight } from "react-icons/go";
 
 import Social from "./Social";
 const Footer = () => {
   return (
-    <div className="h-[21rem] bg-[#114b5f] grid grid-cols-7 pt-16 px-10 gap-2 relative">
+    <div className="h-[21rem] w-[100%] bg-[#114b5f] grid grid-cols-7 pt-16 px-10 gap-2 relative">
       <div className="col-span-2">
         <div className="logo">
           <img className="w-44 mx-auto" src={logo} alt="logo" />
