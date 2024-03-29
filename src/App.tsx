@@ -16,30 +16,30 @@ import React from "react";
 const App: React.FC = () => {
   return (
     <>
-<Tools />
-      <div className="background-overlay bg-slate-400">
-        <Video />
-        <Navbar />
+      <div className=" ">
+        <Tools />
+        <div className="background-overlay bg-slate-400">
+          <Video />
+          <Navbar />
+        </div>
+        <CountDown />
+        <ParallaxProvider
+          backgroundImage={parallaxData.bg[0]}
+          height={parallaxData.height[0]}
+        >
+          <ParallaxContent1 />
+        </ParallaxProvider>
+        <MainTopics />
+        <News />
+        <ParallaxProvider
+          backgroundImage={parallaxData.bg[1]}
+          height={parallaxData.height[1]}
+        >
+          <ParallaxContent2 />
+        </ParallaxProvider>
+        <Sponsors />
+        <Footer />
       </div>
-      <CountDown />
-      <ParallaxProvider
-        backgroundImage={parallaxData.bg[0]}
-        height={parallaxData.height[0]}
-      >
-        <ParallaxContent1 />
-      </ParallaxProvider>
-      <MainTopics />
-      <News />
-      <ParallaxProvider
-        backgroundImage={parallaxData.bg[1]}
-        height={parallaxData.height[1]}
-        // opacity="opacity-70"
-      >
-        <ParallaxContent2 />
-      </ParallaxProvider>
-
-      <Sponsors />
-      <Footer />
     </>
   );
 };

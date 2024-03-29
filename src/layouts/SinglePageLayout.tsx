@@ -10,12 +10,11 @@ const SinglePageLayout: React.FC<SinglePageLayoutProps> = ({ children }) => {
   return (
     <>
       <Tools />
-      <div className=" bg-black h-[100vh] w-[100%] mx-auto pt-2 ">
+      <div className="bg-[#0d1224] w-[100%] mx-auto pt-2 ">
         <Logo />
-        <div className="pt-16">
+        <div className="mt-20">
           <Menuu />
         </div>
-
         {children}
         <Footer />
       </div>

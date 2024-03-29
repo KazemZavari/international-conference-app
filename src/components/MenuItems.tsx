@@ -6,22 +6,41 @@ import { FaUsers } from "react-icons/fa";
 import { IoSettings } from "react-icons/io5";
 import { HiChevronDown } from "react-icons/hi";
 import type { MenuProps } from "antd";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const items: MenuProps["items"] = [
   {
     label: (
-      <a href="http://localhost:3000/" rel="noopener noreferrer" target="_self">
+      <NavLink to="http://localhost:3000/" target="_self">
         Home
-      </a>
+      </NavLink>
     ),
+
+    // <a href="http://localhost:3000/" rel="noopener noreferrer" target="_self">
+    //   Home
+    // </a>
+
     key: "Home",
     icon: <FaHome />,
   },
   {
-    label: <Link to="/news">news</Link>,
+    label: (
+      <NavLink
+        to="/news"
+        className="flex items-center"
+        style={({ isActive }) => {
+          return {
+            color: isActive ? "white" : " ",
+
+          };
+        }}
+      >
+        <IoNewspaper className="mr-1" />
+        News
+      </NavLink>
+    ),
     key: "news",
-    icon: <IoNewspaper />,
+    icon: "",
   },
   {
     label: (
