@@ -11,12 +11,12 @@ import ParallaxContent2 from "./components/ParallaxContent2";
 import MainTopics from "./components/MainTopics";
 import { parallaxData } from "./constants/parallax";
 import Tools from "./components/Tools";
-import React from "react";
-
+import ProgressBar from "./components/ProgressBar";
 const App: React.FC = () => {
   return (
     <>
-      <div className=" ">
+      <div>
+      <ProgressBar />
         <Tools />
         <div className="background-overlay bg-slate-400">
           <Video />

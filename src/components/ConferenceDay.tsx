@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { VariantsLeft, VariantsRight } from "../assets/Motions/HomePageMotion";
+
 type ConferenceDayProps = {
   day: number;
   month: number;
 };
+
 const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
   const [state, setState] = useState({
     seconds: 0,
@@ -52,25 +56,55 @@ const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
 
   return (
     <div className=" absolute top-44 left-40 text-white flex ">
-      <span className="font-bold text-[20px] justify-start ">
+      <motion.span
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={VariantsLeft}
+        className="font-bold text-[20px] justify-start "
+      >
         Conference starts in:
-      </span>
-      <div className="ml-16 -mt-4">
+      </motion.span>
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={VariantsLeft}
+        className=" group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2 border-red-500 p-5 rounded-e-full rounded-b-full "
+      >
         <span className="font-bold text-[40px]">{state.days}</span>{" "}
         <span className="font-bold text-[24px]">Days</span>
-      </div>
-      <div className="ml-16 -mt-4">
+      </motion.div>
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={VariantsLeft}
+        className=" group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2 border-red-500 p-5 rounded-e-full rounded-t-full"
+      >
         <span className="font-bold text-[40px]">{state.hours}</span>{" "}
         <span className="font-bold text-[24px]">Hours</span>
-      </div>
-      <div className="ml-16 -mt-4">
+      </motion.div>
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.6 }}
+        variants={VariantsRight}
+        className="group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2 border-red-500 p-5 rounded-s-full rounded-b-full"
+      >
         <span className="font-bold text-[40px]">{state.minutes}</span>{" "}
         <span className="font-bold text-[24px]">Minutes</span>
-      </div>
-      <div className="ml-16 -mt-4">
+      </motion.div>
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.6 }}
+        variants={VariantsRight}
+        className="group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2 border-red-500 p-5 rounded-t-full rounded-s-full"
+      >
         <span className="font-bold text-[40px]">{state.seconds}</span>{" "}
         <span className="font-bold text-[24px]">Seconds</span>
-      </div>
+      </motion.div>
     </div>
   );
 };

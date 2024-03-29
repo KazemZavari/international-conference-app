@@ -1,19 +1,27 @@
 import Divider from "./Divider";
 import ColorDiv from "./ColorDiv";
 import { mainTopicsItems } from "../constants/mainTopics";
+import { motion } from "framer-motion";
+import { VariantsUp } from "../assets/Motions/HomePageMotion";
 const MainTopics = () => {
   return (
     <div className="bg-[#114b5f] pb-10 inlin-flex justify-center relative overflow-hidden">
       <ColorDiv />
       <Divider borderText="Main Topics of The Conference" />
-      <div className="mt-[0.5rem] grid grid-cols-4 justify-evenly gap-5 mx-28  ">
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={VariantsUp}
+        className="mt-[0.5rem] grid grid-cols-4 justify-evenly gap-5 mx-28  "
+      >
         {mainTopicsItems.map((item) => (
           <div className="col-span-1 bg-white h-[26rem] w-[100%] rounded-3xl mt-8 relative overflow-hidden ">
             <img className="h-[16.5rem] rounded-t-2xl" src={item.img} />
             <div className="group">
               <div
                 className="group-hover:animate-in group-hover:slide-in-from-bottom-[4rem] 
-                 group-hover:duration-700 "
+                 group-hover:duration-700"
               >
                 <div
                   className="bg-white/30 w-[100%] hidden group-hover:block group-hover:absolute
@@ -41,7 +49,7 @@ const MainTopics = () => {
             </button>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

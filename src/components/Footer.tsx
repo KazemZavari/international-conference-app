@@ -1,13 +1,25 @@
 import logo from "../assets/img/sharif-logo-1.png";
 import { GoArrowRight } from "react-icons/go";
 import Social from "./Social";
+import { motion } from "framer-motion";
+import {
+  VariantsUp,
+  VariantsLeft,
+  VariantsRight,
+} from "../assets/Motions/HomePageMotion";
 const Footer = () => {
   return (
     <div
       className="h-[21rem] w-[100%] bg-[#114b5f] grid grid-cols-7 pt-16 px-10 gap-2
                     overflow-hidden relative"
     >
-      <div className="col-span-2">
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={VariantsLeft}
+        className="col-span-2"
+      >
         <div className="logo">
           <img className="w-44 mx-auto" src={logo} alt="logo" />
           <h3 className="mx-auto text-white text-[1.4rem] font-semibold">
@@ -17,9 +29,15 @@ const Footer = () => {
         <span className="absolute left-3 bottom-5 text-white opacity-80 text-[.9rem]">
           © 2024 All Rights Reserved{" "}
         </span>
-      </div>
+      </motion.div>
 
-      <div className="col-span-3 text-left ml-12 text-white">
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={VariantsUp}
+        className="col-span-3 text-left ml-12 text-white"
+      >
         <h3 className="text-[1.5rem]">
           <strong>ICERS</strong>2024
         </h3>
@@ -29,8 +47,14 @@ const Footer = () => {
         </p>
 
         <Social />
-      </div>
-      <div className="col-span-2  text-left text-white">
+      </motion.div>
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={VariantsRight}
+        className="col-span-2  text-left text-white"
+      >
         <h3 className="text-[1.2rem] font-bold">Stay in Touch</h3>
         <form method="post" className="mt-5">
           <input
@@ -55,7 +79,7 @@ const Footer = () => {
             </button>
           </div>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 };

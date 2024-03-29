@@ -1,8 +1,15 @@
 import { ParallaxItems } from "../constants/parallax";
-
+import { VariantsUp } from "../assets/Motions/HomePageMotion";
+import { motion } from "framer-motion";
 const ParallaxContent1 = () => {
   return (
-    <div className="mt-[4.2rem] grid grid-cols-2 justify-items-center gap-8 px-28">
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={VariantsUp}
+      className="mt-[4.2rem] grid grid-cols-2 justify-items-center gap-8 px-28"
+    >
       {ParallaxItems.map((item) => (
         <div
           key={item.title}
@@ -13,7 +20,7 @@ const ParallaxContent1 = () => {
           <h4 className="font text-[1.5rem]">{item.date}</h4>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

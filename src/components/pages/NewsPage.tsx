@@ -3,14 +3,17 @@ import SinglePageLayout from "../../layouts/SinglePageLayout";
 import Divider from "../Divider";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import { newsPageItems } from "../../constants/newsPageItems";
+import ProgressBar from "../ProgressBar";
 const NewsPage = () => {
   return (
     <SinglePageLayout>
+      <ProgressBar />
+
       <div className="h-auto pb-10  ">
         <Divider
           borderText={"News Page"}
           textColor="text-white"
-          borderWidth="w-[45%]"
+          borderWidth="w-[33%]"
         />
 
         <div className="grid grid-cols-3 px-16  gap-10 w-[80%] mx-auto mt-10">

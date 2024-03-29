@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { VariantsDown } from "../assets/Motions/HomePageMotion";
+
 type dividerProps = {
   borderText: string;
   borderWidth?: string;
@@ -12,7 +15,11 @@ const Divider: React.FC<dividerProps> = ({
   textColor,
 }) => {
   return (
-    <div
+    <motion.div
+    initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={VariantsDown}
       className={`relative inline-flex mt-[2rem] py-[1.2rem] items-center w-[60%] ${borderWidth} `}
     >
       <div
@@ -26,7 +33,7 @@ const Divider: React.FC<dividerProps> = ({
       <div
         className={`flex-grow border-t ${borderColor} border-[.1rem]`}
       ></div>
-    </div>
+    </motion.div>
   );
 };
 

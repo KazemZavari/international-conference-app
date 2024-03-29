@@ -1,13 +1,20 @@
 import Divider from "./Divider";
 import NewsSwiper from "./NewsSwiper";
+import { motion } from "framer-motion";
+import { VariantsUp } from "../assets/Motions/HomePageMotion";
 const News = () => {
   return (
     <div className="bg-[#114b5f] h-[33rem]">
       <Divider borderText="News" borderColor="border-white" />
-      <div className="flex justify-center bg-gradient-to-t from-gray-200 to-[#114b5f] 
+      <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={VariantsUp}
+       className="flex justify-center bg-gradient-to-t from-gray-200 to-[#114b5f] 
                     h-[25rem] mt-[3rem]">
         <NewsSwiper />
-      </div>
+      </motion.div>
     </div>
   );
 };
