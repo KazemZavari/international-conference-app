@@ -2,12 +2,14 @@ import "rc-menu/assets/index.css";
 import Logo from "./Logo";
 import Menuu from "./Menuu";
 import { motion } from "framer-motion";
+import ScrollDown from "./ScrollDown";
 import { VariantsDown, VariantsUp } from "../assets/Motions/HomePageMotion";
 const Navbar = () => {
   return (
     <>
       <nav className="h-[100vh] z-1 ">
         <div className="topContent flex justify-start w-[90%] pt-2 ">
+        <ScrollDown />
           <Logo />
           <motion.div
            initial="offscreen"

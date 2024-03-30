@@ -38,20 +38,20 @@ export const VariantsLeft: Variants = {
         transition: {
             type: "slide",
             duration: 0.6,
-            delay: .2
+            delay: .1
         },
     },
 };
 export const VariantsRight: Variants = {
     offscreen: {
-        x: 150,
+        x: 180,
     },
     onscreen: {
         x: 0,
         transition: {
             type: "slide",
             duration: 0.6,
-            delay: .2 
+            delay: .1
         },
     },
 };
@@ -63,7 +63,7 @@ export const VariantsLogo: Variants = {
         x: 0,
         transition: {
             type: "slide",
-            duration: 1.5,
+            duration: .6,
             delay: 0
         },
     },

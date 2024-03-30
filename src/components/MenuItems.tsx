@@ -31,7 +31,6 @@ export const items: MenuProps["items"] = [
         style={({ isActive }) => {
           return {
             color: isActive ? "white" : " ",
-
           };
         }}
       >
@@ -142,8 +141,21 @@ export const items: MenuProps["items"] = [
     ],
   },
   {
-    label: "Contact us",
+    label: (
+      <NavLink
+        to="/contact-us"
+        className="flex items-center"
+        style={({ isActive }) => {
+          return {
+            color: isActive ? "white" : " ",
+          };
+        }}
+      >
+        <MailOutlined className="mr-1" />
+        Contact us
+      </NavLink>
+    ),
     key: "ContactPage",
-    icon: <MailOutlined />,
+    icon: "",
   },
 ];

@@ -15,7 +15,7 @@ import ProgressBar from "./components/ProgressBar";
 const App: React.FC = () => {
   return (
     <>
-      <div>
+      <div className="max-w-[1600px]">
         <ProgressBar />
         <Tools />
         <div className="background-overlay bg-slate-400">

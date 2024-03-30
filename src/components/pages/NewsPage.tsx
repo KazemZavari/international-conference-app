@@ -69,7 +69,7 @@ const NewsPage = () => {
                          from-pink-500 to-violet-600 font-semibold"
         >
           Load More News
-          <BsChevronDoubleDown className="ml-5 mt-1 group-hover:animate-bounce text-[1.2rem] group-hover:text-[1.6rem] font-bold " />
+          <BsChevronDoubleDown className="ml-5 mt-1 animate-bounce text-[1.2rem] font-bold " />
         </button>
       </SinglePageLayout>
     </>

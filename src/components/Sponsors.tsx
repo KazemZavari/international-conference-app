@@ -3,43 +3,29 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import Divider from "./Divider";
 import { sponsoreItems } from "../constants/sponsors";
-
-const swiperSliderClasses =
-  "flex align-middle justify-center bg-transparent pt-[1rem] ";
+import ScrollCarousel from "scroll-carousel-react";
 const sipersliderImgClasses =
   "block rounded-2xl mx-auto self-center h-28 w-[11rem] hover:scale-[1.1] duration-500";
 
 const Sponsors = () => {
   return (
-    <div className="h-[20rem] ">
+    <div className="  ">
       <Divider
         borderText="Sponsors"
         textColor="text-black"
         borderColor="border-black"
       />
-      <Swiper
-        modules={[Navigation, Autoplay]}
-        slidesPerView={5}
-        loop={true}
-        grabCursor={true}
-        centeredSlides={true}
-        speed={5000}
-        autoplay={{
-          delay: 10,
-          pauseOnMouseEnter: true,
-        }}
-        className=" w-[80%] flex justify-center bg-transparent mt-4 "
-      >
+      <ScrollCarousel autoplay autoplaySpeed={8} speed={7}>
         {sponsoreItems.map((sponsore) => (
-          <SwiperSlide className={swiperSliderClasses}>
+          <div key={sponsore.title} className="rounded h-36 w-48">
             <img
               className={sipersliderImgClasses}
               src={sponsore.icon}
               alt={sponsore.title}
             />
-          </SwiperSlide>
+          </div>
         ))}
-      </Swiper>
+      </ScrollCarousel>
     </div>
   );
 };
