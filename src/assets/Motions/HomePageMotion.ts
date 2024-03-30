@@ -55,3 +55,16 @@ export const VariantsRight: Variants = {
         },
     },
 };
+export const VariantsLogo: Variants = {
+    offscreen: {
+        x: -210,
+    },
+    onscreen: {
+        x: 0,
+        transition: {
+            type: "slide",
+            duration: 1.5,
+            delay: 0
+        },
+    },
+};

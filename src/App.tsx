@@ -16,7 +16,7 @@ const App: React.FC = () => {
   return (
     <>
       <div>
-      <ProgressBar />
+        <ProgressBar />
         <Tools />
         <div className="background-overlay bg-slate-400">
           <Video />

@@ -10,7 +10,7 @@ import pic11 from "../assets/sponsors-logo/11.png"
 import pic12 from "../assets/sponsors-logo/12.png"
 import pic13 from "../assets/sponsors-logo/13.png"
 
-export const itemsr = [
+export const sponsoreItems = [
   {
     "icon": pic3,
     "title": "pic3",

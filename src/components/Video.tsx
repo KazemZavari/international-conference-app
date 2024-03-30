@@ -5,7 +5,7 @@ const Video = () => {
     <>
    
    
-      <div className="absolute -z-10 h-[100vh] overflow-hidden]">
+      <div className="absolute -z-10 h-[100vh] overflow-hidden">
         {/* <video
         className="w-[100vw]"
         autoPlay

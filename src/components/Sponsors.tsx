@@ -2,7 +2,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import Divider from "./Divider";
-import { itemsr } from "../constants/sponsorsLogo";
+import { sponsoreItems } from "../constants/sponsors";
 
 const swiperSliderClasses =
   "flex align-middle justify-center bg-transparent pt-[1rem] ";
@@ -23,18 +23,19 @@ const Sponsors = () => {
         loop={true}
         grabCursor={true}
         centeredSlides={true}
+        speed={5000}
         autoplay={{
-          delay: 4000,
+          delay: 10,
           pauseOnMouseEnter: true,
         }}
         className=" w-[80%] flex justify-center bg-transparent mt-4 "
       >
-        {itemsr.map((item) => (
+        {sponsoreItems.map((sponsore) => (
           <SwiperSlide className={swiperSliderClasses}>
             <img
               className={sipersliderImgClasses}
-              src={item.icon}
-              alt={item.title}
+              src={sponsore.icon}
+              alt={sponsore.title}
             />
           </SwiperSlide>
         ))}

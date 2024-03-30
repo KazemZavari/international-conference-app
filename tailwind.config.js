@@ -19,7 +19,11 @@ export default {
       // },
     },
 
-    extend: {},
+    extend: {
+      transitionDuration: {
+        1500: "1500ms",
+      },
+    },
   },
   plugins: [require("tailwindcss-animate")],
 };
