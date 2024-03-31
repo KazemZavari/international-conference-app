@@ -1,21 +1,21 @@
-import "./App.css";
-import Video from "./components/Video";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import News from "./components/News";
-import CountDown from "./components/CountDown";
-import Sponsors from "./components/Sponsors";
-import ParallaxProvider from "./components/ParallaxProvider";
-import ParallaxContent1 from "./components/ParallaxContent1";
-import ParallaxContent2 from "./components/ParallaxContent2";
-import MainTopics from "./components/MainTopics";
-import { parallaxData } from "./constants/parallax";
-import Tools from "./components/Tools";
-import ProgressBar from "./components/ProgressBar";
+import "../../App.css";
+import Video from "../Video";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
+import News from "../News";
+import CountDown from "../CountDown";
+import Sponsors from "../Sponsors";
+import ParallaxProvider from "../ParallaxProvider";
+import ParallaxContent1 from "../ParallaxContent1";
+import ParallaxContent2 from "../ParallaxContent2";
+import MainTopics from "../MainTopics";
+import { parallaxData } from "../../constants/parallax";
+import Tools from "../Tools";
+import ProgressBar from "../ProgressBar";
 const App: React.FC = () => {
   return (
     <>
-      <div className="max-w-[1600px]">
+      
         <ProgressBar />
         <Tools />
         <div className="background-overlay bg-slate-400">
@@ -39,7 +39,7 @@ const App: React.FC = () => {
         </ParallaxProvider>
         <Sponsors />
         <Footer />
-      </div>
+     
     </>
   );
 };

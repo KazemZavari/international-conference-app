@@ -10,12 +10,12 @@ const ScrollDown = () => {
       viewport={{ once: true, amount: 0.1 }}
       variants={VariantsRight}
         className="group text-white hover:text-yellow-500 font-semibold text-[1.2rem] 
-                    inline-flex group absolute right-32 top-16 mx-auto items-center bg-black rounded-md px-6 py-1
-                    hover:bg-transparent border-[1px] border-yellow-500 pb-2 hover:border-white
+                    inline-flex group absolute right-32 top-[4rem] 2xl:top-[4.5rem] mx-auto items-center bg-black/70 rounded-md px-6 py-3
+                    hover:bg-transparent border-[1px] border-yellow-500 pb-3 hover:border-white
                      duration-300 "
         href="#start"
       >
-        start
+        Let's go
         <FaAnglesDown className="text-white group-hover:text-orange-500 animate-bounce ml-2 mt-2 " />
       </motion.a>
 

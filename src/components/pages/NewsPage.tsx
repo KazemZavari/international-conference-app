@@ -1,31 +1,35 @@
 import { Link } from "react-router-dom";
-import SinglePageLayout from "../../layouts/SinglePageLayout";
+import PageLayout from "../../layouts/PageLayout";
 import Divider from "../Divider";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import { newsPageItems } from "../../constants/newsPageItems";
 import Logo from "../Logo";
 import CardGradient from "../CardGradient";
 import { ScrollProgress } from "../ScrollProgress";
+import { useEffect } from "react";
 const NewsPage = () => {
+  useEffect(() => {
+     
+  });
   return (
     <>
       <Logo />
-      <SinglePageLayout>
+      <PageLayout>
         <ScrollProgress position="left" height={9} smoothness={true} />
         <div className="h-auto pb-10  ">
           <Divider
             borderText={"News Page"}
-            textColor="text-white"
-            borderWidth="w-[33%]"
+            // textColor="text-white"
+            borderWidth="w-[30%]"
           />
 
-          <div className="grid grid-cols-3 px-16  gap-10 w-[80%] mx-auto mt-10">
+          <div className="grid grid-cols-3 px-16  gap-10 w-[80%] mx-auto mt-10 ">
             {newsPageItems.map((item) => (
               <>
                 <div
                   key={item.title}
                   className="group col-span-1 rounded-lg shadow-[0px_0px_15px_-10px_white] hover:-translate-y-1 duration-150
-                         hover:shadow-[0px_0px_25px_-15px_white] cursor-pointer w-[18rem]"
+                         hover:shadow-[0px_0px_25px_-15px_white] cursor-pointer w-[18rem] z-[100]"
                 >
                   <div className=" group-hover:hidden duration-500">
                     {" "}
@@ -35,7 +39,7 @@ const NewsPage = () => {
                   <div className="bg-[#11152c]  rounded-lg overflow-hidden">
                     <img
                       className="w-[100%] h-[12rem] rounded-lg opacity-80 group-hover:opacity-100
-                group-hover:scale-105 duration-1000"
+                      group-hover:scale-105 duration-1000"
                       alt="example"
                       src={item.img}
                     />
@@ -71,7 +75,7 @@ const NewsPage = () => {
           Load More News
           <BsChevronDoubleDown className="ml-5 mt-1 animate-bounce text-[1.2rem] font-bold " />
         </button>
-      </SinglePageLayout>
+      </PageLayout>
     </>
   );
 };

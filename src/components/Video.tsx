@@ -1,4 +1,4 @@
-// import video from "../assets/bgVideo/earth-1.mp4";
+import video from "../assets/bgVideo/earth-1.mp4";
 import pic from "../assets/img/pic-1.jpg";
 const Video = () => {
   return (

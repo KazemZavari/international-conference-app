@@ -3,6 +3,9 @@ import Menuu from "../Menuu";
 import Footer from "../Footer";
 import Player from "../Player";
 // import video from "../../assets/bgVideo/3.mov";
+import bggridlighter from "../../assets/img/bg-grid-lighter.svg";
+import Menuu2 from "../Menuu2";
+
 const NewsSinglePage: React.FC = () => {
   return (
     <>
@@ -10,12 +13,20 @@ const NewsSinglePage: React.FC = () => {
         height={"h-[45vh]"}
         backgroundImage="bg-[url('./assets/img/pic-1.jpg')]"
       >
-        <div className="pt-16 ">
+        <div className="pt-16 flex justify-center">
           {" "}
-          <Menuu />
+          <Menuu2 />
         </div>
       </ParallaxProvider>
       <div className=" mx-auto text-center h-[22rem] bg-[#0d1224] pl-[22rem] 2xl:pl-[32rem] pr-20 text-white line-clamp-4 ">
+      <img
+            alt="background"
+            width={950}
+            height={650}
+            className="absolute -left-[.rem] "
+            // style="color:transparent"
+            src={bggridlighter}
+          />
         <h1 className="uppercase text-white pt-6 pb-3 pl-2 font-semibold">
           news Title
         </h1>

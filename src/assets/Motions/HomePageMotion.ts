@@ -44,7 +44,7 @@ export const VariantsLeft: Variants = {
 };
 export const VariantsRight: Variants = {
     offscreen: {
-        x: 180,
+        x: 120,
     },
     onscreen: {
         x: 0,

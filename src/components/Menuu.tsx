@@ -7,7 +7,6 @@ import { VariantsDown } from "../assets/Motions/HomePageMotion";
 
 const Menuu: React.FC = () => {
   const [current, setCurrent] = useState("mail");
-
   const onClick: MenuProps["onClick"] = (e) => {
     console.log("click ", e);
     setCurrent(e.key);

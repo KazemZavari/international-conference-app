@@ -100,12 +100,21 @@ export const items: MenuProps["items"] = [
   },
   {
     label: (
-      <a href="#" target="_self" rel="noopener noreferrer">
-        Community
-      </a>
-    ),
-    key: "alipay",
-    icon: <FaUsers />,
+    <NavLink
+    to="/information"
+    className="flex items-center"
+    style={({ isActive }) => {
+      return {
+        color: isActive ? "white" : " ",
+      };
+    }}
+  >
+    <IoNewspaper className="mr-1" />
+    information
+  </NavLink>
+),
+    key: "information",
+    icon: "",
   },
   {
     label: (

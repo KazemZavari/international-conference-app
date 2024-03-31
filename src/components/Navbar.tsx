@@ -17,7 +17,7 @@ const Navbar = () => {
            viewport={{ once: true, amount: 0.1 }}
            variants={VariantsDown}
           className="content pt-10 text-left text-amber-400 text-[1rem] font-bold pl-[15.7rem]
-                     pb-10 2xl:ml-36">
+                     pb-10 2xl:ml-36  ">
             <h3 className="">
               International Conference on Energy Resilience, and Sustainability
             </h3>
