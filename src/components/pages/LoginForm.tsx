@@ -15,16 +15,32 @@ const LoginForm = () => {
   return (
     <form
       onSubmit={onSubmit}
-      className="bg-sky-700/10 rounded-3xl p-10 w-[30rem] mx-auto z-[100] font-OpenSansRegular 
-      border-[1px] border-yellow-400 shadow-[0px_0px_40px_-10px_white]"
+      className="bg-black/80 rounded-3xl p-10 w-[30rem] mx-auto z-[100] font-OpenSansRegular 
+      border-[1px] mt- border-yellow-400 shadow-[0px_0px_40px_-10px_white]"
     >
       <div className="space-y-12  ">
         <div className="border-b border-gray-900/10 ">
-          <div className="grid grid-cols-2 gap-x-10 gap-y-5 mx-auto ">
-          <div className="col-span-full ">
-                <h1 className="font-bold text-3xl text-center text-yellow-500">Sign in </h1>
-              </div>
-            <div className="col-span-full">
+          <div className="grid grid-cols-2 gap-x-10 gap-y-5 mx-auto items-center relative">
+            <div
+              className="flex items-center justify-center absolute -top-20 left-[4.9rem]  
+             bg-black/80 border-[1px] rounded-lg"
+            >
+              <Link
+                to="/loginPage"
+                className="font-bold text-3xl text-center text-yellow-500 hover:text-white px-5
+              bg-red-500/70  py-3 rounded-l-lg duration-500 "
+              >
+                Sign in{" "}
+              </Link>
+              <Link
+                to="/registerPage"
+                className="font-bold text-3xl text-center text-yellow-500 hover:text-white px-5
+              hover:bg-red-800/70   py-3 rounded-r-lg duration-500 "
+              >
+                Sign up{" "}
+              </Link>
+            </div>
+            <div className="col-span-full mt-8">
               <label
                 htmlFor="email"
                 className="text-left block font-medium leading-6 text-gray-300"
