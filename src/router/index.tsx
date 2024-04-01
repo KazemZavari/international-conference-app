@@ -6,6 +6,8 @@ import Information from "../components/pages/Information";
 import ContacrForm from "../components/pages/ContacrForm";
 import Gallery from "../components/pages/Gallery";
 import MainLayout from "../layouts/MainLayout";
+import LoginPage from "../components/pages/LoginPage";
+import RegisterPage from "../components/pages/RegisterPage";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +39,15 @@ export const router = createBrowserRouter([
         path: "/information",
         element: <Information />,
       },
+      {
+        path: "/loginPage",
+        element: <LoginPage />,
+      },
+      {
+        path: "/registerPage",
+        element: <RegisterPage />,
+      },
+      
     ],
   },
   // {

@@ -3,7 +3,7 @@ import Video from "../Video";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import News from "../News";
-import CountDown from "../CountDown";
+import CountDown from "../HomeSections/CountDown";
 import Sponsors from "../Sponsors";
 import ParallaxProvider from "../ParallaxProvider";
 import ParallaxContent1 from "../ParallaxContent1";
@@ -21,6 +21,7 @@ const App: React.FC = () => {
         <div className="background-overlay bg-slate-400">
           <Video />
           <Navbar />
+          
         </div>
         <CountDown />
         <ParallaxProvider

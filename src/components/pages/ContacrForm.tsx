@@ -2,7 +2,7 @@ import Divider from "../Divider";
 import GridLight from "../GridLight";
 import Menuu2 from "../Menuu2";
 import TailwindForm from "./TailwindForm";
-import { Popover, Transition } from "@headlessui/react";
+
 const ContacrForm = () => {
   return (
     <>
@@ -10,12 +10,11 @@ const ContacrForm = () => {
         <div className="">
           <GridLight />
         </div>
-        <div className="flex justify-center pt-20">
+        <div className="flex justify-center pt-20 z-[100]">
           <Menuu2 />
           <Divider borderText={"Contact Form"} />
         </div>
-
-        <div className=" mx-auto mt-5 z-[1200] pb-20  ">
+        <div className=" mx-auto mt-5 z-[1200]   ">
           <TailwindForm />
         </div>
       </div>

@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "roboto";
+  src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "RalewayBold";
+  src: url("./assets/fonts/Raleway/static/Raleway-Bold.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/Raleway/Raleway-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("./assets/fonts/Open_Sans/static/OpenSans-Light.ttf");
+}
+@font-face {
+  font-family: "OpenSans-Medium";
+  src: url("./assets/fonts/Open_Sans/static/OpenSans_SemiCondensed-Regular.ttf");
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("./assets/fonts/Open_Sans/static/OpenSans_Condensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Oswald-Medium";
+  src: url("./assets/fonts/Oswald/static/Oswald-Medium.ttf");
+}
+@font-face {
+  font-family: "Oswald-Bold";
+  src: url("./assets/fonts/Oswald/static/Oswald-Bold.ttf");
+}
+@font-face {
+  font-family: "Oswald-Regular";
+  src: url("./assets/fonts/Oswald/static/Oswald-Regular.ttf");
+}
+
 #root {
   margin: 0 auto;
   padding: 0;
@@ -16,6 +56,6 @@
   transition: 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
-.title:hover .cartContent{
- display: block;
+.title:hover .cartContent {
+  display: block;
 }

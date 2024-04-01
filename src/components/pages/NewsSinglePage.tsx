@@ -21,19 +21,18 @@ const NewsSinglePage: React.FC = () => {
       <div className=" mx-auto text-center h-[22rem] bg-[#0d1224] pl-[22rem] 2xl:pl-[32rem] pr-20 text-white line-clamp-4 ">
       <img
             alt="background"
-            width={950}
-            height={650}
-            className="absolute -left-[.rem] "
+
+            className="absolute w-[900px] "
             // style="color:transparent"
             src={bggridlighter}
           />
         <h1 className="uppercase text-white pt-6 pb-3 pl-2 font-semibold">
           news Title
         </h1>
-        <div className="mx-auto">
-        <p className="leading-7 text-justify indent-6 2xl:max-w-[900px]">
+        <div className="mx-auto  ">
+        <p className="leading-7 text-justify indent-6 2xl:max-w-[900px] pb-2 ">
           {" "}
-          <strong>
+          <strong >
             description news description description news description news
             description description description description news description
             news description description news description description news

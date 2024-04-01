@@ -1,5 +1,4 @@
 import React from "react";
-import Menuu from "../components/Menuu";
 import Tools from "../components/Tools";
 import Footer from "../components/Footer";
 import GridLight from "../components/GridLight";

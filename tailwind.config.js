@@ -2,38 +2,28 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    //   screens: {
-    //     'sm': '575px',
-    //     // => @media (min-width: 640px) { ... }
-
-    //     'md': '768px',
-    //     // => @media (min-width: 768px) { ... }
-
-    //     'lg': '1024px',
-    //     // => @media (min-width: 1024px) { ... }
-
-    //     'xl': '1280px',
-    //     // => @media (min-width: 1280px) { ... }
-
-    //     '2xl': '1536px',
-    //     // => @media (min-width: 1536px) { ... }
-    //   }
-    // },
-    // screens: {
-    //   xs: "320px",
-    //   sm: "640px",
-    //   md: "768px",
-    //   lg: "1024px",
-    //   xl: "1280px",
-    //   "2xl": "1336px",
-    // },
     screens: {
-      "2xl": { max: "1535px" },
-      "xl": { max: "1440px" },
-      "lg": { max: "1023px" },
-      "md": { max: "767px" },
-      "sm": { max: "600px"},
-      "xs": { max: "320px" },
+      "2xl": { max: "1550px" },
+      xl: { max: "1380px" },
+      lg: { max: "1023px" },
+      md: { max: "767px" },
+      sm: { max: "600px" },
+      xs: { max: "320px" },
+    },
+    fontFamily: {
+      Roboto: ["roboto"],
+      
+      Raleway: ["Raleway"],
+      RalewayBold: ["RalewayBold"],
+
+      OpenSansLight: ["OpenSans-Light"],
+      OpenSansMedium: ["OpenSans-Medium"],
+      OpenSansRegular: ["OpenSans-Regular"],
+
+      OswaldMedium: ["Oswald-Medium"],
+      OswaldBold: ["Oswald-Bold"],
+      OswaldRegular: ["Oswald-Regular"],
+
     },
   },
 
