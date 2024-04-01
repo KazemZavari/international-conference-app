@@ -1,9 +1,8 @@
 import { FormProvider, useForm } from "react-hook-form";
-import video from "../../assets/bgVideo/3.mov";
-import pic from "../../assets/img/pic-7.jpg"
+import { FaArrowAltCircleLeft } from "react-icons/fa";
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Menuu2 from "../Menuu2";
 
 const RegisterForm = () => {
   const methods = useForm();
@@ -16,21 +15,14 @@ const RegisterForm = () => {
   });
   return (
     <>
-    <div>
-    {/* <div className="absolute -z-10 h-[] ">
-        <video
-          className="w-[100vw]"
-          autoPlay
-          muted
-          playsInline
-          loop
-          src={video}
-        ></video>
-        <img src={pic} />
-      </div> */}
-      <div
-        className="-z-[100] w-[100%] bg-[url('./assets/img/pic-7.jpg')] bg-cover bg-center"
-      >
+      <div className="-z-[100] w-[100%] bg-[url('./assets/img/pic-7.jpg')] bg-cover bg-center">
+        <Link to="/">
+          <FaArrowAltCircleLeft
+            size={40}
+            className="fixed left-20 top-10 text-white animate-pulse hover:animate-none "
+          />
+        </Link>
+
         <div className="py-28">
           <form
             onSubmit={onSubmit}
@@ -179,8 +171,6 @@ const RegisterForm = () => {
           </form>
         </div>
       </div>
-    </div>
-     
     </>
   );
 };
