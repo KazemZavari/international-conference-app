@@ -1,48 +1,39 @@
-import { useForm } from "react-hook-form";
-
+import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import FormTabs from "./FormTabs";
+import { inputCSS } from "./LoginForm";
 
+type inputProps = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  remember: boolean;
+};
 const RegisterForm: React.FC = () => {
-  const methods = useForm();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<inputProps>();
+  const onSubmit: SubmitHandler<inputProps> = (data) =>
+    alert(JSON.stringify(data));
   const [success, setSuccess] = useState(false);
 
-  const onSubmit = methods.handleSubmit((data) => {
-    alert("success");
-    methods.reset();
-    setSuccess(true);
-  });
   return (
-    <div className="py-28">
+    <div className="py-20 sm:px-5">
       <form
-        onSubmit={onSubmit}
-        className="bg-black/80 rounded-3xl p-10 w-[30rem] mx-auto z-[100] font-RalewayBold 
-        border-[2px]  border-yellow-400 shadow-[0px_0px_40px_-10px_white]"
+        onSubmit={handleSubmit(onSubmit)}
+        className="bg-black/80 rounded-3xl p-10 md:p-6 w-[30rem] md:w-[23rem] sm:w-[20rem] xs:w-[18.5rem]
+         mx-auto font-RalewayBold border-[2px] border-yellow-400 shadow-[0px_0px_40px_-10px_white]"
       >
-        <div className="space-y-12">
+        <div className="space-y-12 md:space-y-7">
           <div className="border-b border-gray-900/10 ">
-            <div className="grid grid-cols-2 gap-x-10 gap-y-5 relative  ">
-              <div
-                className="flex items-center justify-center absolute -top-20 left-[4.7rem]  
-                        bg-black/80 border-[2px] border-yellow-400 rounded-lg "
-              >
-                <Link
-                  to="/loginPage"
-                  className="font-bold text-2xl text-center text-yellow-500 hover:text-white px-5
-              hover:bg-red-900/70 py-3 rounded-l-lg duration-500 "
-                >
-                  Sign in{" "}
-                </Link>
-                <Link
-                  to="/registerPage"
-                  className="font-bold text-2xl text-center text-yellow-500 hover:text-white
-               px-5
-             bg-red-500/70  py-3 rounded-r-lg duration-500 "
-                >
-                  Sign up{" "}
-                </Link>
-              </div>
-              <div className="col-span-full mt-8">
+            <div className="grid grid-cols-2 gap-x-10 gap-y-5 md:gap-y-2 sm:space-y-1 relative  ">
+              <FormTabs />
+              <div className="col-span-full mt-8 sm:pt-6 ">
                 <label
                   htmlFor="first-name"
                   className="text-left block font-medium leading-6 text-gray-300"
@@ -52,14 +43,20 @@ const RegisterForm: React.FC = () => {
                 <div>
                   <input
                     id="first-name"
-                    name="first-name"
+                    {...register("firstName", {
+                      required: "This is required",
+                      minLength: { value: 3, message: "min lenght is 3" },
+                    })}
                     type="text"
                     autoComplete="text"
                     placeholder="First name"
-                    className="block w-full rounded-md border-0 py-2 text-gray-200 shadow-sm font-Raleway
-                 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 bg-gray-300/10
-                  focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6 z-[100]"
+                    className={inputCSS}
                   />
+                  {errors && (
+                    <span className="text-red-600 flex text-left">
+                      {errors.firstName?.message}
+                    </span>
+                  )}
                 </div>
               </div>
               <div className="col-span-full">
@@ -72,13 +69,11 @@ const RegisterForm: React.FC = () => {
                 <div>
                   <input
                     id="last-name"
-                    name="last-name"
+                    {...register("lastName")}
                     type="text"
                     autoComplete="text"
                     placeholder="Lirst name"
-                    className="block w-full rounded-md border-0 py-2 text-gray-200 shadow-sm font-Raleway 
-                 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 bg-gray-300/10
-                  focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6 z-[100]"
+                    className={inputCSS}
                   />
                 </div>
               </div>
@@ -92,14 +87,19 @@ const RegisterForm: React.FC = () => {
                 <div>
                   <input
                     id="email"
-                    name="email"
+                    {...register("email", {
+                      required: "This is required",
+                    })}
                     type="email"
                     autoComplete="email"
                     placeholder="Email address"
-                    className="block w-full rounded-md border-0 py-2 text-gray-200 shadow-sm font-Raleway
-                  ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 bg-gray-300/10
-                  focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6 z-[100]"
+                    className={inputCSS}
                   />
+                  {errors && (
+                    <span className="text-red-600 flex text-left">
+                      {errors.email?.message}
+                    </span>
+                  )}
                 </div>
               </div>
               <div className="col-span-full">
@@ -109,35 +109,22 @@ const RegisterForm: React.FC = () => {
                 >
                   Password
                 </label>
-                <div className="col-span-full flex">
+                <div className="col-span-full">
                   <input
                     type="password"
-                    name="password"
+                    {...register("password", {
+                      required: "This is required",
+                      minLength: { value: 6, message: "min lenght is 6" },
+                    })}
                     id="password"
                     placeholder="Password"
-                    className="block w-full rounded-md border-0 py-2 text-gray-200 shadow-sm font-Raleway
-                 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 bg-gray-300/10
-                  focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6 z-[100]"
+                    className={inputCSS}
                   />
-                </div>
-              </div>
-              <div className="col-span-full">
-                <label
-                  htmlFor=" address"
-                  className="block text-left leading-6 text-gray-300"
-                >
-                  Confirm password
-                </label>
-                <div className="col-span-full flex">
-                  <input
-                    type="password"
-                    name="confirm-password"
-                    id="confirm-password"
-                    placeholder=" Confirm password"
-                    className="block w-full rounded-md border-0 py-2 text-gray-200 shadow-sm font-Raleway
-                 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 bg-gray-300/10
-                  focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6 z-[100]"
-                  />
+                   {errors && (
+                    <span className="text-red-600 flex text-left">
+                      {errors.password?.message}
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
@@ -145,14 +132,13 @@ const RegisterForm: React.FC = () => {
         </div>
 
         <div className="mt-6 flex items-center justify-end">
-          <button
+          <input
+            value="sign up"
             type="submit"
             className="w-full rounded-md bg-indigo-600 px-5 py-2 text-lg font-semibold
              text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2
               focus-visible:outline-offset-2 focus-visible:outline-indigo-600 font-Raleway"
-          >
-            sign up
-          </button>
+          />
         </div>
         <span className="text-right flex justify-end mt-4 text-gray-300  ">
           Already registered

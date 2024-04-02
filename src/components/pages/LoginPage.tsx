@@ -1,21 +1,15 @@
 import LoginForm from "./forms/LoginForm";
-import { FaArrowAltCircleLeft } from "react-icons/fa";
+import HomeLink from "./forms/HomeLink";
 
-import { Link } from "react-router-dom";
 const LoginPage = () => {
   return (
     <>
       <div
-        className="-z-[100] w-[100%] h-[100vh] bg-[url('./assets/img/pic-9.jpg')] bg-cover
-        bg-center bg-opacity-50"
+        className=" h-[100vh] bg-[url('./assets/img/pic-9.jpg')] bg-cover bg-center flex justify-center
+       bg-fixed overflow-hidden"
       >
-        <Link to="/">
-          <FaArrowAltCircleLeft
-            size={40}
-            className="fixed left-20 top-10 text-white animate-pulse hover:animate-none "
-          />
-        </Link>
-        <div className="pt-28">
+        <HomeLink />
+        <div className="pt-28 sm:px-20 ">
           <LoginForm />
         </div>
       </div>
