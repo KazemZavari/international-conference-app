@@ -15,27 +15,27 @@ const LoginForm = () => {
   return (
     <form
       onSubmit={onSubmit}
-      className="bg-black/80 rounded-3xl p-10 w-[30rem] mx-auto z-[100] font-OpenSansRegular 
-      border-[1px] mt- border-yellow-400 shadow-[0px_0px_40px_-10px_white]"
+      className="bg-black/80 rounded-3xl p-10 w-[30rem] mx-auto z-[100] font-RalewayBold
+      border-[2px] border-yellow-400 shadow-[0px_0px_40px_-10px_white]"
     >
       <div className="space-y-12  ">
         <div className="border-b border-gray-900/10 ">
           <div className="grid grid-cols-2 gap-x-10 gap-y-5 mx-auto items-center relative">
             <div
-              className="flex items-center justify-center absolute -top-20 left-[4.9rem]  
-             bg-black/80 border-[1px] rounded-lg"
+              className="flex items-center justify-center absolute -top-20 left-[4.7rem]  
+             bg-black/80 border-[2px] border-yellow-400 rounded-lg"
             >
               <Link
                 to="/loginPage"
-                className="font-bold text-3xl text-center text-yellow-500 hover:text-white px-5
-              bg-red-500/70  py-3 rounded-l-lg duration-500 "
+                className="font-bold text-2xl text-center text-yellow-500 hover:text-white px-5
+              bg-red-500/70 py-3 rounded-l-lg duration-500 "
               >
                 Sign in{" "}
               </Link>
               <Link
                 to="/registerPage"
-                className="font-bold text-3xl text-center text-yellow-500 hover:text-white px-5
-              hover:bg-red-800/70   py-3 rounded-r-lg duration-500 "
+                className="font-bold text-2xl text-center text-yellow-500 hover:text-white px-5
+              hover:bg-red-800/70 py-3 rounded-r-lg duration-500 "
               >
                 Sign up{" "}
               </Link>
@@ -43,7 +43,7 @@ const LoginForm = () => {
             <div className="col-span-full mt-8">
               <label
                 htmlFor="email"
-                className="text-left block font-medium leading-6 text-gray-300"
+                className="text-left block font-medium leading-6 text-gray-300 "
               >
                 Email address:
               </label>
@@ -53,9 +53,10 @@ const LoginForm = () => {
                   name="email"
                   type="email"
                   autoComplete="email"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm
-                   ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2
-                    focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 z-[100]"
+                  placeholder="Enter your email adrress"
+                  className="block w-full rounded-md border-0 py-2.5 text-gray-100 shadow-sm font-Raleway
+                   ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 bg-gray-300/10
+                    focus:ring-inset focus:ring-yellow-500 sm:text-sm sm:leading-6 z-[100]"
                 />
               </div>
             </div>
@@ -72,9 +73,10 @@ const LoginForm = () => {
                   name="password"
                   id="password"
                   autoComplete="address"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm
-                   ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2
-                    focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 z-[100]"
+                  placeholder="Enter ypur password"
+                  className="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm font-Raleway
+                   ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 bg-gray-300/10
+                    focus:ring-inset focus:ring-yellow-500 sm:text-sm sm:leading-6 z-[100]"
                 />
               </div>
             </div>

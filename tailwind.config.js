@@ -3,6 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
+      "3xl": { max: "1750px" },
       "2xl": { max: "1550px" },
       xl: { max: "1380px" },
       lg: { max: "1023px" },

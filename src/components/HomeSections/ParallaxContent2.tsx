@@ -1,10 +1,10 @@
 import {
   ParallaxItemsImportantDates,
   ParallaxItemsDownloadCenter,
-} from "../constants/parallax";
-import Divider from "./Divider";
+} from "../../constants/parallax";
+import Divider from "../Divider";
 import { motion } from "framer-motion";
-import { VariantsDown } from "../assets/Motions/HomePageMotion";
+import { VariantsDown } from "../../assets/Motions/HomePageMotion";
 
 const ParallaxContent1 = () => {
   return (

@@ -3,11 +3,12 @@ import Home from "../components/pages/Home";
 import NewsPage from "../components/pages/NewsPage";
 import NewsSinglePage from "../components/pages/NewsSinglePage";
 import Information from "../components/pages/Information";
-import ContacrForm from "../components/pages/ContacrForm";
+import ContacForm from "../components/pages/ContacForm";
 import Gallery from "../components/pages/Gallery";
 import MainLayout from "../layouts/MainLayout";
 import LoginPage from "../components/pages/LoginPage";
 import RegisterPage from "../components/pages/RegisterPage";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -28,7 +29,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/contact-us",
-        element: <ContacrForm />,
+        element: <ContacForm />,
       },
       {
         path: "/gallery",

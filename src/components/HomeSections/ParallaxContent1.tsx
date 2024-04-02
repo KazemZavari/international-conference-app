@@ -1,5 +1,5 @@
-import { ParallaxItems } from "../constants/parallax";
-import { VariantsUp } from "../assets/Motions/HomePageMotion";
+import { ParallaxItems } from "../../constants/parallax";
+import { VariantsUp } from "../../assets/Motions/HomePageMotion";
 import { motion } from "framer-motion";
 const ParallaxContent1 = () => {
   return (

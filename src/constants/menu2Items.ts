@@ -25,8 +25,8 @@ export const menu2Items = [
         href: "/contact-us",
 
     },
-    {
-        title: "LogIn/Out",
-        href: "/loginPage",
-    },
+    // {
+    //     title: "LogIn/Out",
+    //     href: "/loginPage",
+    // },
 ]

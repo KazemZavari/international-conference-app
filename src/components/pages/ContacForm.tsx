@@ -1,9 +1,9 @@
 import Divider from "../Divider";
 import GridLight from "../GridLight";
-import Menuu2 from "../Menuu2";
-import TailwindForm from "./TailwindForm";
+import Menuu2 from "./Menuu2";
+import TailwindForm from "./forms/TailwindForm";
 
-const ContacrForm = () => {
+const ContacForm = () => {
   return (
     <>
       <div className="bg-slate-900 overflow-x-hidden lg:overflow-x-hidden">
@@ -22,4 +22,4 @@ const ContacrForm = () => {
   );
 };
 
-export default ContacrForm;
+export default ContacForm;

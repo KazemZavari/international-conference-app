@@ -1,10 +1,10 @@
 import "rc-menu/assets/index.css";
-import Logo from "./Logo";
+import Logo from "../Logo";
 import Menuu from "./Menuu";
 import { motion } from "framer-motion";
-import ScrollDown from "./ScrollDown";
-import { VariantsDown, VariantsUp } from "../assets/Motions/HomePageMotion";
-import RegisterBotton from "./RegisterBotton";
+import ScrollDown from "../ScrollDown";
+import { VariantsDown, VariantsUp } from "../../assets/Motions/HomePageMotion";
+import RegisterBotton from "../RegisterBotton";
 const Navbar = () => {
   return (
     <>

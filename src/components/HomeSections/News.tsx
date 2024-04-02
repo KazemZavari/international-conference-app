@@ -1,7 +1,7 @@
-import Divider from "./Divider";
+import Divider from "../Divider";
 import NewsSwiper from "./NewsSwiper";
 import { motion } from "framer-motion";
-import { VariantsUp } from "../assets/Motions/HomePageMotion";
+import { VariantsUp } from "../../assets/Motions/HomePageMotion";
 const News = () => {
   return (
     <div className="bg-[#114b5f] h-[33rem]">

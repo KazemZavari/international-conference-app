@@ -1,8 +1,8 @@
 import React from "react";
 import Tools from "../components/Tools";
-import Footer from "../components/Footer";
+import Footer from "../components/HomeSections/Footer";
 import GridLight from "../components/GridLight";
-import Menuu2 from "../components/Menuu2";
+import Menuu2 from "../components/pages/Menuu2";
 
 type SinglePageLayoutProps = {
   children: React.ReactNode;

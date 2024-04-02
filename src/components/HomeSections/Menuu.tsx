@@ -3,7 +3,7 @@ import type { MenuProps } from "antd";
 import { items } from "./MenuItems";
 import { Menu, ConfigProvider } from "antd";
 import { motion } from "framer-motion";
-import { VariantsDown } from "../assets/Motions/HomePageMotion";
+import { VariantsDown } from "../../assets/Motions/HomePageMotion";
 
 const Menuu: React.FC = () => {
   const [current, setCurrent] = useState("mail");

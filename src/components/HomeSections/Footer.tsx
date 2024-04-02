@@ -1,4 +1,4 @@
-import logo from "../assets/img/sharif-logo-1.png";
+import logo from "../../assets/img/sharif-logo-1.png";
 import { GoArrowRight } from "react-icons/go";
 import Social from "./Social";
 import { motion } from "framer-motion";
@@ -6,7 +6,7 @@ import {
   VariantsUp,
   VariantsLeft,
   VariantsRight,
-} from "../assets/Motions/HomePageMotion";
+} from "../../assets/Motions/HomePageMotion";
 const Footer = () => {
   return (
     <div
@@ -63,12 +63,12 @@ const Footer = () => {
             className="bg-transparent border-b-[1px] p-2 w-[16rem] "
           />
           <div
-            className="group hover:-mt-[.8rem] duration-500 text-right mr-[6.6rem] 2xl:mr-[10.7rem]
-                         align-middle"
+            className="group hover:-mt-[.8rem] duration-500 text-right xl:mr-[6.6rem] 2xl:mr-[8.3rem]
+                         align-middle 3xl:mr-[10.7rem]"
           >
             <button
-              className=" px-8 py-4 text-[1rem] bg-teal-600 rounded-s-[2rem] rounded-b-[2rem]
-               hover:bg-white hover:text-teal-800 mt-5 duration-1000 "
+              className=" px-8 py-4 text-[1rem]  rounded-s-[2rem] rounded-b-[2rem]
+               hover:bg-white bg-teal-600 hover:text-teal-800 mt-5 duration-1000 "
             >
               SUBSCRIBE
               <GoArrowRight

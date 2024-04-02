@@ -2,7 +2,7 @@ import { Navigation, Pagination, EffectFade, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import img1 from "../assets/img/pic-10.jpg";
 
-import { newsItems } from "../constants/newsItems";
+import { newsItems } from "../../constants/newsItems";
 
 import "swiper/css";
 import "swiper/css/navigation";

@@ -1,10 +1,10 @@
-import ParallaxProvider from "../ParallaxProvider";
-import Menuu from "../Menuu";
-import Footer from "../Footer";
+import ParallaxProvider from "../HomeSections/ParallaxProvider";
+import Menuu from "../HomeSections/Menuu";
+import Footer from "../HomeSections/Footer";
 import Player from "../Player";
 // import video from "../../assets/bgVideo/3.mov";
 import bggridlighter from "../../assets/img/bg-grid-lighter.svg";
-import Menuu2 from "../Menuu2";
+import Menuu2 from "./Menuu2";
 
 const NewsSinglePage: React.FC = () => {
   return (
