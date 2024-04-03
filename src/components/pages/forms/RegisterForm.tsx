@@ -23,11 +23,11 @@ const RegisterForm: React.FC = () => {
   const [success, setSuccess] = useState(false);
 
   return (
-    <div className="py-20 sm:px-5">
+    <div className="py-20 sm:px-5 lg:mb-10">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="bg-black/80 rounded-3xl p-10 md:p-6 w-[30rem] md:w-[23rem] sm:w-[20rem] xs:w-[18.5rem]
-         mx-auto font-RalewayBold border-[2px] border-yellow-400 shadow-[0px_0px_40px_-10px_white]"
+          font-RalewayBold border-[2px] lg:mb-10 border-yellow-400 shadow-[0px_0px_40px_-10px_white]"
       >
         <div className="space-y-12 md:space-y-7">
           <div className="border-b border-gray-900/10 ">
@@ -120,7 +120,7 @@ const RegisterForm: React.FC = () => {
                     placeholder="Password"
                     className={inputCSS}
                   />
-                   {errors && (
+                  {errors && (
                     <span className="text-red-600 flex text-left">
                       {errors.password?.message}
                     </span>

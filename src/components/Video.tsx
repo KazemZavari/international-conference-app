@@ -1,10 +1,13 @@
 import video from "../assets/bgVideo/earth-1.mp4";
+import video2 from "../assets/bgVideo/3.mov"
 import pic from "../assets/img/pic-1.jpg";
-const Video = () => {
+import pic1 from "../assets/img/pic-7.jpg";
+type videoProps={
+  darkMode:boolean
+}
+const Video: React.FC<videoProps> = ({darkMode}) => {
   return (
     <>
-   
-   
       <div className="absolute -z-10 h-[100vh] overflow-hidden">
         {/* <video
         className="w-[100vw]"
@@ -12,11 +15,11 @@ const Video = () => {
         muted
         playsInline
         loop
-        src={video}
+        src={ darkMode? video : video2}
       ></video> */}
-        <img src={pic} />
+        <img src={darkMode? pic : pic1} />
       </div>
-      </>
+    </>
   );
 };
 

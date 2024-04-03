@@ -5,12 +5,17 @@ import { motion } from "framer-motion";
 import ScrollDown from "../ScrollDown";
 import { VariantsDown, VariantsUp } from "../../assets/Motions/HomePageMotion";
 import RegisterBotton from "../RegisterBotton";
+// import DarkModeToggle from "../../theme/DarkModeToggle";
+
 const Navbar = () => {
   return (
     <>
       <nav className="h-[100vh] z-1   ">
         <div className="flex justify-start w-[90%] pt-2 ">
-          
+          <div className="fixed top-10 right-20 w-10 h-10 z-[100000] ">
+            {" "}
+            {/* <DarkModeToggle /> */}
+          </div>
           <RegisterBotton />
           <Logo />
           <motion.div
@@ -18,10 +23,10 @@ const Navbar = () => {
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.1 }}
             variants={VariantsDown}
-            className="pt-10 text-left text-amber-400 text-[1rem] font-bold pl-[15.7rem]
+            className="pt-10 text-left text-amber-400 dark:text-amber-50 text-[1rem] font-bold pl-[15.7rem]
                      pb-10 xl:ml-20 2xl:ml-32  "
           >
-            <h3 className="  ">
+            <h3>
               International Conference on Energy Resilience, and Sustainability
             </h3>
             <h4>Sharif University of Technology, Tehran, Iran</h4>
