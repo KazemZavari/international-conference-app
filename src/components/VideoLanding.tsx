@@ -1,11 +1,12 @@
 import video from "../assets/bgVideo/earth-1.mp4";
-import video2 from "../assets/bgVideo/3.mov"
+import video2 from "../assets/bgVideo/3.mov";
 import pic from "../assets/img/pic-1.jpg";
 import pic1 from "../assets/img/pic-7.jpg";
-type videoProps={
-  darkMode:boolean
-}
-const Video: React.FC<videoProps> = ({darkMode}) => {
+import { useContext } from "react";
+import { mainContext } from "../provider/MainContext";
+
+const VideoLanding: React.FC = () => {
+  const { darkMode } = useContext(mainContext);
   return (
     <>
       <div className="absolute -z-10 h-[100vh] overflow-hidden">
@@ -17,10 +18,10 @@ const Video: React.FC<videoProps> = ({darkMode}) => {
         loop
         src={ darkMode? video : video2}
       ></video> */}
-        <img src={darkMode? pic : pic1} />
+        <img src={darkMode ? pic : pic1} />
       </div>
     </>
   );
 };
 
-export default Video;
+export default VideoLanding;

@@ -4,8 +4,9 @@ const RegisterPage = () => {
   return (
     <>
       <div
-        className="h-[100vh] lg:overflow-y-visible bg-[url('./assets/img/pic-7.jpg')] pb-20 bg-cover bg-center flex justify-center bg-fixed 
-      overflow-hidden"
+        className="lg:overflow-y-scroll h-[100vh] xl:h-[110vh] lg:h-[100vh] md:h-[100vh] bg-[url('./assets/img/pic-7.jpg')] pb-20 bg-cover 
+        bg-center flex justify-center bg-fixed 
+      overflow-visible" 
       >
         <div className="fixed top-5 right-5 w-10 h-10 z-[100000]"> </div>
         <HomeLink />

@@ -1,6 +1,6 @@
 import React from "react";
 import Tools from "../components/Tools";
-import Footer from "../components/HomeSections/Footer";
+import Footer from "../components/HomePageSections/Footer";
 import GridLight from "../components/GridLight";
 import Menuu2 from "../components/pages/Menuu2";
 

@@ -1,6 +1,6 @@
-import ParallaxProvider from "../HomeSections/ParallaxProvider";
-import Menuu from "../HomeSections/Menuu";
-import Footer from "../HomeSections/Footer";
+import ParallaxProvider from "../HomePageSections/ParallaxProvider";
+import Menuu from "../HomePageSections/Menuu";
+import Footer from "../HomePageSections/Footer";
 import Player from "../Player";
 // import video from "../../assets/bgVideo/3.mov";
 import bggridlighter from "../../assets/img/bg-grid-lighter.svg";
