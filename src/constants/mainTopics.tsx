@@ -6,15 +6,10 @@ export const mainTopicsItems = [
   {
     img: pic1,
     title: "article1",
-    content: (""
-      // <ul>
-      //   <li>-content1</li>
-      //   <li>-content1</li>
-      // </ul>
-    ),
+    content: "",
     href: "/singlPage",
   },
-  
+
   {
     img: pic2,
     title: "article2",

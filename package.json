@@ -14,8 +14,9 @@
     "@emotion/styled": "^11.11.5",
     "@headlessui/react": "^1.7.18",
     "@mui/material": "^5.15.14",
+    "@tanstack/react-query": "^5.28.14",
     "antd": "^5.15.4",
-    "formik": "^2.4.5",
+    "axios": "^1.6.8",
     "framer-motion": "^11.0.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -27,10 +28,8 @@
     "react-router-dom": "^6.22.3",
     "react-scroll-parallax": "^3.4.5",
     "react-social-icons": "^6.14.0",
-    "react-toggle-dark-mode": "^1.1.1",
     "scroll-carousel-react": "^1.0.0",
     "swiper": "^11.0.7",
-    "tailwind-easy-theme-switcher": "^1.1.1",
     "yup": "^1.4.0"
   },
   "devDependencies": {
