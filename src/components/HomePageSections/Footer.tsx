@@ -10,7 +10,7 @@ import {
 const Footer = () => {
   return (
     <div
-      className="h-[21rem] w-[100%] bg-[#114b5f] grid grid-cols-7 pt-16 px-10 gap-2
+      className="h-[21rem] w-[100%] bg-cyan-800 dark:bg-cyan-950 grid grid-cols-7 pt-16 px-10 gap-2
                     overflow-hidden relative"
     >
       <motion.div
@@ -22,11 +22,11 @@ const Footer = () => {
       >
         <div className="logo">
           <img className="w-44 mx-auto" src={logo} alt="logo" />
-          <h3 className="mx-auto text-white text-[1.4rem] font-semibold">
+          <h3 className="mx-auto text-white dark:text-yellow-300 text-[1.4rem] font-semibold">
             Sharif University of Technology
           </h3>
         </div>
-        <span className="absolute left-3 bottom-5 text-white opacity-80 text-[.9rem]">
+        <span className="absolute left-3 bottom-5 text-white dark:text-yellow-400 opacity-80 text-[.9rem]">
           © 2024 All Rights Reserved{" "}
         </span>
       </motion.div>
@@ -36,7 +36,7 @@ const Footer = () => {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.1 }}
         variants={VariantsUp}
-        className="col-span-3 text-left ml-12 text-white"
+        className="col-span-3 text-left ml-12 text-white dark:text-yellow-300"
       >
         <h3 className="text-[1.5rem]">
           <strong>ICERS</strong>2024
@@ -53,22 +53,22 @@ const Footer = () => {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.1 }}
         variants={VariantsRight}
-        className="col-span-2  text-left text-white"
+        className="col-span-2 ml-3 text-left text-white dark:text-yellow-300"
       >
         <h3 className="text-[1.2rem] font-bold">Stay in Touch</h3>
         <form method="post" className="mt-5">
           <input
             type="text"
-            placeholder="Enter Your Email To Join Our Mai"
+            placeholder="Enter Your Email To Join Our Team"
             className="bg-transparent border-b-[1px] p-2 w-[16rem] "
           />
           <div
-            className="group hover:-mt-[.8rem] duration-500 text-right xl:mr-[6.6rem] 2xl:mr-[8.3rem]
+            className="group hover:-mt-[.8rem] duration-500 text-right xl:mr-[5.65rem] 
                          align-middle 3xl:mr-[10.7rem]"
           >
             <button
-              className=" px-8 py-4 text-[1rem]  rounded-s-[2rem] rounded-b-[2rem]
-               hover:bg-white bg-teal-600 hover:text-teal-800 mt-5 duration-1000 "
+              className=" px-4 py-3 text-[1rem] text-white rounded-s-[2rem] rounded-b-[2rem]
+               hover:bg-white  bg-teal-600 dark:bg-yellow-600 hover:text-teal-800 dark:hover:text-black  mt-4 duration-1000 "
             >
               SUBSCRIBE
               <GoArrowRight

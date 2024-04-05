@@ -55,7 +55,7 @@ const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
   }, [currentYear, day, month]);
 
   return (
-    <div className=" absolute top-44 left-40 text-white flex ">
+    <div className=" absolute top-48 left-28 3xl:ml-20 text-white flex ">
       <motion.span
         initial="offscreen"
         whileInView="onscreen"
@@ -70,7 +70,8 @@ const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.5 }}
         variants={VariantsLeft}
-        className=" group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2 border-red-500 p-5 rounded-e-full rounded-b-full "
+        className=" group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2 p-5 rounded-e-full rounded-b-full
+         border-red-400 dark:border-gray-300" 
       >
         <span className="font-bold text-[40px]">{state.days}</span>{" "}
         <span className="font-bold text-[24px]">Days</span>
@@ -80,7 +81,8 @@ const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.5 }}
         variants={VariantsLeft}
-        className=" group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2 border-red-500 p-5 rounded-e-full rounded-t-full"
+        className=" group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2  p-5
+         rounded-e-full rounded-t-full border-red-400 dark:border-gray-300"
       >
         <span className="font-bold text-[40px]">{state.hours}</span>{" "}
         <span className="font-bold text-[24px]">Hours</span>
@@ -90,7 +92,8 @@ const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.6 }}
         variants={VariantsRight}
-        className="group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2 border-red-500 p-5 rounded-s-full rounded-b-full"
+        className="group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2 border-red-400 dark:border-gray-300
+         p-5 rounded-s-full rounded-b-full"
       >
         <span className="font-bold text-[40px]">{state.minutes}</span>{" "}
         <span className="font-bold text-[24px]">Minutes</span>
@@ -100,7 +103,7 @@ const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.6 }}
         variants={VariantsRight}
-        className="group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2 border-red-500 p-5 rounded-t-full rounded-s-full"
+        className="group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2 border-red-400 dark:border-gray-300 p-5 rounded-t-full rounded-s-full"
       >
         <span className="font-bold text-[40px]">{state.seconds}</span>{" "}
         <span className="font-bold text-[24px]">Seconds</span>

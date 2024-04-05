@@ -1,7 +1,7 @@
 import video from "../assets/bgVideo/earth-1.mp4";
 import video2 from "../assets/bgVideo/3.mov";
 import pic from "../assets/img/pic-1.jpg";
-import pic1 from "../assets/img/pic-7.jpg";
+import pic1 from "../assets/img/pic-9.jpg";
 import { useContext } from "react";
 import { mainContext } from "../provider/MainContext";
 
@@ -18,7 +18,7 @@ const VideoLanding: React.FC = () => {
         loop
         src={ darkMode? video : video2}
       ></video> */}
-        <img src={darkMode ? pic : pic1} />
+        <img className="" src={darkMode ? pic : pic1} />
       </div>
     </>
   );

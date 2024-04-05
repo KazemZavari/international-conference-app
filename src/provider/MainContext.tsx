@@ -19,7 +19,7 @@ type MainContextProviderProps = {
 export const mainContext = createContext({} as MainContextProps);
 
 const MainContextProvider = ({ children }: MainContextProviderProps) => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(true);
 
   useEffect(() => {
     const isDarkMode = localStorage.getItem("darkMode") === "true";

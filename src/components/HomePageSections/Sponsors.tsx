@@ -9,15 +9,15 @@ const sipersliderImgClasses =
 
 const Sponsors = () => {
   return (
-    <section>
+    <section className="dark:bg-[#0d1224] shadow-2xl shadow-white">
       <Divider
         borderText="Sponsors"
-        textColor="text-black"
-        borderColor="border-black"
+        textColor="text-black dark:text-yellow-400"
+        borderColor="border-black dark:border-yellow-400 "
       />
       <ScrollCarousel autoplay autoplaySpeed={8} speed={7}>
         {sponsoreItems.map((sponsore) => (
-          <div key={sponsore.title} className="rounded h-36 w-48">
+          <div key={sponsore.title} className="rounded h-36 w-48 dark:">
             <img
               className={sipersliderImgClasses}
               src={sponsore.icon}

@@ -17,7 +17,7 @@ const NewsSwiper = () => {
       slidesPerView={1}
       loop={true}
       pagination={{ clickable: true, dynamicBullets: true }}
-      navigation={true}
+      // navigation={true}
       grabCursor={true}
       centeredSlides={true}
       autoplay={{
@@ -27,7 +27,7 @@ const NewsSwiper = () => {
         disableOnInteraction: true,
       }}
       className=" w-[90%] h-[21rem] flex justify-center bg-transparent rounded-[5rem] 
-                  -mt-[1rem] duration-500 "
+                  -mt-[2rem] duration-500 "
     >
       {newsItems.map((item) => (
         <SwiperSlide key={item.title} className="flex align-middle justify-center bg-transparent duration-700">

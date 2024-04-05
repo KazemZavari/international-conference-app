@@ -10,7 +10,7 @@ const ParallaxContent1 = () => {
   return (
     <>
       {/* Download Center Section */}
-      <Divider borderText="Download Center" />
+      <Divider borderText="Download Center" borderColor="border-yellow-400"/>
       <motion.div
       initial="offscreen"
       whileInView="onscreen"
@@ -19,14 +19,15 @@ const ParallaxContent1 = () => {
       className="mt-[1rem] grid grid-cols-3 mb-5 px-32 justify-items-center">
         {ParallaxItemsDownloadCenter.map((item) => (
           <div className="col-span-1 ">
-          <a href={item.href} target="_self" className="text-amber-300" >{item.icon}</a>
-            <h3 className="font-bold text-[1.6rem]">{item.title}</h3>
+          <a href={item.href} target="_self" className="dark:text-white dark:hover:text-amber-600
+           text-amber-400 hover:text-white  " >{item.icon}</a>
+            <h3 className="font-bold text-[1.6rem]  ">{item.title}</h3>
           </div>
         ))}
       </motion.div>
 
       {/* Important Dates Section */}
-      <Divider borderText="Important Dates" />
+      <Divider borderText="Important Dates" borderColor="border-yellow-400" />
       <motion.div
       initial="offscreen"
       whileInView="onscreen"
@@ -35,8 +36,9 @@ const ParallaxContent1 = () => {
       className="mt-[2rem] grid grid-cols-2 justify-items-center gap-8 px-20">
         {ParallaxItemsImportantDates.map((item) => (
           <div
-            className="w-[60%] rounded-[20px] shadow-slate-100 shadow-sm
-           py-3 backdrop-blur-[50px] bg-white/15 col-span-1"
+            className="w-[60%] rounded-[20px] shadow-sm col-span-1
+           py-3 backdrop-blur-[50px] bg-white/30 shadow-slate-300 dark:bg-black/40
+            dark:shadow-yellow-400 text-slate-950 dark:text-yellow-500"
           >
             <h3 className="font-bold text-[2rem] leading-8 px-2 ">
               {item.title}

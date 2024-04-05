@@ -10,11 +10,11 @@ const RegisterBotton = () => {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.1 }}
         variants={VariantsUp}
-        className=" group text-blue-950 hover:text-white font-Roboto text-[1.1rem] 
-                      absolute right-72 top-[10rem] mx-auto px-3 py-1 hover:bg-transparent
-                     items-center bg-amber-500 rounded-t-full rounded-r-full  
-                     border-[1px] border-yellow-100  hover:border-white
-                     duration-300 "
+        className=" group text-blue-950 hover:text-white font-Roboto text-[1.1rem] absolute
+       right-[19.5%] top-[10rem] mx-auto px-3 py-1 hover:bg-black/60 items-center
+          bg-amber-500 rounded-t-full rounded-r-full border-[1px] border-yellow-100 
+           hover:border-white duration-300 "
+                   
       >
         <Link to="/loginPage" className="flex">
           {/* <FaAnglesDown className="text-white group-hover:text-orange-500 animate- " /> */}

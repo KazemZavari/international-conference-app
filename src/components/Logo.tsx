@@ -4,14 +4,15 @@ import { motion } from "framer-motion";
 import {  VariantsLogo } from "../assets/Motions/HomePageMotion";
 const Logo: React.FC = () => {
   return (
-    <Link to="/">
+    <Link to="/" className=" mt-5">
       <motion.div
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={VariantsLogo}
-      className="absolute pr-4 ml-10  ">
-        <img className="w-44 2xl:w-[13.5rem]" src={logo} alt="logo" />
+      className="absolute ml-7 bg-black/50 dark:bg-white/10 hover:bg-black/60
+      dark:hover:bg-white/15 rounded-full duration-700 ">
+        <img className="2xl:w-[12rem] xl:w-[10rem] lg:w-[8rem] w-[14rem] z-50" src={logo} alt="logo" />
       </motion.div>
     </Link>
   );

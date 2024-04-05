@@ -13,8 +13,9 @@ const ParallaxContent1 = () => {
       {ParallaxItems.map((item) => (
         <div
           key={item.title}
-          className="w-[90%] rounded-[20px] py-3 backdrop-blur-[10px]  shadow-slate-100 shadow-sm
-           bg-white/10 col-span-1"
+          className="w-[90%] rounded-[20px] py-3 backdrop-blur-[10px] shadow-sm cursor-pointer 
+           bg-white/10 col-span-1 shadow-slate-300 dark:bg-black/40 dark:shadow-yellow-400
+          text-slate-950 dark:text-yellow-400"
         >
           <h3 className="font-bold text-[2rem] ">{item.title}</h3>
           <h4 className="font text-[1.5rem]">{item.date}</h4>
