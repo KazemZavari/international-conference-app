@@ -17,7 +17,7 @@ export const VariantsUp: Variants = {
 };
 export const VariantsDown: Variants = {
     offscreen: {
-        y: -60,
+        y: -30,
     },
     onscreen: {
         y: 0,
@@ -57,7 +57,7 @@ export const VariantsRight: Variants = {
 };
 export const VariantsLogo: Variants = {
     offscreen: {
-        x: -210,
+        x: -180,
     },
     onscreen: {
         x: 0,

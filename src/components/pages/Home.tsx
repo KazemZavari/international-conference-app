@@ -12,15 +12,19 @@ import MainTopics from "../HomePageSections/MainTopics";
 import { parallaxData } from "../../constants/parallax";
 import Tools from "../Tools";
 import ProgressBar from "../ProgressBar";
-
+import CardGradient from "../CardGradient";
+import GridLight from "../GridLight";
+import Menuu2 from "../pages/Menuu2";
 const App: React.FC = () => {
   return (
     <>
       <ProgressBar />
       <Tools />
-      <div className="background-overlay bg-slate-400">
+
+      <div className="sm:bg-slate-900   ">
         <VideoLanding />
         <Navbar />
+
       </div>
       <CountDown />
       <ParallaxProvider

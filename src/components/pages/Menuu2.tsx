@@ -13,7 +13,7 @@ const Menuu2: React.FC = () => {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.1 }}
         variants={VariantsDown}
-        className="fixed top-8 z-[1500]  lg:hidden "
+        className="fixed top-8 z-[1500] lg:hidden "
       >
         <div
           className="bg-black/70 hover:bg-black/65 dark:bg-black/50 dark:hover:bg-white/5 h-20 flex items-center px-28

@@ -6,7 +6,7 @@ const GridLight: React.FC = () => {
     <>
       <img
         alt="background"
-        className="absolute left-[5rem] sm:-left-[5rem] w-[75rem] xl:w-[55rem] lg:w-[40rem] md:w-[25rem] sm:w-[25rem] xs:w-[15rem]
+        className="absolute left-[5rem] sm:-left-[1rem] w-[75rem] xl:w-[55rem] lg:w-[40rem] md:w-[25rem] sm:w-[25rem] xs:w-[25rem]
         overflow-x-hidden "
         src={gridLighter}
       />
