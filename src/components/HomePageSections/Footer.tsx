@@ -92,7 +92,7 @@ const Footer = () => {
           </form>
         </motion.div>
       </div>
-      <div className="hidden sm:block w-[100%] bg-slate-900 py-3 text-[.9rem] text-gray-400 font-semibold">
+      <div className="hidden sm:block w-[100%] bg-cyan-900 py-3 text-[.9rem] text-gray-300 font-semibold">
         {" "}
         © 2024 All Rights Reserved{" "}
       </div>

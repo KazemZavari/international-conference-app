@@ -18,10 +18,10 @@ const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
     days: 0,
   });
 
-  const DateContainerCSS = `"group-hover:animate-pulse rounded-e-full rounded-b-full sm:rounded-full 
+  const DateContainerCSS = `"group-hover:animate-pulse rounded-s-full rounded-b-full sm:rounded-full 
   border-red-400
-  dark:border-gray-300 ml-12 xl:ml-12 lg:ml-7 md:ml-3 sm:ml-1 xs:ml-2 xs:-mt-1 -mt-10 xl:-mt-5 lg:-mt-3 md:-mt-2 border-dashed border-2 p-5
-   xl:p-4 lg:p-3 md:p-2 sm:p-1"`;
+  dark:border-gray-300 ml-12 xl:ml-12 lg:ml-7 md:ml-3 sm:ml-1 xs:ml-2 xs:-mt-1 -mt-10 xl:-mt-5 lg:-mt-3
+   md:-mt-2 border-dashed border-2 p-5 xl:p-4 lg:p-3 md:p-2 sm:p-1"`;
 
   const numberCSS = `"font-bold text-[2.2rem] xl:text-[1.5rem] lg:text-[1.2rem] md:text-[1rem] 
   sm:text-[.9rem] "`;
@@ -67,8 +67,10 @@ const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
   }, [currentYear, day, month]);
 
   return (
-    <div className=" absolute top-48 xl:top-44 lg:top-36 md:top-28 sm:top-24 xs:top-16 2xl:left-28 3xl:ml-60 
-    xl:left-10 xl:ml-10 sm:left-5 xs:left-0 lg:ml-5 md:ml-3 sm:ml-1 text-white flex ">
+    <div
+      className=" absolute top-48 xl:top-44 lg:top-36 md:top-28 sm:top-24 xs:top-16 2xl:left-28 3xl:ml-60 
+    xl:left-10 xl:ml-10 sm:left-5 xs:left-0 lg:ml-5 md:ml-3 sm:ml-1 text-white flex "
+    >
       <motion.span
         initial="offscreen"
         whileInView="onscreen"
