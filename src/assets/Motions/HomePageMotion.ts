@@ -2,7 +2,7 @@ import { Variants } from "framer-motion";
 
 export const VariantsUp: Variants = {
     offscreen: {
-        y: 120,
+        y:50,
     },
     onscreen: {
         y: 0,
@@ -17,7 +17,7 @@ export const VariantsUp: Variants = {
 };
 export const VariantsDown: Variants = {
     offscreen: {
-        y: -30,
+        y: -20,
     },
     onscreen: {
         y: 0,
@@ -31,7 +31,7 @@ export const VariantsDown: Variants = {
 
 export const VariantsLeft: Variants = {
     offscreen: {
-        x: -50,
+        x: -30,
     },
     onscreen: {
         x: 0,
@@ -44,7 +44,7 @@ export const VariantsLeft: Variants = {
 };
 export const VariantsRight: Variants = {
     offscreen: {
-        x: 120,
+        x: 30,
     },
     onscreen: {
         x: 0,

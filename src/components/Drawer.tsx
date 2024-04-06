@@ -16,7 +16,6 @@ const Drawerm: React.FC = () => {
   return (
     <>
       <Button
-        // type="primary"
         onClick={showDrawer}
         className="absolute right-10 top-16 md:top-5 md:right-5 hidden lg:block"
       >

@@ -9,15 +9,16 @@ const VideoLanding: React.FC = () => {
   const { darkMode } = useContext(mainContext);
   return (
     <>
-      <div className="absolute -z-10 h-[100vh] opacity-90 md:flex sm:bg-slate-900 sm:z-0">
-        <video
+      <div className="absolute -z-10 h-[100vh] md:h-auto opacity-90 md:flex sm:bg-slate-400
+       dark:sm:bg-slate-900 sm:z-0">
+        {/* <video
         className="md:hidden flex  "
         autoPlay
         muted
         playsInline
         loop
         src={ darkMode? video : video2}
-      ></video>
+      ></video> */}
         <img className="lg:w-[100vw] sm:hidden " src={darkMode ? pic : pic1} />
       </div>
     </>

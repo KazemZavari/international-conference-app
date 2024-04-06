@@ -17,7 +17,7 @@ export const parallaxData: parallaxData = {
     "bg-[url('./assets/img/pic-9.jpg')]",
     "bg-[url('./assets/img/pic-10.jpg')]",
   ],
-  height: ["h-[70vh]", "h-[100vh]"],
+  height: ["h-[60vh] lg:h-[22rem] sm:h-[18rem] xs:h-[28rem]", "h-[100vh] lg:h-[38rem]"],
 };
 
 export const ParallaxItems: ItemsProps = [

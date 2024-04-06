@@ -12,7 +12,7 @@ export default {
       lg: { max: "1023px" },
       md: { max: "767px" },
       sm: { max: "600px" },
-      xs: { max: "340px" },
+      xs: { max: "360px" },
     },
     fontFamily: {
       Roboto: ["roboto"],

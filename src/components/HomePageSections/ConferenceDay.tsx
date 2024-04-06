@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { VariantsLeft, VariantsRight } from "../../assets/Motions/HomePageMotion";
+import {
+  VariantsLeft,
+  VariantsRight,
+} from "../../assets/Motions/HomePageMotion";
 
 type ConferenceDayProps = {
   day: number;
@@ -15,6 +18,15 @@ const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
     days: 0,
   });
 
+  const DateContainerCSS = `"group-hover:animate-pulse rounded-e-full rounded-b-full sm:rounded-full 
+  border-red-400
+  dark:border-gray-300 ml-12 xl:ml-12 lg:ml-7 md:ml-3 sm:ml-1 xs:ml-2 xs:-mt-1 -mt-10 xl:-mt-5 lg:-mt-3 md:-mt-2 border-dashed border-2 p-5
+   xl:p-4 lg:p-3 md:p-2 sm:p-1"`;
+
+  const numberCSS = `"font-bold text-[2.2rem] xl:text-[1.5rem] lg:text-[1.2rem] md:text-[1rem] 
+  sm:text-[.9rem] "`;
+  const stringCSS = `"font-bold text-[24px] xl:text-[20px] lg:text-[17px] md:text-[14px]
+   sm:text-[13px]"`;
   const currentTime = new Date();
   const currentYear = currentTime.getFullYear();
 
@@ -55,13 +67,15 @@ const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
   }, [currentYear, day, month]);
 
   return (
-    <div className=" absolute top-48 left-28 3xl:ml-20 text-white flex ">
+    <div className=" absolute top-48 xl:top-44 lg:top-36 md:top-28 sm:top-24 xs:top-16 2xl:left-28 3xl:ml-60 
+    xl:left-10 xl:ml-10 sm:left-5 xs:left-0 lg:ml-5 md:ml-3 sm:ml-1 text-white flex ">
       <motion.span
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.5 }}
         variants={VariantsLeft}
-        className="font-bold text-[20px] justify-start "
+        className="font-bold text-[20px] xl:text-[17px] md:text-[14px] sm:text-[11px] justify-start
+         xs:hidden sm:-mt-5 md:-ml-5 "
       >
         Conference starts in:
       </motion.span>
@@ -70,43 +84,40 @@ const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.5 }}
         variants={VariantsLeft}
-        className=" group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2 p-5 rounded-e-full rounded-b-full
-         border-red-400 dark:border-gray-300" 
+        className={DateContainerCSS}
       >
-        <span className="font-bold text-[40px]">{state.days}</span>{" "}
-        <span className="font-bold text-[24px]">Days</span>
+        <span className={numberCSS}>{state.days}</span>{" "}
+        <span className={stringCSS}>Days</span>
       </motion.div>
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.5 }}
         variants={VariantsLeft}
-        className=" group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2  p-5
-         rounded-e-full rounded-t-full border-red-400 dark:border-gray-300"
+        className={DateContainerCSS}
       >
-        <span className="font-bold text-[40px]">{state.hours}</span>{" "}
-        <span className="font-bold text-[24px]">Hours</span>
+        <span className={numberCSS}>{state.hours}</span>{" "}
+        <span className={stringCSS}>Hours</span>
       </motion.div>
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.6 }}
         variants={VariantsRight}
-        className="group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2 border-red-400 dark:border-gray-300
-         p-5 rounded-s-full rounded-b-full"
+        className={DateContainerCSS}
       >
-        <span className="font-bold text-[40px]">{state.minutes}</span>{" "}
-        <span className="font-bold text-[24px]">Minutes</span>
+        <span className={numberCSS}>{state.minutes}</span>{" "}
+        <span className={stringCSS}>Minutes</span>
       </motion.div>
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.6 }}
         variants={VariantsRight}
-        className="group-hover:animate-pulse ml-12 -mt-10  border-dashed border-2 border-red-400 dark:border-gray-300 p-5 rounded-t-full rounded-s-full"
+        className={DateContainerCSS}
       >
-        <span className="font-bold text-[40px]">{state.seconds}</span>{" "}
-        <span className="font-bold text-[24px]">Seconds</span>
+        <span className={numberCSS}>{state.seconds}</span>{" "}
+        <span className={stringCSS}>Seconds</span>
       </motion.div>
     </div>
   );

@@ -21,7 +21,7 @@ const App: React.FC = () => {
       <ProgressBar />
       <Tools />
 
-      <div className="sm:bg-slate-900   ">
+      <div className="sm:bg-sky-100 dark:sm:bg-slate-900  ">
         <VideoLanding />
         <Navbar />
 

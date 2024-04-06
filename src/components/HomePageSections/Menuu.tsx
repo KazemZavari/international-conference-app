@@ -33,7 +33,7 @@ const Menuu: React.FC = () => {
                 borderRadius: 5,
                 colorText: "#fff",
                 colorSplit: "none",
-                padding: 7,
+                padding: 16,
               },
               components: {
                 Menu: {
