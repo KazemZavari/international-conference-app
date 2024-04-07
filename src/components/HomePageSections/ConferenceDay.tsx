@@ -69,7 +69,7 @@ const ConferenceDay: React.FC<ConferenceDayProps> = ({ day, month }) => {
   return (
     <div
       className=" absolute top-48 xl:top-44 lg:top-36 md:top-28 sm:top-24 xs:top-16 2xl:left-28 3xl:ml-60 
-    xl:left-10 xl:ml-10 sm:left-5 xs:left-0 lg:ml-5 md:ml-3 sm:ml-1 text-white flex "
+    xl:left-28 xl:ml-10 sm:left-5 xs:left-0 lg:ml-5 md:ml-3 sm:ml-1 text-white flex "
     >
       <motion.span
         initial="offscreen"
