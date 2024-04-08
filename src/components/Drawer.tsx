@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Drawer, ConfigProvider, Divider } from "antd";
+import { Button, Drawer, ConfigProvider } from "antd";
 import { IoMenu } from "react-icons/io5";
 import { createStyles, useTheme } from "antd-style";
 import logo from "../assets/img/sharif-logo-1.png";
@@ -11,15 +11,11 @@ import type {
 } from "antd/es/drawer/DrawerPanel";
 import { IoClose } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
-import Logo from "./Logo";
 import RegisterBotton from "./RegisterBotton";
 import { menu2Items } from "../constants/menu2Items";
 import Tools from "./Tools";
 
 const useStyle = createStyles(({ token }) => ({
-  // 'my-drawer-body': {
-  //   background: "#",
-  // },
   "my-drawer-header": {
     background: "#114b5f",
   },
@@ -73,7 +69,8 @@ const Drawerm: React.FC = () => {
           title={
             <>
               <Link to="/" onClick={onClose}>
-                <h1 className="text-white hover:text-sky-500 ml-20 duration-300 py-3 z-[999999999999]">
+                <h1 className="text-white hover:text-sky-500 ml-20 sm:ml-16 duration-300 py-3 
+                z-[999999999999]">
                   awesomePro
                 </h1>
               </Link>
@@ -89,7 +86,7 @@ const Drawerm: React.FC = () => {
           open={open}
           className="dark:bg-slate-800 dark:text-white text-[2rem]"
         >
-          <div onClick={onClose} className=" relative -mt-16 right-10">
+          <div onClick={onClose} className=" relative -mt-12 right-10">
             <RegisterBotton />
           </div>
           <ul className="flex-col list-none duration-300 text-white mt-24">
@@ -106,17 +103,18 @@ const Drawerm: React.FC = () => {
                 }}
               >
                 <li
-                  className=" flex  hover:text-gray-600 dark:text-gray-300
-                   dark:hover:text-yellow-300 duration-500 group py-3 font-semibold
-                  "
+                  className="flex hover:text-gray-600 dark:text-gray-300 justify-start duration-500 
+                   dark:hover:text-yellow-300 group py-3 mr-1 font-semibold   "
                   onClick={onClose}
                 >
-                  <FaAngleRight className="mt-2 mr-1 group-hover:pl-2 duration-300" />{item.title}
+                  <FaAngleRight className="mt-2 mr-2 group-hover:pl-2 group-hover:text-[1.2rem] duration-300" />
+
+                  {item.title}
                 </li>
-                
               </NavLink>
             ))}
           </ul>
+
           <Tools />
         </Drawer>
       </ConfigProvider>

@@ -16,8 +16,9 @@ const Menuu2: React.FC = () => {
         className="fixed top-8 z-[1500] lg:hidden "
       >
         <div
-          className="bg-black/70 hover:bg-black/65 dark:bg-black/50 dark:hover:bg-white/5 h-20 flex items-center px-28
-                      rounded-full border-[1.3px] border-black dark:border-slate-600 duration-700 "
+          className="bg-black/70 hover:bg-black/65 dark:bg-black/50 dark:hover:bg-black/45
+           h-16 flex items-center px-10 rounded-full border-[1.3px] border-black dark:border-slate-600
+            duration-700 "
         >
           <ul className="inline-flex justify-center list-none duration-300 text-white">
             {menu2Items.map((item) => (

@@ -4,13 +4,13 @@ import NewsPage from "../components/pages/NewsPage";
 import NewsSinglePage from "../components/pages/NewsSinglePage";
 import Information from "../components/pages/Information";
 import Contact from "../components/pages/Contact";
-import Gallery from "../components/pages/Gallery";
+import Gallery from "../components/pages/Gallery"; 
 import MainLayout from "../layouts/MainLayout";
 import LoginPage from "../components/pages/LoginPage";
 import RegisterPage from "../components/pages/RegisterPage";
 
 export const router = createBrowserRouter([
-  {
+  { 
     path: "/",
     element: <MainLayout />,
     errorElement: <h3> Page Note Found 🙄 ... </h3>,
