@@ -3,6 +3,8 @@ import { FaWandMagicSparkles } from "react-icons/fa6";
 import { BsFullscreenExit } from "react-icons/bs";
 import { AiOutlineSmile } from "react-icons/ai";
 import { IoColorFillOutline } from "react-icons/io5";
+import { BsX } from "react-icons/bs";
+
 import { useState } from "react";
 const Tools: React.FC = () => {
   const [visible, setvisible] = useState(false);
@@ -16,10 +18,18 @@ const Tools: React.FC = () => {
           className=" flex justify-center items-center z-50 fixed right-6 bottom-6 h-[3rem] cursor-pointer
                     w-[3rem] bg-gray-700 group-hover:bg-yellow-500 rounded-full shadow-2xl duration-1000"
         >
-          <FaWandMagicSparkles
-            size={22}
-            className="text-yellow-400 group-hover:text-[#0d1224]"
-          />
+          {visible ? (
+            <BsX
+              size={36}
+              className="text-yellow-400 group-hover:text-[#0d1224] 
+              duration-300 hover:rotate-90 "
+            />
+          ) : (
+            <FaWandMagicSparkles
+              size={22}
+              className="text-yellow-400 group-hover:text-[#0d1224] duration-1000"
+            />
+          )}
         </div>
         {visible && (
           <div
