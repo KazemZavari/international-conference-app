@@ -22,12 +22,12 @@ const Tools: React.FC = () => {
             <BsX
               size={36}
               className="text-yellow-400 group-hover:text-[#0d1224] 
-              duration-300 hover:rotate-90 "
+              duration-500 hover:rotate-90 "
             />
           ) : (
             <FaWandMagicSparkles
               size={22}
-              className="text-yellow-400 group-hover:text-[#0d1224] duration-1000"
+              className="text-yellow-400 group-hover:text-[#0d1224] duration-500"
             />
           )}
         </div>
