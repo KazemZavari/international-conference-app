@@ -23,7 +23,7 @@ const NewsPage = () => {
           <div className="flex justify-center">
             <div
               className="grid grid-cols-3 md:grid-cols-2 px-40 xl:px-16 lg:px-5 md:px-10 sm:px-2 xs:px-5
-           gap-x-3 gap-y-8  mt-10 mx-auto"
+              gap-x-3 gap-y-8  mt-10 mx-auto"
             >
               {newsPageItems.map((item) => (
                 <>
