@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import FormTabs from "./FormTabs";
 import { inputCSS } from "./LoginForm";
-
+import { ToastContainer, toast } from "react-toastify";
 type inputProps = {
   firstName: string;
   lastName: string;
@@ -18,8 +18,11 @@ const RegisterForm: React.FC = () => {
     watch,
     formState: { errors },
   } = useForm<inputProps>();
-  const onSubmit: SubmitHandler<inputProps> = (data) =>
+  const onSubmit: SubmitHandler<inputProps> = (data) =>{
     alert(JSON.stringify(data));
+    toast.success("sign up is successfully!");
+  }
+
   const [success, setSuccess] = useState(false);
 
   return (
@@ -29,6 +32,19 @@ const RegisterForm: React.FC = () => {
         className="bg-black/80 rounded-3xl p-10 md:p-6 w-[30rem] md:w-[23rem] sm:w-[20rem] xs:w-[18.5rem]
           font-RalewayBold border-[2px] lg:mb-10 border-yellow-400 shadow-[0px_0px_40px_-10px_white]"
       >
+        <ToastContainer 
+        position="bottom-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+
+      />
         <div className="space-y-12 md:space-y-7">
           <div className="border-b border-gray-900/10 ">
             <div className="grid grid-cols-2 gap-x-10 gap-y-5 md:gap-y-2 sm:space-y-1 relative  ">

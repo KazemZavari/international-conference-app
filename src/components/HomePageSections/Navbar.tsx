@@ -15,7 +15,10 @@ const Navbar = () => {
 
       <nav className=" 2xl:overflow-hidden z-1 lg:h-[27rem] md:h-[22rem]">
         <div className="flex justify-start w-[90%] sm:w-[95%] pt-2 overflow-hidden">
+          <div className="lg:hidden">
           <RegisterBotton />
+          </div>
+         
 
           <Logo />
           <motion.div

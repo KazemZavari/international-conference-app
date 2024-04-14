@@ -1,10 +1,14 @@
-import pic1 from "../assets/img/pic-10.jpg";
-import pic2 from "../assets/img/pic-9.jpg";
-import pic3 from "../assets/img/pic-7.jpg";
-
+const pic = [
+  "https://picsum.photos/600",
+  "https://picsum.photos/610",
+  "https://picsum.photos/620",
+  "https://picsum.photos/630",
+  "https://picsum.photos/640",
+  "https://picsum.photos/650",
+];
 export const mainTopicsItems = [
-    {
-    img: pic2,
+  {
+    img: pic[0],
     title: "article2",
     content: (
       <ul>
@@ -15,7 +19,7 @@ export const mainTopicsItems = [
     href: "/singlPage",
   },
   {
-    img: pic2,
+    img: pic[1],
     title: "article2",
     content: (
       <ul>
@@ -26,7 +30,7 @@ export const mainTopicsItems = [
     href: "/singlPage",
   },
   {
-    img: pic3,
+    img: pic[2],
     title: "article3",
     content: (
       <ul>
@@ -37,7 +41,7 @@ export const mainTopicsItems = [
     href: "/singlPage",
   },
   {
-    img: pic3,
+    img: pic[3],
     title: "article3",
     content: (
       <ul>
@@ -48,7 +52,7 @@ export const mainTopicsItems = [
     href: "/singlPage",
   },
   {
-    img: pic1,
+    img: pic[4],
     title: "article1",
     content: (
       <ul>
@@ -59,7 +63,7 @@ export const mainTopicsItems = [
     href: "/singlPage",
   },
   {
-    img: pic3,
+    img: pic[5],
     title: "article3",
     content: (
       <ul>
@@ -69,5 +73,4 @@ export const mainTopicsItems = [
     ),
     href: "/singlPage",
   },
- 
 ];

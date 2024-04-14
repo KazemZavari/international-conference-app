@@ -2,7 +2,7 @@ import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import FormTabs from "./FormTabs";
-
+import { ToastContainer, toast } from "react-toastify";
 export const inputCSS = `"block w-full rounded-md border-0 py-2.5 text-gray-100 shadow-sm font-Raleway
   ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 bg-gray-300/10
    focus:ring-inset focus:ring-yellow-500 sm:text-sm sm:leading-6 z-[100]"`;
@@ -20,15 +20,11 @@ const LoginForm = () => {
     watch,
     formState: { errors },
   } = useForm<inputProps>();
-  const onSubmit: SubmitHandler<inputProps> = (data) =>
-    alert(JSON.stringify(data));
-  // const [success, setSuccess] = useState(false);
 
-  // const onSubmit:SubmitHandler<inputProps> = handleSubmit((data) => {
-  //   alert(JSON.stringify(data));
-  //   // methods.reset();
-  //   setSuccess(true);
-  // });
+  const onSubmit: SubmitHandler<inputProps> = (data) => {
+    alert(JSON.stringify(data));
+    toast.success("sign in is successfully!");
+  };
 
   return (
     <form
@@ -38,6 +34,18 @@ const LoginForm = () => {
       border-[2px] border-yellow-400 shadow-[0px_0px_40px_-10px_white]"
     >
       <div className="space-y-12 md:space-y-7 ">
+        <ToastContainer
+          position="bottom-right"
+          autoClose={4000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
         <div className="border-b border-gray-900/10 ">
           <div className="grid grid-cols-2 gap-x-10 gap-y-5 mx-auto items-center relative">
             <FormTabs />
@@ -57,7 +65,6 @@ const LoginForm = () => {
                   placeholder="Enter your email adress"
                   autoComplete="email"
                   className={inputCSS}
-
                 />
                 {errors && (
                   <span className="text-red-600 flex text-left">

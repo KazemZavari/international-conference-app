@@ -1,8 +1,8 @@
 import ReactPlayer from "react-player";
 type PlayerProps = {
   url: string;
-  height: number;
-  width: number;
+  height?: number;
+  width?: number;
   controls: boolean;
   autoplay: boolean;
 };
@@ -14,7 +14,7 @@ const Player: React.FC<PlayerProps> = ({
   autoplay,
 }) => {
   return (
-    <div className=" self-center inline-block mx-auto ">
+    <div className=" flex justify-center ">
       <ReactPlayer
         url={url}
         height={height}
@@ -24,6 +24,7 @@ const Player: React.FC<PlayerProps> = ({
         muted={false}
         pip={true}
         playing={autoplay}
+        
       />
     </div>
   );

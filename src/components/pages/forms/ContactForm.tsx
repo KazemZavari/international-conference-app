@@ -2,9 +2,9 @@
 
 const TailwindForm = () => {
   return (
-    <form 
-    className="bg-sky-700/10 rounded-3xl p-10 w-[45rem] mx-auto z-[100] font-Raleway
-      border-[1px] border-yellow-400 shadow-[0px_0px_40px_-10px_white] text-gray-300"
+    <form
+      className="bg-sky-700/10 rounded-3xl p-10 w-[60%] xl:w-[50%] md:w-[85%] mx-auto z-[100] font-Raleway
+      border-[1px] border-yellow-400 shadow-[0px_0px_40px_-10px_white] text-gray-300 "
     >
       <div className="space-y-8">
         <div className="border-b border-gray-900/10">
@@ -20,13 +20,13 @@ const TailwindForm = () => {
           <p className="block mt-1 text-sm leading-6 text-gray-200">
             Use a permanent address where you can receive mail.
           </p>
-          <div className="mt-5 grid grid-cols-2 gap-x-10 gap-y-5 ">
-            <div>
+          <div className="mt-5 grid grid-cols-2 mx-auto gap-x-10 gap-y-5 w-[75%] lg:w-[85%] ">
+            <div className="col-span-full">
               <label
                 htmlFor="first-name"
                 className="block text-left text-sm font-medium leading-6 text-gray-300"
               >
-                First name:
+                Full name:
               </label>
               <div>
                 <input
@@ -40,26 +40,7 @@ const TailwindForm = () => {
               </div>
             </div>
 
-            <div className="sm:col-span-3">
-              <label
-                htmlFor="last-name"
-                className="block text-left text-sm font-medium leading-6 text-gray-200"
-              >
-                Last name:
-              </label>
-              <div>
-                <input
-                  type="text"
-                  name="last-name"
-                  id="last-name"
-                  autoComplete="family-name"
-                  placeholder="Last name"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-
-            <div className="sm:col-span-4">
+            <div className="col-span-full">
               <label
                 htmlFor="email"
                 className="text-left block text-sm font-medium leading-6 text-gray-200"
@@ -78,7 +59,7 @@ const TailwindForm = () => {
               </div>
             </div>
 
-            <div className="sm:col-span-3">
+            <div className="col-span-full">
               <label
                 htmlFor="country"
                 className="text-left block text-sm font-medium leading-6 text-gray-200"
@@ -90,7 +71,6 @@ const TailwindForm = () => {
                   id="country"
                   name="country"
                   autoComplete="country-name"
-                  
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                 >
                   <option>iran</option>
@@ -134,7 +114,6 @@ const TailwindForm = () => {
                   defaultValue={""}
                 />
               </div>
-
             </div>
           </div>
         </div>
