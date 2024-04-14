@@ -4,25 +4,23 @@ import { BsFullscreenExit } from "react-icons/bs";
 import { AiOutlineSmile } from "react-icons/ai";
 import { IoColorFillOutline } from "react-icons/io5";
 import { BsX } from "react-icons/bs";
-
-import { useState } from "react";
+import { useContext } from "react";
+import { mainContext } from "../provider/MainContext";
 const Tools: React.FC = () => {
-  const [visible, setvisible] = useState(false);
+const {visible, handleVisible} = useContext(mainContext)
   return (
     <>
       <div className="group">
         <div
-          onClick={() => {
-            setvisible(!visible);
-          }}
-          className=" flex justify-center items-center z-50 fixed right-6 bottom-6 h-[3rem] cursor-pointer
-                    w-[3rem] bg-gray-700 group-hover:bg-yellow-500 rounded-full shadow-2xl duration-1000"
+          onClick={handleVisible}
+          className="flex justify-center items-center z-50 fixed right-6 bottom-6 cursor-pointer
+          w-[3rem] h-[3rem] md:h-[2.5rem] md:w-[2.5rem] bg-gray-700 group-hover:bg-yellow-500
+           rounded-full shadow-2xl duration-1000"
         >
           {visible ? (
             <BsX
               size={36}
-              className="text-yellow-400 group-hover:text-[#0d1224] 
-              duration-500 hover:rotate-90 "
+              className="text-yellow-400 group-hover:text-[#0d1224] duration-500 hover:rotate-90 "
             />
           ) : (
             <FaWandMagicSparkles
@@ -33,34 +31,38 @@ const Tools: React.FC = () => {
         </div>
         {visible && (
           <div
-            className="fixed z-50 right-[.5rem] bottom-[4.3rem] bg-transparent h-auto w-20 
-            "
+            className="fixed z-50 right-[.5rem] bottom-[4.3rem] bg-transparent h-auto w-20 "
           >
-            <div className="flex justify-center pb-[2px] animate-in duration-500 slide-in-from-bottom-24">
+            <div className="flex justify-center pb-[1px] animate-in duration-500 slide-in-from-bottom-32">
               <div
-                className="h-[3rem] w-[3rem] bg-gray-300 rounded-full flex justify-center items-center 
-                    duration-500 "
+                className="h-[3rem] w-[3rem] dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 bg-gray-400
+                 hover:bg-gray-500 rounded-full flex justify-center items-center duration-500
+                 text-gray-900 hover:text-gray-200 "
               >
                 <IoColorFillOutline size={20} />
               </div>
             </div>
-            <div className="flex justify-center pb-[2px] animate-in duration-500 slide-in-from-bottom-16 ">
+            
+            <div className="flex justify-center pb-[1px] animate-in duration-500 slide-in-from-bottom-24 ">
+              <div className="h-[3rem] w-[3rem] dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 bg-gray-400
+               hover:bg-gray-500  rounded-full flex justify-center items-center duration-500 
+               text-gray-900 hover:text-gray-200">
+                <BsFullscreenExit size={22} />
+              </div>
+            </div>
+            <div className="flex justify-center pb-[1px] animate-in duration-500 slide-in-from-bottom-12">
+              <div className="h-[3rem] w-[3rem] dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 bg-gray-400
+               hover:bg-gray-600 rounded-full flex justify-center items-center duration-500
+               text-gray-900 hover:text-gray-200">
+                <AiOutlineSmile size={20} />
+              </div>
+            </div>
+            <div className="flex justify-center pb-[5px] animate-in duration-500 slide-in-from-bottom-8 ">
               <div
-                className="h-[3rem] w-[3rem] bg-gray-300 rounded-full flex justify-center items-center 
+                className="h-[3rem] w-[3rem] dark:bg-gray-800 dark:text-gray-200 rounded-full flex justify-center items-center 
                duration-500 "
               >
-                {/* <LuMoon size={20} /> */}
                 <DarkModeToggle />
-              </div>
-            </div>
-            <div className="flex justify-center pb-[2px] animate-in duration-500 slide-in-from-bottom-12 ">
-              <div className="h-[3rem] w-[3rem] bg-gray-300 rounded-full flex justify-center items-center  duration-500 ">
-                <BsFullscreenExit size={20} />
-              </div>
-            </div>
-            <div className="flex justify-center pb-[8px] animate-in duration-500 slide-in-from-bottom-8">
-              <div className="h-[3rem] w-[3rem] bg-gray-300 rounded-full flex justify-center items-center  duration-500 ">
-                <AiOutlineSmile size={20} />
               </div>
             </div>
           </div>
