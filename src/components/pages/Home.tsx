@@ -12,14 +12,15 @@ import MainTopics from "../HomePageSections/MainTopics";
 import { parallaxData } from "../../constants/parallax";
 import Tools from "../Tools";
 import ProgressBar from "../ProgressBar";
-import CardGradient from "../CardGradient";
-import GridLight from "../GridLight";
-import Menuu2 from "../pages/Menuu2";
+
 const App: React.FC = () => {
   return (
     <>
       <ProgressBar />
+      <div className="md:hidden">
       <Tools />
+      </div>
+      
 
       <div className="sm:bg-sky-100 dark:sm:bg-slate-900  ">
         <VideoLanding />

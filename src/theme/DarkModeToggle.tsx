@@ -7,7 +7,7 @@ const DarkModeToggle: React.FC = () => {
   return (
     <div>
       <button
-        className="delay-100 duration-300 rounded-full h-[3rem] w-[3rem] 
+        className="delay-100 duration-300 rounded-full h-[3rem] w-[3rem] lg:h-[2.5rem] lg:w-[2.5rem] 
          dark:hover:bg-gray-700 bg-gray-400 hover:bg-gray-500 dark:bg-gray-800 
           dark:text-gray-200 z-[1000000] "
         onClick={toggleDarkMode}

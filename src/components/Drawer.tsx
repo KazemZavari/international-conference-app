@@ -69,8 +69,10 @@ const Drawerm: React.FC = () => {
           title={
             <>
               <Link to="/" onClick={onClose}>
-                <h1 className="text-white hover:text-sky-500 ml-20 sm:ml-16 duration-300 py-3 
-                z-[999999999999]">
+                <h1
+                  className="text-white hover:text-sky-500 ml-20 sm:ml-16 duration-300 py-3 
+                z-[999999999999]"
+                >
                   awesomePro
                 </h1>
               </Link>
