@@ -9,7 +9,7 @@ const DarkModeToggle: React.FC = () => {
       <button
         className="delay-100 duration-300 rounded-full h-[3rem] w-[3rem] 
          dark:hover:bg-gray-700 bg-gray-400 hover:bg-gray-500 dark:bg-gray-800 
-          dark:text-gray-200 *:z-[1000000] "
+          dark:text-gray-200 z-[1000000] "
         onClick={toggleDarkMode}
       >
         <IoMoonOutline
