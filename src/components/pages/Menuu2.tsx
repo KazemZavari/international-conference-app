@@ -3,9 +3,12 @@ import { VariantsDown } from "../../assets/Motions/HomePageMotion";
 import { menu2Items } from "../../constants/menu2Items";
 import { NavLink } from "react-router-dom";
 
-
+import { useContext } from "react";
+import { mainContext } from "../../provider/MainContext";
 const Menuu2: React.FC = () => {
+  const {showSearch}= useContext(mainContext)
   return (
+
     <>
       
       <motion.nav
@@ -13,7 +16,7 @@ const Menuu2: React.FC = () => {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.1 }}
         variants={VariantsDown}
-        className="fixed top-8 z-[1500] lg:hidden "
+        className="z-[1500] lg:hidden transition-all duration-700 ease-in"
       >
         <div
           className="bg-black/70 hover:bg-black/65 dark:bg-black/50 dark:hover:bg-black/45
@@ -37,7 +40,12 @@ const Menuu2: React.FC = () => {
                 <li className="px-5 hover:text-yellow-300 duration-700">{item.title}</li>
               </NavLink>
             ))}
+
           </ul>
+
+           {/* searchBox */}
+          <input className={`${showSearch} ml-3 text-white `}/>
+
         </div>
       </motion.nav>
     </>

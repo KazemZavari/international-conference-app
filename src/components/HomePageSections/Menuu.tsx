@@ -14,16 +14,17 @@ const Menuu: React.FC = () => {
 
   return (
     <>
-      <motion.div
+
+    <motion.div
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.1 }}
         variants={VariantsDown}
-        className="mt-5 lg:hidden"
+        className="mt-5 lg:hidden "
       >
         <div
           className="w-[59%] 2xl:w-[59%]  border-b-[2px] border-slate-700 dark:border-yellow-300 
-                    pb-[1rem] block mx-auto "
+                    pb-[1rem] block mx-auto  "
         ></div>
         <div className="flex justify-center">
           {" "}
@@ -58,12 +59,15 @@ const Menuu: React.FC = () => {
               selectedKeys={[current]}
               mode="horizontal"
               items={items}
-              className="flex justify-center  3xl:w-[60%] lg:w-[90vw] text-[1rem] font-semibold dark:bg-black/40
-               bg-black/50 rounded-2xl shadow-sm shadow-slate-300 dark:shadow-yellow-300"
+              className="flex justify-center 3xl:w-[60%] lg:w-[90vw] text-[1rem] font-semibold
+              dark:bg-black/40 bg-black/50 rounded-2xl shadow-sm shadow-slate-300 
+              dark:shadow-yellow-300"
             />
           </ConfigProvider>
         </div>
       </motion.div>
+ 
+
     </>
   );
 };

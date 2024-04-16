@@ -7,13 +7,13 @@ import axios from "axios";
 const Gallery = () => {
   const [items, setItems] = useState<any[]>([]);
   const [hasMore, setHasMore] = useState<boolean>(true);
-  const [index, setIndex] = useState(10);
-
+  const [index, setIndex] = useState(2);
+  const [inputText, setInputText] = useState("");
   useEffect(() => {
     axios
       .get(
         // "https://jsonplaceholder.typicode.com/albums/8/photos?offset=50&limit=12"
-        "https://picsum.photos/v2/list?page=3&limit=10"
+        "https://picsum.photos/v2/list?page=1&limit=12"
       )
       .then((res) => setItems(res.data))
       .catch((err) => console.log(err));
@@ -32,8 +32,21 @@ const Gallery = () => {
       })
       .catch((err) => console.log(err));
 
-    setIndex((prevIndex) => prevIndex - 1);
+    setIndex((prevIndex) => prevIndex + 1);
   };
+
+
+
+  // const filteredData = items.filter((el) => {
+  //   //if no input the return the original
+  //   if (inputText === "") {
+  //     return el;
+  //   }
+  //   //return the item which contains the user input
+  //   else {
+  //     return el.text.toLowerCase().includes(inputText);
+  //   }
+  // });
 
   return (
     <>
@@ -44,6 +57,9 @@ const Gallery = () => {
           borderColor="border-black dark:border-yellow-400"
           textColor="text-gray-700 dark:text-yellow-400"
         />
+        {/* -------searchBox------- */}
+
+        {/* -------searchBox------- */}
         <main className="">
           <p
             className="text-slate-800 dark:text-white text-[1.4rem] lg:text-[1.2rem] sm:text-[1rem]
