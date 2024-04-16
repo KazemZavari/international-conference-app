@@ -5,13 +5,15 @@ import { BsChevronDoubleDown } from "react-icons/bs";
 import { newsPageItems } from "../../constants/newsPageItems";
 import CardGradient from "../CardGradient";
 import { ScrollProgress } from "../ScrollProgress";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
+import Spinner from "../Spinner";
 const NewsPage = () => {
   useEffect(() => {});
   return (
     <>
       <PageLayout>
-        <ScrollProgress position="left" height={9} smoothness={true} />
+        <Suspense fallback={<Spinner />}>
+        <ScrollProgress position="left" height={6} smoothness={true} />
         <div className="h-auto pb-10  ">
           <Divider
             borderText={"News Page"}
@@ -84,6 +86,8 @@ const NewsPage = () => {
           Load More News
           <BsChevronDoubleDown className="ml-5 md:ml-2 mt-1 animate-bounce text-[1.2rem] md:text-[1rem] font-bold " />
         </button>
+        </Suspense>
+
       </PageLayout>
     </>
   );

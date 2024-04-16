@@ -37,7 +37,8 @@ export const ScrollProgress: React.FC<ScrollProgressProps> = ({
 
   return (
     <motion.div
-      className={`fixed top-0 left-0 right-0 z-50 rounded-e-full bg-gradient-to-r from-green-700 to-green-400
+      className={`fixed top-0 left-0 right-0 z-50 rounded-e-full bg-gradient-to-r from-green-700
+       to-green-400
                 `}
       style={{
         ...barAnimation,

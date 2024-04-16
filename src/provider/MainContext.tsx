@@ -48,7 +48,7 @@ const MainContextProvider = ({ children }: MainContextProviderProps) => {
       windowHeight > 120
         ? setStickyClass("fixed top-1 left-0 z-[999999]   ")
         : setStickyClass("relative");
-      windowHeight > 130 ? setFixedSearchbox("fixed top-5 right-12 bg-black/80 z-[999999999]  ")
+      windowHeight > 130 ? setFixedSearchbox("fixed top-5 right-12 md:mr-16 md:w-[14rem] bg-black/80 z-[999]  ")
        : setFixedSearchbox("");
 
     }

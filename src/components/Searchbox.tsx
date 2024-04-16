@@ -7,7 +7,7 @@ type SearchboxProps = {
 const Searchbox: React.FC<SearchboxProps> = ({ inputHandler }) => {
   const {  fixedSearchbox } = useContext(mainContext);
   return (
-    <div className=" pt-5 flex justify-end mr-24 z-[99999]">
+    <div className=" pt-5 flex justify-end mr-24  z-[99999]">
       <input
         type="text"
         onChange={inputHandler}
