@@ -5,21 +5,16 @@ import { motion } from "framer-motion";
 import ScrollDown from "../ScrollDown";
 import { VariantsDown, VariantsUp } from "../../assets/Motions/HomePageMotion";
 import RegisterBotton from "../RegisterBotton";
-
-
+import { useContext } from "react";
+import { mainContext } from "../../provider/MainContext";
 // import DarkModeToggle from "../../theme/DarkModeToggle";
 
 const Navbar = () => {
+  const { stickyClass } = useContext(mainContext);
   return (
     <>
-
       <nav className=" 2xl:overflow-hidden z-1 lg:h-[27rem] md:h-[22rem]">
         <div className="flex justify-start w-[90%] sm:w-[95%] pt-2 overflow-hidden">
-          <div className="lg:hidden">
-          <RegisterBotton />
-          </div>
-         
-
           <Logo />
           <motion.div
             initial="offscreen"
@@ -36,8 +31,13 @@ const Navbar = () => {
             <h5>18-19 April 2024</h5>
           </motion.div>
         </div>
+        <div className={` w-[100%]  `}>
+          <div className="lg:hidden">
+            <RegisterBotton />
+          </div>
+          <Menuu />
+        </div>
 
-        <Menuu />
         <ScrollDown />
         <motion.div
           initial="offscreen"
@@ -49,14 +49,18 @@ const Navbar = () => {
             backdrop-blur-[50px] shadow-slate-100 dark:shadow-yellow-300 shadow-sm md:mt-10 mb-16
              sm:mb-8"
         >
-          <h1 className=" text-[1.7rem] xl:text-[1.4rem] lg:text-[1.3rem] md:text-[1rem] font-bold 
-          sm:font-semibold mb-4 md:mb-2">
+          <h1
+            className=" text-[1.7rem] xl:text-[1.4rem] lg:text-[1.3rem] md:text-[1rem] font-bold 
+          sm:font-semibold mb-4 md:mb-2"
+          >
             International Conference on Energy Resilience, and Sustainability
           </h1>
           <h2 className="text-[1.2rem] font-bold lg:text-[1.1rem] md:text-[.9rem] sm:font-[.8rem] leading-6">
             Sharif University of Technology, TEHRAN, IRAN
           </h2>
-          <h3 className=" text-[1.2rem] font-bold pt-1 lg:text-[1.1rem] md:text-[.9rem] sm:font-semibold">18-19 April 2024</h3>
+          <h3 className=" text-[1.2rem] font-bold pt-1 lg:text-[1.1rem] md:text-[.9rem] sm:font-semibold">
+            18-19 April 2024
+          </h3>
         </motion.div>
       </nav>
     </>

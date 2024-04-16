@@ -1,49 +1,57 @@
+import { lazy } from 'react';
+import { Suspense } from "react";
+import Spinner from "../Spinner";
 import "../../App.css";
-import VideoLanding from "../VideoLanding";
-import Navbar from "../HomePageSections/Navbar";
-import Footer from "../HomePageSections/Footer";
-import News from "../HomePageSections/News";
-import CountDown from "../HomePageSections/CountDown";
-import Sponsors from "../HomePageSections/Sponsors";
-import ParallaxProvider from "../HomePageSections/ParallaxProvider";
-import ParallaxContent1 from "../HomePageSections/ParallaxContent1";
-import ParallaxContent2 from "../HomePageSections/ParallaxContent2";
-import MainTopics from "../HomePageSections/MainTopics";
-import { parallaxData } from "../../constants/parallax";
-import Tools from "../Tools";
-import ProgressBar from "../ProgressBar";
+ 
+ const VideoLanding = lazy(() => import('../VideoLanding'));
+ const Navbar = lazy(() => import('../HomePageSections/Navbar'));
+ const Footer = lazy(() => import('../HomePageSections/Footer'));
+ const News = lazy(() => import('../HomePageSections/News'));
+ const CountDown = lazy(() => import('../HomePageSections/CountDown'));
+ const Sponsors = lazy(() => import('../HomePageSections/Sponsors'));
+  const ParallaxProvider = lazy(() => import('../HomePageSections/ParallaxProvider'));
+ const ParallaxContent1 = lazy(() => import('../HomePageSections/ParallaxContent1'));
+ const ParallaxContent2 = lazy(() => import('../HomePageSections/ParallaxContent2'));
+ const MainTopics = lazy(() => import('../HomePageSections/MainTopics'));
+ const Tools = lazy(() => import('../Tools'));
+ const ProgressBar = lazy(() => import('../ProgressBar'));
+ 
+ import { parallaxData } from "../../constants/parallax";
+ 
+
+
 
 const App: React.FC = () => {
   return (
     <>
-      <ProgressBar />
-      <div className="md:hidden">
-      <Tools />
-      </div>
-      
+      <Suspense fallback={<Spinner />}>
+        <ProgressBar />
+        <div className="md:hidden">
+          <Tools />
+        </div>
 
-      <div className="sm:bg-sky-100 dark:sm:bg-slate-900  ">
-        <VideoLanding />
-        <Navbar />
-
-      </div>
-      <CountDown />
-      <ParallaxProvider
-        backgroundImage={parallaxData.bg[0]}
-        height={parallaxData.height[0]}
-      >
-        <ParallaxContent1 />
-      </ParallaxProvider>
-      <MainTopics />
-      <News />
-      <ParallaxProvider
-        backgroundImage={parallaxData.bg[1]}
-        height={parallaxData.height[1]}
-      >
-        <ParallaxContent2 />
-      </ParallaxProvider>
-      <Sponsors />
-      <Footer />
+        <div className="sm:bg-sky-100 dark:sm:bg-slate-900  ">
+          <VideoLanding />
+          <Navbar />
+        </div>
+        <CountDown />
+        <ParallaxProvider
+          backgroundImage={parallaxData.bg[0]}
+          height={parallaxData.height[0]}
+        >
+          <ParallaxContent1 />
+        </ParallaxProvider>
+        <MainTopics />
+        <News />
+        <ParallaxProvider
+          backgroundImage={parallaxData.bg[1]}
+          height={parallaxData.height[1]}
+        >
+          <ParallaxContent2 />
+        </ParallaxProvider>
+        <Sponsors />
+        <Footer />
+      </Suspense>
     </>
   );
 };

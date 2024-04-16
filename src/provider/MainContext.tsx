@@ -15,10 +15,10 @@ type MainContextProps = {
   handleVisible: React.ReactEventHandler;
   stickyClass: string;
   setStickyClass: React.Dispatch<SetStateAction<string>>;
-  showSearch: string;
-  setShowSearch: React.Dispatch<SetStateAction<string>>;
-  hideSearch: string;
-  sethideSearch: React.Dispatch<SetStateAction<string>>;
+  fixedSearchbox: string;
+  setFixedSearchbox: React.Dispatch<SetStateAction<string>>;
+ 
+ 
 };
 
 type MainContextProviderProps = {
@@ -30,9 +30,9 @@ export const mainContext = createContext({} as MainContextProps);
 const MainContextProvider = ({ children }: MainContextProviderProps) => {
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const [visible, setvisible] = useState<boolean>(false);
-  const [stickyClass, setStickyClass] = useState("relative");
-  const [showSearch, setShowSearch] = useState("hidden");
-  const [hideSearch, sethideSearch] = useState("block");
+  const [stickyClass, setStickyClass] = useState("relative ");
+  const [fixedSearchbox, setFixedSearchbox] = useState("");
+ 
 
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
@@ -46,10 +46,11 @@ const MainContextProvider = ({ children }: MainContextProviderProps) => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
       windowHeight > 120
-        ? setStickyClass("fixed top-1 left-0 z-[999999] ")
+        ? setStickyClass("fixed top-1 left-0 z-[999999]   ")
         : setStickyClass("relative");
-      windowHeight > 120 ? setShowSearch("block ") : setShowSearch("hidden");
-      windowHeight > 130 ? sethideSearch("hidden") : sethideSearch("block");
+      windowHeight > 130 ? setFixedSearchbox("fixed top-5 right-12 bg-black/80 z-[999999999]  ")
+       : setFixedSearchbox("");
+
     }
   };
 
@@ -81,10 +82,9 @@ const MainContextProvider = ({ children }: MainContextProviderProps) => {
         handleVisible,
         stickyClass,
         setStickyClass,
-        showSearch,
-        setShowSearch,
-        hideSearch,
-        sethideSearch,
+        fixedSearchbox,
+        setFixedSearchbox,
+ 
       }}
     >
       {children}
