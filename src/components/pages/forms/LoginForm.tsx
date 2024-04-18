@@ -1,5 +1,4 @@
-import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
-import { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import FormTabs from "./FormTabs";
 import { ToastContainer, toast } from "react-toastify";
@@ -17,7 +16,6 @@ const LoginForm = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<inputProps>();
 

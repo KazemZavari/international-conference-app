@@ -5,12 +5,8 @@ import { motion } from "framer-motion";
 import ScrollDown from "../ScrollDown";
 import { VariantsDown, VariantsUp } from "../../assets/Motions/HomePageMotion";
 import RegisterBotton from "../RegisterBotton";
-import { useContext } from "react";
-import { mainContext } from "../../provider/MainContext";
 
 const Navbar = () => {
-  const { stickyClass } = useContext(mainContext);
-
   return (
     <>
       <nav className=" 2xl:overflow-hidden z-1 lg:h-[27rem] md:h-[22rem] relative">

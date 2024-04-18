@@ -18,7 +18,6 @@ import { Autoplay, EffectCube, Pagination } from "swiper/modules";
 
 import { FaSnapchatGhost } from "react-icons/fa";
 import { newsPageItems } from "../../constants/newsPageItems";
-import Metors from "../Metors";
 const services = [1, 2, 3, 4, 5, 6];
 const Blog: React.FC = () => {
   const [items, setItems] = useState<any[]>([]);
@@ -91,7 +90,7 @@ const Blog: React.FC = () => {
             font-RalewayBold gap-y-6 gap-x-3 "
             >
               {services.map((service) => (
-                <div className="col-span-1 dark:text-white text-gray-800 p-2 ">
+                <div key={service} className="col-span-1 dark:text-white text-gray-800 p-2 ">
                   <h3 className=" text-left pb-2 text-[1.3rem] xl:text-[1.1rem]">
                     <FaSnapchatGhost
                       className="mr-1 inline text-slate-900 dark:text-yellow-400
@@ -168,7 +167,7 @@ const Blog: React.FC = () => {
             </h2>
             <div className="grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 font-RalewayBold gap-3  ">
               {services.map((service) => (
-                <div
+                <div key={service}
                   className="col-span-1 dark:text-white text-gray-800 border-[1px] border-gray-800
                 dark:border-gray-400 p-2 md:p-1
                  items-center sm:mb-2 "

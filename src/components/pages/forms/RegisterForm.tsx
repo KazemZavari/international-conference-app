@@ -15,15 +15,12 @@ const RegisterForm: React.FC = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<inputProps>();
   const onSubmit: SubmitHandler<inputProps> = (data) =>{
     alert(JSON.stringify(data));
     toast.success("sign up is successfully!");
   }
-
-  const [success, setSuccess] = useState(false);
 
   return (
     <div className="py-20 sm:px-5 lg:mb-10">

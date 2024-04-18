@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Drawer, ConfigProvider } from "antd";
 import { IoMenu } from "react-icons/io5";
-import { createStyles, useTheme } from "antd-style";
+import { createStyles } from "antd-style";
 import logo from "../assets/img/sharif-logo-1.png";
 import { FaAngleRight } from "react-icons/fa";
 
@@ -15,7 +15,7 @@ import RegisterBotton from "./RegisterBotton";
 import { menu2Items } from "../constants/menu2Items";
 import Tools from "./Tools";
 
-const useStyle = createStyles(({ token }) => ({
+const useStyle = createStyles(() => ({
   "my-drawer-header": {
     background: "#114b5f",
   },

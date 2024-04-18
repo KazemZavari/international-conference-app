@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { VariantsDown, VariantsUp } from "../assets/Motions/HomePageMotion";
+import { VariantsDown } from "../assets/Motions/HomePageMotion";
 import { Link } from "react-router-dom";
 const RegisterBotton = () => {
   return (
