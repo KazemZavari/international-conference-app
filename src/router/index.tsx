@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../components/pages/Home";
 import NewsPage from "../components/pages/NewsPage";
 import NewsSinglePage from "../components/pages/NewsSinglePage";
-import Information from "../components/pages/Information";
+import Blog from "../components/pages/Blog";
 import Contact from "../components/pages/Contact";
 import Gallery from "../components/pages/Gallery"; 
 import MainLayout from "../layouts/MainLayout";
@@ -37,8 +37,8 @@ export const router = createBrowserRouter([
       },
 
       {
-        path: "/information",
-        element: <Information />,
+        path: "/blog",
+        element: <Blog />,
       },
       {
         path: "/loginPage",

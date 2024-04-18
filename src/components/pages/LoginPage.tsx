@@ -13,7 +13,7 @@ const LoginPage = () => {
           <Drawer />
         </div>
         <HomeLink />
-        <div className="pt-28 sm:px-20 ">
+        <div className="pt-24 pb-5 sm:px-20 ">
           <LoginForm />
         </div>
       </div>

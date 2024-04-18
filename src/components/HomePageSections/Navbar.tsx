@@ -7,15 +7,16 @@ import { VariantsDown, VariantsUp } from "../../assets/Motions/HomePageMotion";
 import RegisterBotton from "../RegisterBotton";
 import { useContext } from "react";
 import { mainContext } from "../../provider/MainContext";
-// import DarkModeToggle from "../../theme/DarkModeToggle";
 
 const Navbar = () => {
   const { stickyClass } = useContext(mainContext);
+
   return (
     <>
-      <nav className=" 2xl:overflow-hidden z-1 lg:h-[27rem] md:h-[22rem]">
+      <nav className=" 2xl:overflow-hidden z-1 lg:h-[27rem] md:h-[22rem] relative">
         <div className="flex justify-start w-[90%] sm:w-[95%] pt-2 overflow-hidden">
           <Logo />
+
           <motion.div
             initial="offscreen"
             whileInView="onscreen"

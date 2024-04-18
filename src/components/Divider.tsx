@@ -20,8 +20,8 @@ const Divider: React.FC<dividerProps> = ({
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.5 }}
         variants={VariantsDown}
-      className={`relative inline-flex mt-[1rem] lg:mt-[1rem] sm:mt-[.6rem] py-[1.2rem] md:py-[.4rem]
-       items-center w-[60%] xl:w-[55%] md:w-[75%] sm:w-[80%] ${borderWidth} `}
+      className={`relative inline-flex mt-[1rem] lg:mt-[1rem] sm:-mt-10 py-[1.2rem] md:py-[.4rem]  
+       items-center w-[60%] xl:w-[55%] md:w-[65%] sm:w-[60%] xs:w-[75%] ${borderWidth} `}
     >
       <div
         className={`flex-grow border-t ${borderColor} border-[.1rem] sm:border-[.08rem] `}

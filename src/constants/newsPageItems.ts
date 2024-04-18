@@ -1,10 +1,10 @@
 const pic =[
-    "https://picsum.photos/1620/800",
-    "https://picsum.photos/1830/900",
-    "https://picsum.photos/1910/950",
-    "https://picsum.photos/2100/1010",
+    "https://picsum.photos/1620/890",
+    "https://picsum.photos/1830/940",
+    "https://picsum.photos/1910/910",
+    "https://picsum.photos/2100/1001",
     "https://picsum.photos/1650/830",
-    "https://picsum.photos/1600/850",
+    "https://picsum.photos/1600/851",
 ]
 export const newsPageItems = [
     {

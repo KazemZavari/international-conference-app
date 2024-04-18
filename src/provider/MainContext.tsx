@@ -17,8 +17,6 @@ type MainContextProps = {
   setStickyClass: React.Dispatch<SetStateAction<string>>;
   fixedSearchbox: string;
   setFixedSearchbox: React.Dispatch<SetStateAction<string>>;
- 
- 
 };
 
 type MainContextProviderProps = {
@@ -32,7 +30,6 @@ const MainContextProvider = ({ children }: MainContextProviderProps) => {
   const [visible, setvisible] = useState<boolean>(false);
   const [stickyClass, setStickyClass] = useState("relative ");
   const [fixedSearchbox, setFixedSearchbox] = useState("");
- 
 
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
@@ -48,9 +45,11 @@ const MainContextProvider = ({ children }: MainContextProviderProps) => {
       windowHeight > 120
         ? setStickyClass("fixed top-1 left-0 z-[999999]   ")
         : setStickyClass("relative");
-      windowHeight > 130 ? setFixedSearchbox("fixed top-5 right-12 md:mr-16 md:w-[14rem] bg-black/80 z-[999]  ")
-       : setFixedSearchbox("");
-
+      windowHeight > 130
+        ? setFixedSearchbox(
+            "fixed top-5 right-12 md:mr-16 md:w-[14rem] bg-black/80 z-[999]  "
+          )
+        : setFixedSearchbox("");
     }
   };
 
@@ -84,7 +83,6 @@ const MainContextProvider = ({ children }: MainContextProviderProps) => {
         setStickyClass,
         fixedSearchbox,
         setFixedSearchbox,
- 
       }}
     >
       {children}

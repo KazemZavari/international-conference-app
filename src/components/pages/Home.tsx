@@ -1,27 +1,34 @@
-import { lazy } from 'react';
-import { Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
+import { parallaxData } from "../../constants/parallax";
 import Spinner from "../Spinner";
 import "../../App.css";
- 
- const VideoLanding = lazy(() => import('../VideoLanding'));
- const Navbar = lazy(() => import('../HomePageSections/Navbar'));
- const Footer = lazy(() => import('../HomePageSections/Footer'));
- const News = lazy(() => import('../HomePageSections/News'));
- const CountDown = lazy(() => import('../HomePageSections/CountDown'));
- const Sponsors = lazy(() => import('../HomePageSections/Sponsors'));
-  const ParallaxProvider = lazy(() => import('../HomePageSections/ParallaxProvider'));
- const ParallaxContent1 = lazy(() => import('../HomePageSections/ParallaxContent1'));
- const ParallaxContent2 = lazy(() => import('../HomePageSections/ParallaxContent2'));
- const MainTopics = lazy(() => import('../HomePageSections/MainTopics'));
- const Tools = lazy(() => import('../Tools'));
- const ProgressBar = lazy(() => import('../ProgressBar'));
- 
- import { parallaxData } from "../../constants/parallax";
- 
+
+const VideoLanding = lazy(() => import("../VideoLanding"));
+const Navbar = lazy(() => import("../HomePageSections/Navbar"));
+const Footer = lazy(() => import("../HomePageSections/Footer"));
+const News = lazy(() => import("../HomePageSections/News"));
+const CountDown = lazy(() => import("../HomePageSections/CountDown"));
+const Sponsors = lazy(() => import("../HomePageSections/Sponsors"));
+const ParallaxProvider = lazy(
+  () => import("../HomePageSections/ParallaxProvider")
+);
+const ParallaxContent1 = lazy(
+  () => import("../HomePageSections/ParallaxContent1")
+);
+const ParallaxContent2 = lazy(
+  () => import("../HomePageSections/ParallaxContent2")
+);
+const MainTopics = lazy(() => import("../HomePageSections/MainTopics"));
+const Tools = lazy(() => import("../Tools"));
+const ProgressBar = lazy(() => import("../ProgressBar"));
 
 
 
 const App: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page after render the pages
+  }, []);
+
   return (
     <>
       <Suspense fallback={<Spinner />}>

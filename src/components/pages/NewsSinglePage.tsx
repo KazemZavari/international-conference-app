@@ -1,12 +1,13 @@
 import ParallaxProvider from "../HomePageSections/ParallaxProvider";
-import Menuu from "../HomePageSections/Menuu";
 import Footer from "../HomePageSections/Footer";
 import Player from "../Player";
-import video from "../../assets/bgVideo/3.mov";
-import bggridlighter from "../../assets/img/bg-grid-lighter.svg";
+// import video from "../../assets/bgVideo/3.mov";
 import Menuu2 from "./Menuu2";
-
+import { useEffect } from "react";
 const NewsSinglePage: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [window.scrollY])
   return (
     <>
       <ParallaxProvider
@@ -19,20 +20,15 @@ const NewsSinglePage: React.FC = () => {
         </div>
       </ParallaxProvider>
       <div
-        className=" mx-auto text-center h-[22rem] sm:h-[36rem] xs:h-[44rem] bg-[#0d1224]    
+        className=" mx-auto text-center h-[22rem] sm:h-[35rem] xs:h-[44rem] bg-[#0d1224]    
        text-white line-clamp-4 "
       >
-        <img
-          alt="background"
-          className="absolute w-[900px] "
-          // style="color:transparent"
-          src={bggridlighter}
-        />
+   
         <h1 className="block uppercase text-white pt-6 pb-3 font-semibold">
           news Title
         </h1>
-        <div className="mx-auto flex justify-center px-40 lg:px-20 md:px-10">
-          <p className="leading-7 text-justify indent-6 2xl:max-w-[900px] pb-2 ">
+        <div className="mx-auto flex justify-center px-40 lg:px-20 md:px-10 sm:px-5 mb-20">
+          <p className="leading-7 text-left indent-6 2xl:max-w-[900px] mb-2 ">
             {" "}
             <strong>
               Sed laoreet eget magna ac laoreet. Vivamus a elit ac nibh
@@ -71,7 +67,7 @@ const NewsSinglePage: React.FC = () => {
           </div>
         </div>
         <div className="flex justify-center col-span-full md:-mt-40 sm:-mt-52 xs:-mt-96">
-          <p className=" leading-8 text-justify indent-6">
+          <p className=" leading-8 text-left indent-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit
             amet mi orci. Sed mollis nisi neque, ut ultrices est viverra sit
             amet. Integer eros mauris, finibus non elementum in, eleifend cursus

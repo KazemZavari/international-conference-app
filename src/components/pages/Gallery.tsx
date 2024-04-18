@@ -9,34 +9,24 @@ import Spinner from "../Spinner";
 const Gallery = () => {
   const [items, setItems] = useState<any[]>([]);
   const [hasMore, setHasMore] = useState<boolean>(true);
-  const [index, setIndex] = useState(2);
+  const [index, setIndex] = useState(3);
   const [inputText, setInputText] = useState("");
+
   useEffect(() => {
     axios
-      .get(
-        // "https://jsonplaceholder.typicode.com/albums/8/photos?offset=50&limit=12"
-        "https://picsum.photos/v2/list?page=1&limit=12"
-      )
+      .get("https://picsum.photos/v2/list?page=2&limit=12")
       .then((res) => setItems(res.data))
       .catch((err) => console.log(err));
   }, []);
 
-  // useEffect(()=>{
-
-  // })
   const fetchMoreData = () => {
     axios
-      .get(
-        // `https://jsonplaceholder.typicode.com/albums/${index}/photos?offset=50&limit=12`
-        `https://picsum.photos/v2/list?page=${index}&limit=12`
-      )
+      .get(`https://picsum.photos/v2/list?page=${index}&limit=12`)
       .then((res) => {
         setItems((prevItems) => [...prevItems, ...res.data]);
-
         res.data.length > 0 ? setHasMore(true) : setHasMore(false);
       })
       .catch((err) => console.log(err));
-
     setIndex((prevIndex) => prevIndex + 1);
   };
 
@@ -46,12 +36,9 @@ const Gallery = () => {
   };
 
   const filteredData = items.filter((el) => {
-    //if no input the return the original
     if (inputText === "") {
       return el;
-    }
-    //return the item which contains the user input
-    else {
+    } else {
       return (
         el.author.toLowerCase().includes(inputText) |
         el.id.toLowerCase().includes(inputText)

@@ -1,6 +1,8 @@
 import pic1 from "../assets/img/pic-10.jpg"
 import pic2 from "../assets/img/pic-9.jpg"
 import pic3 from "../assets/img/pic-7.jpg"
+// import { useEffect } from "react"
+
 const pic =[
     "https://picsum.photos/1600/800",
     "https://picsum.photos/1800/900",

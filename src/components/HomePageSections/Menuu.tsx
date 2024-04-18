@@ -23,8 +23,8 @@ const Menuu: React.FC = () => {
         className="mt-5 lg:hidden "
       >
         <div
-          className="w-[59%] 2xl:w-[59%]  border-b-[2px] border-slate-700 dark:border-yellow-300 
-                    pb-[1rem] block mx-auto  "
+          className="w-[58.5%] border-b-[2px] border-slate-700 dark:border-yellow-300 pb-[1rem]
+           block mx-auto  "
         ></div>
         <div className="flex justify-center">
           {" "}

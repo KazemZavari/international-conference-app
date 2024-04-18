@@ -5,25 +5,29 @@ export const menu2Items = [
 
     },
     {
+        title: "Blog",
+        href: "/blog",
+
+    },
+    {
         title: "News",
         href: "/news",
-
     },
     {
         title: "Gallery",
         href: "/gallery",
 
     },
-    {
-        title: "Information",
-        href: "/information",
-
-    },
+   
 
     {
         title: "Contact us",
         href: "/contact-us",
-
+    },
+    
+    {
+        title: "Register",
+        href: "/loginPage",
     },
     // {
     //     title: "LogIn/Out",

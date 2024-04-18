@@ -1,6 +1,9 @@
 import { MailOutlined } from "@ant-design/icons";
 import { FaHome } from "react-icons/fa";
 import { IoNewspaper } from "react-icons/io5";
+import { FaBloggerB } from "react-icons/fa";
+
+
 import { IoLibrary } from "react-icons/io5";
 import { HiChevronDown } from "react-icons/hi";
 import { GrGallery } from "react-icons/gr";
@@ -15,7 +18,25 @@ export const items: MenuProps["items"] = [
       </NavLink>
     ),
     key: "Home",
-    icon: <FaHome />,
+    icon: <FaHome  size={22}/>,
+  },
+  {
+    label: (
+      <NavLink
+        to="/blog"
+        className="flex items-center"
+        style={({ isActive }) => {
+          return {
+            color: isActive ? "white" : " ",
+          };
+        }}
+      >
+        <FaBloggerB size={22} className="mr-1" />
+        Blog
+      </NavLink>
+    ),
+    key: "blog",
+    icon: "",
   },
   {
     label: (
@@ -28,7 +49,7 @@ export const items: MenuProps["items"] = [
           };
         }}
       >
-        <IoNewspaper className="mr-1" />
+        <IoNewspaper className="mr-1" size={22} />
         News
       </NavLink>
     ),
@@ -92,24 +113,7 @@ export const items: MenuProps["items"] = [
       },
     ],
   },
-  {
-    label: (
-      <NavLink
-        to="/information"
-        className="flex items-center"
-        style={({ isActive }) => {
-          return {
-            color: isActive ? "white" : " ",
-          };
-        }}
-      >
-        <IoNewspaper size={22} className="mr-1" />
-        information
-      </NavLink>
-    ),
-    key: "information",
-    icon: "",
-  },
+
   {
     label: (
       <div className="inline-flex group ">
