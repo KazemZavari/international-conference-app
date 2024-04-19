@@ -37,7 +37,7 @@ const App: React.FC = () => {
           <Tools />
         </div>
 
-        <div className="sm:bg-gradient-to-b sm:from-teal-600 sm:to-[#114b5f]  dark:sm:bg-gradient-to-b
+        <div className="sm:bg-gradient-to-b sm:from-teal-600 sm:to-[#114b5f] dark:sm:bg-gradient-to-b
           dark:sm:from-teal-900 dark:sm:to-slate-900">
           <VideoLanding />
           <Navbar />
