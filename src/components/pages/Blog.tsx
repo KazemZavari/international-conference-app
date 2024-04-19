@@ -7,17 +7,15 @@ import { FaComments } from "react-icons/fa";
 import { FaRegCircleUser } from "react-icons/fa6";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
-
-// import required modules
 import { Autoplay, EffectCube, Pagination } from "swiper/modules";
 
 import { FaSnapchatGhost } from "react-icons/fa";
 import { newsPageItems } from "../../constants/newsPageItems";
+import { ScrollProgress } from "../ScrollProgress";
 const services = [1, 2, 3, 4, 5, 6];
 const Blog: React.FC = () => {
   const [items, setItems] = useState<any[]>([]);
@@ -35,6 +33,7 @@ const Blog: React.FC = () => {
   return (
     <>
       <PageLayout>
+        <ScrollProgress position="left" height={6} smoothness={true} />
         <Divider
           borderText={"Blog"}
           borderColor="border-black dark:border-yellow-400"
@@ -48,7 +47,7 @@ const Blog: React.FC = () => {
           >
             {items.map((item) => (
               <>
-                <div className="col-span-1 py-3 md:pb-5  ">
+                <div key={item.author} className="col-span-1 py-3 md:pb-5  ">
                   <div className="">
                     <Link to={"/newsSinglePage"}>
                       <img
@@ -90,7 +89,10 @@ const Blog: React.FC = () => {
             font-RalewayBold gap-y-6 gap-x-3 "
             >
               {services.map((service) => (
-                <div key={service} className="col-span-1 dark:text-white text-gray-800 p-2 ">
+                <div
+                  key={service}
+                  className="col-span-1 dark:text-white text-gray-800 p-2 "
+                >
                   <h3 className=" text-left pb-2 text-[1.3rem] xl:text-[1.1rem]">
                     <FaSnapchatGhost
                       className="mr-1 inline text-slate-900 dark:text-yellow-400
@@ -110,7 +112,7 @@ const Blog: React.FC = () => {
 
           {/* swiper */}
           <div className=" py-10 ">
-          <h2
+            <h2
               className="dark:text-white text-gray-800 text-[1.8rem] md:text-[1.4rem]
               pb-10 font-RalewayBold  "
             >
@@ -133,7 +135,7 @@ const Blog: React.FC = () => {
                 //   delay: 4000,
                 //   pauseOnMouseEnter: true,
                 //   waitForTransition: true,
-                 
+
                 // }}
                 pagination={{ clickable: true, dynamicBullets: true }}
                 modules={[EffectCube, Pagination, Autoplay]}
@@ -146,17 +148,16 @@ const Blog: React.FC = () => {
                     className="flex align-middle justify-center bg-transparent duration-700"
                   >
                     <Link to={"/gallery"}>
-                    <img
-                      src={item.img}
-                      className="block shadow-sm shadow-slate-700   mx-auto self-center w-[100%] h-[100%]"
-                    />
+                      <img
+                        src={item.img}
+                        className="block shadow-sm shadow-slate-700   mx-auto self-center w-[100%] h-[100%]"
+                      />
                     </Link>
                   </SwiperSlide>
                 ))}
               </Swiper>
             </>
           </div>
-
 
           <div className="px-36 xl:px-16 lg:px-16 md:px-5  xs:px-2 pb-20">
             <h2
@@ -167,7 +168,8 @@ const Blog: React.FC = () => {
             </h2>
             <div className="grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 font-RalewayBold gap-3  ">
               {services.map((service) => (
-                <div key={service}
+                <div
+                  key={service}
                   className="col-span-1 dark:text-white text-gray-800 border-[1px] border-gray-800
                 dark:border-gray-400 p-2 md:p-1
                  items-center sm:mb-2 "
@@ -203,7 +205,6 @@ const Blog: React.FC = () => {
               ))}
             </div>
           </div>
-
         </main>
       </PageLayout>
     </>

@@ -22,7 +22,7 @@ const MainTopics = () => {
       >
         {mainTopicsItems.map((item) => (
           <>
-            <div
+            <div key={item.title}
               className="col-span-1 md:col-span-2 xs:col-span-full bg-gray-300 dark:bg-slate-800
                w-[100%] rounded-3xl mt-4 relative overflow-hidden max-w-[1500px]"
             >

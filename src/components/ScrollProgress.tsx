@@ -49,15 +49,3 @@ export const ScrollProgress: React.FC<ScrollProgressProps> = ({
     />
   );
 };
-
-// how use this component
-
-// import { ScrollProgress } from "../components/ScrollProgress";
-{
-  /* <ScrollProgress
-position={"left"}
-color={"orange"}
-height={7}
-smoothness={true}
-/> */
-}

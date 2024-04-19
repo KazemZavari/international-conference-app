@@ -20,9 +20,7 @@ const ParallaxContent2 = lazy(
 );
 const MainTopics = lazy(() => import("../HomePageSections/MainTopics"));
 const Tools = lazy(() => import("../Tools"));
-const ProgressBar = lazy(() => import("../HomePageSections/ProgressBar"));
-
-
+import { ScrollProgress } from "../ScrollProgress";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -32,13 +30,15 @@ const App: React.FC = () => {
   return (
     <>
       <Suspense fallback={<Spinner />}>
-        <ProgressBar />
+        <ScrollProgress position="left" height={6} smoothness={true} />
         <div className="md:hidden">
           <Tools />
         </div>
 
-        <div className="sm:bg-gradient-to-b sm:from-teal-600 sm:to-[#114b5f] dark:sm:bg-gradient-to-b
-          dark:sm:from-teal-900 dark:sm:to-slate-900">
+        <div
+          className="sm:bg-gradient-to-b sm:from-teal-600 sm:to-[#114b5f] dark:sm:bg-gradient-to-b
+          dark:sm:from-teal-900 dark:sm:to-slate-900"
+        >
           <VideoLanding />
           <Navbar />
         </div>

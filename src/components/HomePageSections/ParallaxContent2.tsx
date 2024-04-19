@@ -52,7 +52,7 @@ const ParallaxContent1 = () => {
        sm:px-8 xs:px-2 xs:gap-y-8 "
       >
         {ParallaxItemsImportantDates.map((item) => (
-          <div
+          <div key={item.title}
             className="w-[100%] rounded-[20px] shadow-sm col-span-1 md:col-span-full 
            py-3 backdrop-blur-[50px] bg-white/30 shadow-slate-300 dark:bg-black/40
             dark:shadow-yellow-400 text-slate-950 dark:text-yellow-500"
