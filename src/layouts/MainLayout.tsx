@@ -4,15 +4,15 @@ import Drawer from "../components/Drawer";
 import { useEffect } from "react";
 const MainLayout: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);  // Scroll to the top of the page after render the pages
+    window.scrollTo(0, 0); // Scroll to the top of the page after render the pages
   }, []);
 
   return (
     <MainContextProvider>
-      <div className="z-[99999999999999] ">
+      <div className="overflow-hidden">
         <Drawer />
+        <Outlet />
       </div>
-      <Outlet />
     </MainContextProvider>
   );
 };

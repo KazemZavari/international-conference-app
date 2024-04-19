@@ -51,7 +51,7 @@ const Drawerm: React.FC = () => {
       <Button
         onClick={showDrawer}
         className="fixed right-10 top-12 md:top-5 md:right-5 hidden lg:block p-1 border-none
-         dark:bg-black bg-black/70  z-[999] duration-500 group"
+         dark:bg-black bg-black/70 z-[999] duration-500 group"
       >
         <IoMenu
           className="text-white  dark:text-yellow-400 text-[1.6rem] border-none
