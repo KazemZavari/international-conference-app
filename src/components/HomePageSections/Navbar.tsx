@@ -19,8 +19,9 @@ const Navbar = () => {
             viewport={{ once: true, amount: 0.1 }}
             variants={VariantsDown}
             className="mt-10 text-left text-slate-950 dark:text-amber-400 text-[1rem] font-bold
-             ml-[22%] lg:ml-[16%] mb-10 md:hidden bg-green-400/40 dark:bg-black/30 py-3 px-4 rounded-3xl
-             backdrop-blur-[50px] shadow-slate-100 dark:shadow-yellow-300 shadow-sm "
+             ml-[22%] lg:ml-[16%] mb-10 md:hidden bg-green-400/40 dark:bg-black/30 sm:bg-transparent
+             dark:sm:bg-transparent py-3 px-4 rounded-3xl backdrop-blur-[50px]
+              shadow-slate-100 dark:shadow-yellow-300 shadow-sm "
           >
             <h3>
               International Conference on Energy Resilience, and Sustainability

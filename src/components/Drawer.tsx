@@ -85,9 +85,9 @@ const Drawerm: React.FC = () => {
             <IoClose className="text-white text-[1.5rem] mt-1 hover:bg-sky-500 rounded-sm duration-500 " />
           }
           open={open}
-          className="bg-white/10 dark:bg-black/80 dark:text-white text-[2rem]"
+          className="bg-red-500 dark:bg-black/80 dark:text-white text-[2rem]"
         >
-          <div onClick={onClose} className=" relative -mt-12 right-10">
+          <div onClick={onClose} className="relative -mt-12 right-10">
             <RegisterBotton />
           </div>
           <ul className="flex-col list-none duration-300 text-white mt-24">
