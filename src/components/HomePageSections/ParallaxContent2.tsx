@@ -4,7 +4,7 @@ import {
 } from "../../constants/parallax";
 import Divider from "../Divider";
 import { motion } from "framer-motion";
-import { VariantsDown } from "../../assets/Motions/HomePageMotion";
+import { VariantsDown } from "../../Motions/HomePageMotion";
 
 const ParallaxContent1 = () => {
   return (

@@ -2,7 +2,7 @@ import { Variants } from "framer-motion";
 
 export const VariantsUp: Variants = {
     offscreen: {
-        y:50,
+        y:45,
     },
     onscreen: {
         y: 0,

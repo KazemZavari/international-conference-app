@@ -9,7 +9,7 @@ const MainLayout: React.FC = () => {
 
   return (
     <MainContextProvider>
-      <div className="z-[999999999999999] -mr-10">
+      <div className="z-[99999999999999] -mr-10">
         <Drawer />
       </div>
       <Outlet />

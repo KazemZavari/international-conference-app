@@ -1,6 +1,6 @@
 import { FaAnglesDown } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { VariantsDown } from "../assets/Motions/HomePageMotion";
+import { VariantsDown } from "../../Motions/HomePageMotion";
 const ScrollDown = () => {
   return (
     <motion.a

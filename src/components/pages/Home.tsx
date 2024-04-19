@@ -3,7 +3,7 @@ import { parallaxData } from "../../constants/parallax";
 import Spinner from "../Spinner";
 import "../../App.css";
 
-const VideoLanding = lazy(() => import("../VideoLanding"));
+const VideoLanding = lazy(() => import("../HomePageSections/VideoLanding"));
 const Navbar = lazy(() => import("../HomePageSections/Navbar"));
 const Footer = lazy(() => import("../HomePageSections/Footer"));
 const News = lazy(() => import("../HomePageSections/News"));
@@ -20,7 +20,7 @@ const ParallaxContent2 = lazy(
 );
 const MainTopics = lazy(() => import("../HomePageSections/MainTopics"));
 const Tools = lazy(() => import("../Tools"));
-const ProgressBar = lazy(() => import("../ProgressBar"));
+const ProgressBar = lazy(() => import("../HomePageSections/ProgressBar"));
 
 
 
@@ -37,7 +37,7 @@ const App: React.FC = () => {
           <Tools />
         </div>
 
-        <div className="sm:bg-sky-100 dark:sm:bg-slate-900  ">
+        <div className="sm:bg-gradient-to-b from-teal-600 to-[#114b5f]  dark:sm:bg-slate-900  ">
           <VideoLanding />
           <Navbar />
         </div>

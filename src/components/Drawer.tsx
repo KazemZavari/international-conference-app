@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import { Button, Drawer, ConfigProvider } from "antd";
 import { IoMenu } from "react-icons/io5";
+import { FaAngleRight } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 import { createStyles } from "antd-style";
 import logo from "../assets/img/sharif-logo-1.png";
-import { FaAngleRight } from "react-icons/fa";
-
+import { Link, NavLink } from "react-router-dom";
+import RegisterBotton from "./HomePageSections/RegisterBotton";
+import { menu2Items } from "../constants/menu2Items";
+import Tools from "./Tools";
 import type {
   DrawerClassNames,
   DrawerStyles,
 } from "antd/es/drawer/DrawerPanel";
-import { IoClose } from "react-icons/io5";
-import { Link, NavLink } from "react-router-dom";
-import RegisterBotton from "./RegisterBotton";
-import { menu2Items } from "../constants/menu2Items";
-import Tools from "./Tools";
 
 const useStyle = createStyles(() => ({
   "my-drawer-header": {
@@ -73,7 +72,7 @@ const Drawerm: React.FC = () => {
                   className="text-white hover:text-sky-500 ml-20 sm:ml-16 duration-300 py-3 
                 z-[999999999999]"
                 >
-                  awesomePro
+                  conferenceday
                 </h1>
               </Link>
               <Link to="/" onClick={onClose}>

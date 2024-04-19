@@ -6,7 +6,7 @@ import {
   VariantsUp,
   VariantsLeft,
   VariantsRight,
-} from "../../assets/Motions/HomePageMotion";
+} from "../../Motions/HomePageMotion";
 const Footer = () => {
   return (
     <>

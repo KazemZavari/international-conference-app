@@ -1,7 +1,7 @@
 import logo from "../assets/img/sharif-logo-1.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { VariantsDown } from "../assets/Motions/HomePageMotion";
+import { VariantsDown } from "../Motions/HomePageMotion";
 const Logo: React.FC = () => {
   return (
     <Link to="/" className=" mt-5 lg:mt-3 sm:mt-0">

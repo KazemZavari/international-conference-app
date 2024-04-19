@@ -2,7 +2,7 @@ import PageLayout from "../../layouts/PageLayout";
 import Divider from "../Divider";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect } from "react";
 import { FaComments } from "react-icons/fa";
 import { FaRegCircleUser } from "react-icons/fa6";
 
@@ -129,12 +129,12 @@ const Blog: React.FC = () => {
                   shadowOffset: 20,
                   shadowScale: 0.94,
                 }}
-                autoplay={{
-                  delay: 4000,
-                  pauseOnMouseEnter: true,
-                  waitForTransition: true,
+                // autoplay={{
+                //   delay: 4000,
+                //   pauseOnMouseEnter: true,
+                //   waitForTransition: true,
                  
-                }}
+                // }}
                 pagination={{ clickable: true, dynamicBullets: true }}
                 modules={[EffectCube, Pagination, Autoplay]}
                 className=" w-[40rem] xl:w-[32rem] lg:w-[28rem] md:w-[26rem] h-[29rem] xl:h-[20rem]

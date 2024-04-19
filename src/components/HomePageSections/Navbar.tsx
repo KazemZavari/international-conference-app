@@ -2,9 +2,9 @@ import "rc-menu/assets/index.css";
 import Logo from "../Logo";
 import Menuu from "./Menuu";
 import { motion } from "framer-motion";
-import ScrollDown from "../ScrollDown";
-import { VariantsDown, VariantsUp } from "../../assets/Motions/HomePageMotion";
-import RegisterBotton from "../RegisterBotton";
+import ScrollDown from "./ScrollDown";
+import { VariantsDown, VariantsUp } from "../../Motions/HomePageMotion";
+import RegisterBotton from "./RegisterBotton";
 
 const Navbar = () => {
   return (
@@ -18,8 +18,9 @@ const Navbar = () => {
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.1 }}
             variants={VariantsDown}
-            className="pt-10 text-left text-slate-950 dark:text-amber-400 text-[1rem] font-bold
-             pl-[22%] lg:pl-[16%] pb-10 md:hidden  "
+            className="mt-10 text-left text-slate-950 dark:text-amber-400 text-[1rem] font-bold
+             ml-[22%] lg:ml-[16%] mb-10 md:hidden bg-green-400/40 dark:bg-black/30 py-3 px-4 rounded-3xl
+             backdrop-blur-[50px] shadow-slate-100 dark:shadow-yellow-300 shadow-sm "
           >
             <h3>
               International Conference on Energy Resilience, and Sustainability
@@ -41,8 +42,8 @@ const Navbar = () => {
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.1 }}
           variants={VariantsUp}
-          className="mt-[3rem] 2xl:mt-[4rem] sm:mt-[1.5rem] mx-auto text-slate-950 py-3 px-2 rounded-3xl
-           bg-green-400/60 dark:bg-black/30 w-[52rem] xl:w-[63%] lg:w-[79%] sm:w-[88%] dark:text-amber-400
+          className="mt-[3rem] 2xl:mt-[4rem] sm:mt-[1.5rem] mx-auto text-slate-950 dark:text-amber-400 py-3 px-2 rounded-3xl
+           bg-green-400/40 dark:bg-black/30 w-[52rem] xl:w-[63%] lg:w-[79%] sm:w-[88%] 
             backdrop-blur-[50px] shadow-slate-100 dark:shadow-yellow-300 shadow-sm md:mt-10 mb-16
              sm:mb-8"
         >

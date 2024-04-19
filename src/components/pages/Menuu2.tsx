@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { VariantsDown } from "../../assets/Motions/HomePageMotion";
+import { VariantsDown } from "../../Motions/HomePageMotion";
 import { menu2Items } from "../../constants/menu2Items";
 import { NavLink } from "react-router-dom";
 

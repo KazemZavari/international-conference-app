@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {
-  VariantsLeft,
-  VariantsRight,
-} from "../../assets/Motions/HomePageMotion";
+import { VariantsLeft, VariantsRight } from "../../Motions/HomePageMotion";
 
 type ConferenceDayProps = {
   day: number;

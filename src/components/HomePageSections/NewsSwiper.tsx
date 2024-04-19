@@ -18,13 +18,13 @@ const NewsSwiper = () => {
       loop={true}
       pagination={{ clickable: true, dynamicBullets: true }}
       navigation={false}
-      centeredSlides={false}
-      autoplay={{
-        delay: 3000,
-        pauseOnMouseEnter: true,
-        waitForTransition: true,
+   
+      // autoplay={{
+      //   delay: 3000,
+      //   pauseOnMouseEnter: true,
+      //   waitForTransition: true,
       
-      }}
+      // }}
       className=" w-[55%] lg:w-[65%] md:w-[75%] sm:w-[80%] sm:px-4 h-[20rem] lg:h-[19rem] md:h-[16rem] 
       flex justify-center shadow-none bg-transparent 
       rounded-[1rem] -mt-[1rem] duration-500  "

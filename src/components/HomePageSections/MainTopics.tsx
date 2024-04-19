@@ -2,7 +2,7 @@ import Divider from "../Divider";
 import ColorDiv from "../ColorDiv";
 import { mainTopicsItems } from "../../constants/mainTopics";
 import { motion } from "framer-motion";
-import { VariantsUp } from "../../assets/Motions/HomePageMotion";
+import { VariantsUp } from "../../Motions/HomePageMotion";
 import { Link } from "react-router-dom";
 
 const MainTopics = () => {

@@ -1,7 +1,7 @@
 import Divider from "../Divider";
 import NewsSwiper from "./NewsSwiper";
 import { motion } from "framer-motion";
-import { VariantsUp } from "../../assets/Motions/HomePageMotion";
+import { VariantsUp } from "../../Motions/HomePageMotion";
 // import { Pagination } from "@mui/material";
 const News = () => {
   return (

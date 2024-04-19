@@ -35,7 +35,7 @@ const MainContextProvider = ({ children }: MainContextProviderProps) => {
     window.addEventListener("scroll", stickNavbar);
 
     return () => {
-      window.removeEventListener("scroll", stickNavbar);
+      window.removeEventListener("scroll" , stickNavbar);
     };
   }, []);
 

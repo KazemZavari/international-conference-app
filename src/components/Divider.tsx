@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { VariantsDown } from "../assets/Motions/HomePageMotion";
+import { VariantsDown } from "../Motions/HomePageMotion";
 
 type dividerProps = {
   borderText: string;
