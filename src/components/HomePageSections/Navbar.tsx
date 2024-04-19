@@ -43,10 +43,10 @@ const Navbar = () => {
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.1 }}
           variants={VariantsUp}
-          className="mt-[3rem] 2xl:mt-[4rem] sm:mt-[1.5rem] mx-auto text-slate-950 dark:text-amber-400 py-3 px-2 rounded-3xl
-           bg-green-400/40 dark:bg-black/30 w-[52rem] xl:w-[63%] lg:w-[79%] sm:w-[88%] 
-            backdrop-blur-[50px] shadow-slate-100 dark:shadow-yellow-300 shadow-sm md:mt-10 mb-16
-             sm:mb-8"
+          className="mt-[3rem] 2xl:mt-[4rem] sm:mt-[1.5rem] mx-auto text-slate-950 dark:text-amber-400 
+          py-3 px-2 rounded-3xl bg-green-400/40 dark:bg-black/30 w-[52rem] xl:w-[63%] lg:w-[79%]
+           sm:w-[88%] backdrop-blur-[50px] shadow-slate-100 dark:shadow-yellow-300 shadow-sm md:mt-10
+            mb-16 sm:mb-8"
         >
           <h1
             className=" text-[1.7rem] xl:text-[1.4rem] lg:text-[1.3rem] md:text-[1rem] font-bold 
